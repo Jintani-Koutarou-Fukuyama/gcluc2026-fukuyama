@@ -1,0 +1,421 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CPlayer2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CPlayer2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CEnemy2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CEnemy2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CBlock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CBlock.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CBlock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CBlock.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCamera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CCamera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CApplication.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CApplication.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CApplication.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CApplication.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CPlayer2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CPlayer2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CUi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CUi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CEnemy2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CEnemy2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CSound.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CSound.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCamera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CCamera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCharacterManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CCharacterManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CUi.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CUi.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCharacterManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CCharacterManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CRectangle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CRectangle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CRectangle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CRectangle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCharacter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CCharacter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CPoint.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CPoint.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\res\\Image.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GameProgramming64\\res\\Image.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CPoint.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{094B5F39-1467-4D94-845B-08544C8CBD7D}|GameProgramming64\\GameProgramming64.vcxproj|solutionrelative:GameProgramming64\\CPoint.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CApplication.cpp",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CApplication.cpp",
+              "RelativeDocumentMoniker": "GameProgramming64\\CApplication.cpp",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CApplication.cpp",
+              "RelativeToolTip": "GameProgramming64\\CApplication.cpp",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAACEAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-24T01:21:55.087Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CApplication.h",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CApplication.h",
+              "RelativeDocumentMoniker": "GameProgramming64\\CApplication.h",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CApplication.h",
+              "RelativeToolTip": "GameProgramming64\\CApplication.h",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACUAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-18T05:28:59.737Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CPlayer2.h",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CPlayer2.h",
+              "RelativeDocumentMoniker": "GameProgramming64\\CPlayer2.h",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CPlayer2.h",
+              "RelativeToolTip": "GameProgramming64\\CPlayer2.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-30T05:47:40.308Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CPlayer2.cpp",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CPlayer2.cpp",
+              "RelativeDocumentMoniker": "GameProgramming64\\CPlayer2.cpp",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CPlayer2.cpp",
+              "RelativeToolTip": "GameProgramming64\\CPlayer2.cpp",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAAwAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-30T05:50:08.735Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CEnemy2.h",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CEnemy2.h",
+              "RelativeDocumentMoniker": "GameProgramming64\\CEnemy2.h",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CEnemy2.h",
+              "RelativeToolTip": "GameProgramming64\\CEnemy2.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-05T01:06:55.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CUi.cpp",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CUi.cpp",
+              "RelativeDocumentMoniker": "GameProgramming64\\CUi.cpp",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CUi.cpp",
+              "RelativeToolTip": "GameProgramming64\\CUi.cpp",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACcAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-12T01:01:58.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CCamera.h",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCamera.h",
+              "RelativeDocumentMoniker": "GameProgramming64\\CCamera.h",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCamera.h",
+              "RelativeToolTip": "GameProgramming64\\CCamera.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-07-09T02:40:58.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CBlock.cpp",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CBlock.cpp",
+              "RelativeDocumentMoniker": "GameProgramming64\\CBlock.cpp",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CBlock.cpp",
+              "RelativeToolTip": "GameProgramming64\\CBlock.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-29T01:25:47.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CBlock.h",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CBlock.h",
+              "RelativeDocumentMoniker": "GameProgramming64\\CBlock.h",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CBlock.h",
+              "RelativeToolTip": "GameProgramming64\\CBlock.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-29T01:24:53.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CEnemy2.cpp",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CEnemy2.cpp",
+              "RelativeDocumentMoniker": "GameProgramming64\\CEnemy2.cpp",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CEnemy2.cpp",
+              "RelativeToolTip": "GameProgramming64\\CEnemy2.cpp",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAHEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-05T01:06:42.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CCamera.cpp",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCamera.cpp",
+              "RelativeDocumentMoniker": "GameProgramming64\\CCamera.cpp",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCamera.cpp",
+              "RelativeToolTip": "GameProgramming64\\CCamera.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-09T02:42:51.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CSound.h",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CSound.h",
+              "RelativeDocumentMoniker": "GameProgramming64\\CSound.h",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CSound.h",
+              "RelativeToolTip": "GameProgramming64\\CSound.h",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAAE0AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-07-09T03:16:28.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CUi.h",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CUi.h",
+              "RelativeDocumentMoniker": "GameProgramming64\\CUi.h",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CUi.h",
+              "RelativeToolTip": "GameProgramming64\\CUi.h",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-12T01:01:47.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CGame.cpp",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CGame.cpp",
+              "RelativeDocumentMoniker": "GameProgramming64\\CGame.cpp",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CGame.cpp",
+              "RelativeToolTip": "GameProgramming64\\CGame.cpp",
+              "ViewState": "AQIAALEAAAAAAAAAAAAAAFMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-29T01:26:56.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CCharacterManager.cpp",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCharacterManager.cpp",
+              "RelativeDocumentMoniker": "GameProgramming64\\CCharacterManager.cpp",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCharacterManager.cpp",
+              "RelativeToolTip": "GameProgramming64\\CCharacterManager.cpp",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAYwE0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-02T03:22:08.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CCharacterManager.h",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCharacterManager.h",
+              "RelativeDocumentMoniker": "GameProgramming64\\CCharacterManager.h",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCharacterManager.h",
+              "RelativeToolTip": "GameProgramming64\\CCharacterManager.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-07-02T03:21:27.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CGame.h",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CGame.h",
+              "RelativeDocumentMoniker": "GameProgramming64\\CGame.h",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CGame.h",
+              "RelativeToolTip": "GameProgramming64\\CGame.h",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-29T01:26:22.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CPoint.h",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CPoint.h",
+              "RelativeDocumentMoniker": "GameProgramming64\\CPoint.h",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CPoint.h",
+              "RelativeToolTip": "GameProgramming64\\CPoint.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-06T05:37:56.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CPoint.cpp",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CPoint.cpp",
+              "RelativeDocumentMoniker": "GameProgramming64\\CPoint.cpp",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CPoint.cpp",
+              "RelativeToolTip": "GameProgramming64\\CPoint.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-06T05:37:41.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CCharacter.cpp",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCharacter.cpp",
+              "RelativeDocumentMoniker": "GameProgramming64\\CCharacter.cpp",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCharacter.cpp",
+              "RelativeToolTip": "GameProgramming64\\CCharacter.cpp",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAADIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-04T02:47:00.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CCharacter.h",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCharacter.h",
+              "RelativeDocumentMoniker": "GameProgramming64\\CCharacter.h",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CCharacter.h",
+              "RelativeToolTip": "GameProgramming64\\CCharacter.h",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAACsAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-04T02:46:57.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CRectangle.h",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CRectangle.h",
+              "RelativeDocumentMoniker": "GameProgramming64\\CRectangle.h",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CRectangle.h",
+              "RelativeToolTip": "GameProgramming64\\CRectangle.h",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAgAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-04T02:33:35.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CRectangle.cpp",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CRectangle.cpp",
+              "RelativeDocumentMoniker": "GameProgramming64\\CRectangle.cpp",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\CRectangle.cpp",
+              "RelativeToolTip": "GameProgramming64\\CRectangle.cpp",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAAQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-04T02:33:32.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Image.png",
+              "DocumentMoniker": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\res\\Image.png",
+              "RelativeDocumentMoniker": "GameProgramming64\\res\\Image.png",
+              "ToolTip": "C:\\Users\\JINTANI KOUTAROU\\Desktop\\1\u5E74\u524D\u671F\\2DLv1_00_x64vs2022\\2DLv1_00_x64vs2022\\GameProgramming64\\res\\Image.png",
+              "RelativeToolTip": "GameProgramming64\\res\\Image.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-05-29T01:30:23.518Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
