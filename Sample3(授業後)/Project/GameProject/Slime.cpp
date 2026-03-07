@@ -34,7 +34,7 @@ Slime::Slime(SlimeType type, const CVector3D& pos)
 
 	// ƒXƒ‰ƒCƒ€‚Ì‰æ‘œ‚ğ“Ç‚İ‚İ
 	std::string imagePath;
-	if (m_type == SlimeType::Blue) imagePath = "22013.png";
+	if (m_type == SlimeType::Blue) imagePath = "slime_a.png";
 	else if (m_type == SlimeType::Green) imagePath = "slime_b.png";
 	else if (m_type == SlimeType::Yellow) imagePath = "slime_c.png";
 	mp_image = CImage::CreateImage
