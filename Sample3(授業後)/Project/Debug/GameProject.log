@@ -1,20 +1,4 @@
-﻿  CharaBase.cpp
-  DebugPrint.cpp
-  EnemyBase.cpp
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\DebugPrint.cpp(49,17): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  EnemyManager.cpp
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\EnemyManager.cpp(93,25): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\EnemyManager.cpp(95,25): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
-  Field.cpp
-  main.cpp
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\main.cpp(93,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\main.cpp(93,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-  ObjectBase.cpp
-  Player.cpp
-  Slime.cpp
-  Task.cpp
-  TaskManager.cpp
-  コードを生成中...
+﻿  Slime.cpp
 GLFW.lib(init.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(init.obj)' で、または 'C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(window.obj)' で、または 'C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(input.obj)' で、または 'C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
@@ -27,9 +11,9 @@ GLFW.lib(vulkan.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(vulkan.obj)
 GLFW.lib(win32_window.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(win32_window.obj)' で、または 'C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_tls.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(win32_tls.obj)' で、または 'C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_joystick.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(win32_joystick.obj)' で、または 'C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
 GLFW.lib(wgl_context.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(wgl_context.obj)' で、または 'C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(egl_context.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(egl_context.obj)' で、または 'C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
 LINK : warning LNK4075: /INCREMENTAL は /LTCG の指定によって無視されます。
      ライブラリ C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\/../Game/GameProject.lib とオブジェクト C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\/../Game/GameProject.exp を作成中
 LINK : warning LNK4098: defaultlib 'LIBCMT' は他のライブラリの使用と競合しています。/NODEFAULTLIB:library を使用してください。
