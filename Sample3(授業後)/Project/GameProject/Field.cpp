@@ -6,7 +6,7 @@ Field::Field()
 	,mp_fieldImg(nullptr)
 {
 	// フィールド画像を読み込み
-	mp_fieldImg = CImage::CreateImage("22.png");
+	mp_fieldImg = CImage::CreateImage("22仮.png");
 }
 
 // デストラクタ
