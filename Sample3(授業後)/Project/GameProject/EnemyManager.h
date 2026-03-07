@@ -10,12 +10,12 @@ public:
 	static EnemyManager* Instance();
 
 	// 敵をリストに追加
-	void Add(EnemyBase* enemy);
+	void Add(EnemyBase* s_enemy);
 	// 敵をリストから取り除く
-	void Remove(EnemyBase* enemy);
+	void Remove(EnemyBase* s_enemy);
 
 	// 指定した位置から一番近い敵を取得
-	EnemyBase* GetNearEnemy(const CVector3D& pos, const CVector3D& range);
+	EnemyBase* GetNearEnemy(const CVector3D& s_pos, const CVector3D& s_range);
 
 	// 更新
 	void Update()override;
@@ -27,9 +27,9 @@ private:
 	~EnemyManager();
 
 	// インスタンス
-	static EnemyManager* ms_instance;
+	static EnemyManager* msInstance;
 	// 生成済みのエネミーのリスト
-	std::vector<EnemyBase*> m_enemies;
+	std::vector<EnemyBase*> mEnemies;
 
-	float m_elapsedTime;	// 経過時間計測用
+	float mElapsedTime;	// 経過時間計測用
 };

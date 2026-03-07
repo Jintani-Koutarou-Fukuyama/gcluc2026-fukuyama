@@ -15,5 +15,5 @@ public:
 	void PreRender()override;
 
 protected:
-	CImage* mp_fieldImg;	// フィールドの画像
+	CImage* mpFieldImg;	// フィールドの画像
 };

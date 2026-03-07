@@ -5,7 +5,7 @@ class Player : public CharaBase
 {
 public:
 	// コンストラクタ
-	Player(const CVector3D& pos);
+	Player(const CVector3D& s_pos);
 	// デストラクタ
 	~Player();
 
@@ -18,12 +18,12 @@ private:
 	// 状態
 	enum class EState
 	{
-		Idle,	// 待機状態
-		Jump,	// ジャンプ中
-		Attack,	// 攻撃中
-		Death,	// 死亡
+		EIDLE,	// 待機状態
+		JUMP,	// ジャンプ中
+		ATTACK,	// 攻撃中
+		DEATH,	// 死亡
 	};
-	void ChangeState(EState state);
+	void ChangeState(EState s_state);
 
 	// 移動処理の更新
 	bool UpdateMove();
@@ -40,19 +40,19 @@ private:
 	// アニメーションの種類
 	enum class EAnimType
 	{
-		Idle,	// 待機
-		Move,	// 移動
-		Death,	// 死亡
-		Attack,	// 攻撃
+		IDLE,	// 待機
+		MOVE,	// 移動
+		DEATH,	// 死亡
+		ATTACK,	// 攻撃
 
-		Num,
+		NUM,
 	};
 
-	EState m_state;
-	int m_stateStep;
+	EState mState;
+	int mStateStep;
 
 	static TexAnimData ANIM_DATA[];
-	CImage* mp_image;	// プレイヤーの画像
+	CImage* mpImage;	// プレイヤーの画像
 
-	float m_moveSpeedY;	// Y軸（高さ）の移動速度
+	float mMoveSpeedY;	// Y軸（高さ）の移動速度
 };

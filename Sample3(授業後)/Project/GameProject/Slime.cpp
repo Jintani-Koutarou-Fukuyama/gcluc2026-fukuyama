@@ -30,7 +30,7 @@ Slime::Slime(SlimeType type, const CVector3D& pos)
 	, mp_image(nullptr)
 	, m_type(type)
 {
-	m_hp = 1;
+	mHp = 1;
 
 	// ƒXƒ‰ƒCƒ€‚Ì‰æ‘œ‚ğ“Ç‚İ‚İ
 	std::string imagePath;

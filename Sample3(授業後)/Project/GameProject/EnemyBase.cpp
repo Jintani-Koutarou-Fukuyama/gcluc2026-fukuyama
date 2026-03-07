@@ -7,8 +7,8 @@ EnemyBase::EnemyBase()
 {
 }
 
-EnemyBase::EnemyBase(const CVector3D& pos)
-	: CharaBase(pos)
+EnemyBase::EnemyBase(const CVector3D& s_pos)
+	: CharaBase(s_pos)
 {
 	// 敵の管理クラスのリストに自身を追加
 	EnemyManager::Instance()->Add(this);

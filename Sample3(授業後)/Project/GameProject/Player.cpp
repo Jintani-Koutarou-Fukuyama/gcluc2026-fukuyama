@@ -11,8 +11,10 @@
 #define ATTACK_INDEX 2		// 攻撃が発生するアニメーションの番号
 #define ATTACK_RANGE CVector3D(300.0f, 10.0f, 50.0f)	// 攻撃範囲
 
+#define TEXTURE "player.png"
+
 // プレイヤーのアニメーションデータの前宣言
-TexAnimData Player::ANIM_DATA[(int)EAnimType::Num] =
+TexAnimData Player::ANIM_DATA[(int)EAnimType::NUM] =
 {
 	// 待機アニメーション
 	{
@@ -57,39 +59,39 @@ TexAnimData Player::ANIM_DATA[(int)EAnimType::Num] =
 
 
 // コンストラクタ
-Player::Player(const CVector3D& pos)
-	: CharaBase(pos)
-	, m_state(EState::Idle)
-	, m_stateStep(0)
-	, mp_image(nullptr)
+Player::Player(const CVector3D& s_pos)
+	: CharaBase(s_pos)
+	, mState(EState::EIDLE)
+	, mStateStep(0)
+	, mpImage(nullptr)
 {
-	m_hp = 100;
+	mHp = 100;
 
 	// プレイヤーの画像を読み込み
-	mp_image = CImage::CreateImage
+	mpImage = CImage::CreateImage
 	(
-		"player.png",	// 画像ファイルのパス
+		TEXTURE,	// 画像ファイルのパス
 		ANIM_DATA,		// アニメーションのデータ
 		CHIP_SIZE, CHIP_SIZE	// 1コマの幅と高さ
 	);
-	mp_image->ChangeAnimation((int)EAnimType::Idle);
-	mp_image->SetCenter(CENTER_POS);
+	mpImage->ChangeAnimation((int)EAnimType::IDLE);
+	mpImage->SetCenter(CENTER_POS);
 }
 
 // デストラクタ
 Player::~Player()
 {
 	// 画像データを削除
-	delete mp_image;
+	delete mpImage;
 }
 
 // 現在の状態を切り替え
-void Player::ChangeState(EState state)
+void Player::ChangeState(EState s_state)
 {
-	if (m_state == state) return;
+	if (mState == s_state) return;
 
-	m_state = state;
-	m_stateStep = 0;
+	mState = s_state;
+	mStateStep = 0;
 }
 
 // 移動処理の更新
@@ -100,30 +102,30 @@ bool Player::UpdateMove()
 	if (HOLD(CInput::eLeft))
 	{
 		// 左方向へ移動
-		m_pos.x -= MOVE_SPEED_X;
-		mp_image->SetFlipH(true);
+		mPos.x -= MOVE_SPEED_X;
+		mpImage->SetFlipH(true);
 		isMove = true;
 	}
 	// 右キーを押している間
 	else if (HOLD(CInput::eRight))
 	{
 		// 右方向へ移動
-		m_pos.x += MOVE_SPEED_X;
-		mp_image->SetFlipH(false);
+		mPos.x += MOVE_SPEED_X;
+		mpImage->SetFlipH(false);
 		isMove = true;
 	}
 	// 上キーを押している間
 	if (HOLD(CInput::eUp))
 	{
 		// 奥方向へ移動
-		m_pos.z -= MOVE_SPEED_Z;
+		mPos.z -= MOVE_SPEED_Z;
 		isMove = true;
 	}
 	// 下キーを押している間
 	else if (HOLD(CInput::eDown))
 	{
 		// 手前方向へ移動
-		m_pos.z += MOVE_SPEED_Z;
+		mPos.z += MOVE_SPEED_Z;
 		isMove = true;
 	}
 
@@ -137,18 +139,18 @@ void Player::StateIdle()
 	bool isMove = UpdateMove();
 
 	// 移動状態に合わせて、アニメーションを切り替え
-	EAnimType anim = isMove ? EAnimType::Move : EAnimType::Idle;
-	mp_image->ChangeAnimation((int)anim);
+	EAnimType anim = isMove ? EAnimType::MOVE : EAnimType::IDLE;
+	mpImage->ChangeAnimation((int)anim);
 
 	// [Z]キーでジャンプ状態へ移行
 	if (PUSH(CInput::eButton1))
 	{
-		ChangeState(EState::Jump);
+		ChangeState(EState::JUMP);
 	}
 	// [X]キーで攻撃状態へ移行
 	else if (PUSH(CInput::eButton2))
 	{
-		ChangeState(EState::Attack);
+		ChangeState(EState::ATTACK);
 	}
 }
 
@@ -156,62 +158,62 @@ void Player::StateIdle()
 void Player::StateJump()
 {
 	// ステップごとに処理を切り替え
-	switch(m_stateStep)
+	switch(mStateStep)
 	{
 		// ステップ0：ジャンプ開始
 		case 0:
 			// Y軸（高さ）の移動速度にジャンプを速度を設定し、
 			// 接地状態を解除する
-			m_moveSpeedY = JUMP_SPEED;
-			m_isGrounded = false;
-			m_stateStep++;
+			mMoveSpeedY = JUMP_SPEED;
+			mIsGrounded = false;
+			mStateStep++;
 			break;
 		// ステップ1：ジャンプ終了
 		case 1:
 			// 接地したら、待機状態へ移行
-			if (m_isGrounded)
+			if (mIsGrounded)
 			{
-				ChangeState(EState::Idle);
+				ChangeState(EState::EIDLE);
 			}
 			break;
 	}
 
 	// 移動処理
 	bool isMove = UpdateMove();
-	mp_image->ChangeAnimation((int)EAnimType::Idle);
+	mpImage->ChangeAnimation((int)EAnimType::IDLE);
 }
 
 // 攻撃中の更新処理
 void Player::StateAttack()
 {
 	// ステップごとに処理を切り替え
-	switch (m_stateStep)
+	switch (mStateStep)
 	{
 		// ステップ0：攻撃アニメーションに切り替え
 		case 0:
-			mp_image->ChangeAnimation((int)EAnimType::Attack, false);
-			m_stateStep++;
+			mpImage->ChangeAnimation((int)EAnimType::ATTACK, false);
+			mStateStep++;
 			break;
 			// ステップ1：攻撃判定
 		case 1:
 			// 攻撃アニメーションが攻撃タイミングまで進めば
-			if (mp_image->GetIndex() >= ATTACK_INDEX)
+			if (mpImage->GetIndex() >= ATTACK_INDEX)
 			{
 				// 一番近い敵にダメージを与える
-				EnemyBase* enemy = EnemyManager::Instance()->GetNearEnemy(m_pos, ATTACK_RANGE);
+				EnemyBase* enemy = EnemyManager::Instance()->GetNearEnemy(mPos, ATTACK_RANGE);
 				if (enemy != nullptr)
 				{
 					enemy->TakeDamage(100);
 				}
-				m_stateStep++;
+				mStateStep++;
 			}
 			break;
 			// ステップ2：アニメーション終了待ち
 		case 2:
 			// 攻撃アニメーションが終了したら、待機状態へ移行
-			if (mp_image->CheckAnimationEnd())
+			if (mpImage->CheckAnimationEnd())
 			{
-				ChangeState(EState::Idle);
+				ChangeState(EState::EIDLE);
 			}
 			break;
 	}
@@ -226,35 +228,35 @@ void Player::StateDeath()
 void Player::Update()
 {
 	// 現在の状態に合わせて、処理を切り替える
-	switch (m_state)
+	switch (mState)
 	{
-	case EState::Idle:		StateIdle();	break;
-	case EState::Jump:		StateJump();	break;
-	case EState::Attack:	StateAttack();	break;
-	case EState::Death:		StateDeath();	break;
+	case EState::EIDLE:		StateIdle();	break;
+	case EState::JUMP:		StateJump();	break;
+	case EState::ATTACK:	StateAttack();	break;
+	case EState::DEATH:		StateDeath();	break;
 	}
 
 	// Y軸（高さ）の移動を座標に反映
-	m_pos.y += m_moveSpeedY;
-	m_moveSpeedY += GRAVITY;	// Y軸の移動速度に重力を加算
+	mPos.y += mMoveSpeedY;
+	mMoveSpeedY += GRAVITY;	// Y軸の移動速度に重力を加算
 	// 地面より下にいくと
-	if (m_pos.y <= 0.0f)
+	if (mPos.y <= 0.0f)
 	{
 		// 地面の座標へ戻す
-		m_pos.y = 0.0f;
-		m_moveSpeedY = 0.0f;
-		m_isGrounded = true;
+		mPos.y = 0.0f;
+		mMoveSpeedY = 0.0f;
+		mIsGrounded = true;
 	}
 
 	// イメージに座標を設定して、アニメーションを更新
-	mp_image->SetPos(CalcScreenPos());
-	mp_image->UpdateAnimation();
+	mpImage->SetPos(CalcScreenPos());
+	mpImage->UpdateAnimation();
 
-	DebugPrint::Print("プレイヤー位置：%.2f, %.2f, %.2f", m_pos.x, m_pos.y, m_pos.z);
+	DebugPrint::Print("プレイヤー位置：%.2f, %.2f, %.2f", mPos.x, mPos.y, mPos.z);
 }
 
 // 描画処理
 void Player::Render()
 {
-	mp_image->Draw();
+	mpImage->Draw();
 }

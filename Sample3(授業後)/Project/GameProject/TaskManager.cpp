@@ -2,7 +2,7 @@
 #include"Task.h"
 #include"ObjectBase.h"
 //静的なメンバ変数の定義
-TaskManager* TaskManager::ms_instance = nullptr;
+TaskManager* TaskManager::msInstance = nullptr;
 
 
 //コンストラクタ
@@ -23,55 +23,55 @@ TaskManager*TaskManager::Instance()
 {
 	//インスタンスが生成されてなければ
 	//インスタンスを生成後に返す
-	if (ms_instance == nullptr)
+	if (msInstance == nullptr)
 	{
-		ms_instance = new TaskManager();
+		msInstance = new TaskManager();
 	}
-	return ms_instance;
+	return msInstance;
 }
 //TaskManagerのインスタンスを破棄
 void TaskManager::ClearInstance()
 {
 	//インスタンスが生成されていたら、削除する
-	if (ms_instance != nullptr)
+	if (msInstance != nullptr)
 	{
-		delete ms_instance;
-		ms_instance = nullptr;
+		delete msInstance;
+		msInstance = nullptr;
 	}
 }
 
-void TaskManager::Add(Task* task, bool sort)
+void TaskManager::Add(Task* s_task, bool s_sort)
 {
 	//並べ替え時の追加処理でなければ「
-	if (!sort)
+	if (!s_sort)
 	{
 		//追加されるタスクがオブジェクトであれば
 		//オブジェクトリストにも登場
-		if (task->m_prio == (int)ETaskPrio::Object)
+		if (s_task->mPrio == (int)ETaskPrio::EOBJECT)
 		{
-			m_objectList.push_back(task);
+			mObjectList.push_back(s_task);
 		}
 	}
 
 	//すべてのタスクを調べて、優先度順に追加する
-	auto itr = m_taskuList.begin();
-	while (itr != m_taskuList.end())
+	auto itr = mTaskuList.begin();
+	while (itr != mTaskuList.end())
 	{
 		Task* curr = *itr;
 		//追加するタスクの優先度の数値が低い場合は
 		//その位置にタスクを追加する
-		if (task->m_prio < curr->m_prio)
+		if (s_task->mPrio < curr->mPrio)
 		{
-			m_taskuList.insert(itr, task);
+			mTaskuList.insert(itr, s_task);
 			return;
 		}
 		//追加するタスクと現在調べているタスクの優先度が同じ場合は
 		//m_sortOrderの順番でリストに追加する
-		else if (task->m_prio == curr->m_prio)
+		else if (s_task->mPrio == curr->mPrio)
 		{
-			if (task->m_sortOrder<curr->m_sortOrder)
+			if (s_task->mSortOrder<curr->mSortOrder)
 			{
-				m_taskuList.insert(itr, task);
+				mTaskuList.insert(itr, s_task);
 				return;
 			}
 		}
@@ -80,39 +80,39 @@ void TaskManager::Add(Task* task, bool sort)
 	}
 	//リストの間に追加する場所が見つからなかったので
 	//リストの一番最後に追加
-	m_taskuList.push_back(task);
+	mTaskuList.push_back(s_task);
 }
 
-void TaskManager::Remove(Task* task, bool sort)
+void TaskManager::Remove(Task* s_task, bool s_sort)
 {
 	//並び替え時でなければ
-	if (!sort)
+	if (!s_sort)
 	{
 		//取り除くタスクがオブジェクトならば、オブジェクトからも取り除く
-		if (task->m_prio == (int)ETaskPrio::Object)
+		if (s_task->mPrio == (int)ETaskPrio::EOBJECT)
 		{
-			m_objectList.remove(task);
+			mObjectList.remove(s_task);
 		}
 	}
 
 	//指定されたタスクをタスクリストから取り除く
-	m_taskuList.remove(task);
+	mTaskuList.remove(s_task);
 }
 
 //すべてのタスクを削除
 void TaskManager::DeleteAll()
 {
 	//オブジェクトのリストも空にする
-	m_objectList.clear();
+	mObjectList.clear();
 
 	//タスクリストの先頭から順番に削除する
-	auto itr = m_taskuList.begin();
-	while (itr != m_taskuList.end())
+	auto itr = mTaskuList.begin();
+	while (itr != mTaskuList.end())
 	{
 		//削除するタスクのアドレスをいったん記憶し
 		//リストから取り除いた後に、タスクを削除する
 		Task* del = *itr;
-		itr = m_taskuList.erase(itr);
+		itr = mTaskuList.erase(itr);
 		delete del;
 	}
 }
@@ -120,15 +120,15 @@ void TaskManager::DeleteAll()
 void TaskManager::DeleteKilledTasks()
 {
 	//タスクリストの先頭から順番に削除する
-	auto itr = m_taskuList.begin();
-	while (itr != m_taskuList.end())
+	auto itr = mTaskuList.begin();
+	while (itr != mTaskuList.end())
 	{
 		//削除フラグが立っていたら、削除する
 		
 		Task* del = *itr;
-		if (del->m_isKill)
+		if (del->mIsKill)
 		{
-			itr = m_taskuList.erase(itr);
+			itr = mTaskuList.erase(itr);
 			delete del;
 		}
 		else
@@ -144,7 +144,7 @@ void TaskManager::Update()
 	//削除フラグがったっているタスクをすべて削除
 	DeleteKilledTasks();
 	//リストの先頭から順番に更新処理を呼び出す
-	for (Task* task : m_taskuList)
+	for (Task* task : mTaskuList)
 	{
 		//タスクが有効であれば、更新
 		if (task->IsEnable())
@@ -160,7 +160,7 @@ void TaskManager::Update()
 void TaskManager::Render()
 {
 
-	m_objectList.sort
+	mObjectList.sort
 	(
 		[](const Task* task0, const Task* task1)
 		{
@@ -171,7 +171,7 @@ void TaskManager::Render()
 	);
 	
 	int sortOrder = 0;
-	for (Task* obj : m_objectList)
+	for (Task* obj : mObjectList)
 	{
 		obj->SetSortOrder(sortOrder);
 		sortOrder++;
@@ -180,7 +180,7 @@ void TaskManager::Render()
 
 	
 	//通常の描画よりも先に呼び出す描画処理
-	for (Task* task : m_taskuList)
+	for (Task* task : mTaskuList)
 	{
 		//タスクが有効かつ表示状態ならば、描画
 		if (task->IsEnable()&&task->IsShow())
@@ -189,7 +189,7 @@ void TaskManager::Render()
 		}
 	}
 	//通常の描画よりも先に呼び出す描画処理
-	for (Task* task : m_taskuList)
+	for (Task* task : mTaskuList)
 	{
 		//タスクが有効かつ表示状態ならば、描画
 		if (task->IsEnable() && task->IsShow())

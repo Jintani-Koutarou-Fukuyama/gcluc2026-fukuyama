@@ -6,11 +6,11 @@ CharaBase::CharaBase()
 {
 }
 
-CharaBase::CharaBase(const CVector3D& pos)
-	: ObjectBase(pos)
-	, m_maxHp(100)
-	, m_hp(m_maxHp)
-	, m_isDeath(false)
+CharaBase::CharaBase(const CVector3D& s_pos)
+	: ObjectBase(s_pos)
+	, mMmaxHp(100)
+	, mHp(mMmaxHp)
+	, mIsDeath(false)
 {
 }
 
@@ -20,20 +20,20 @@ CharaBase::~CharaBase()
 }
 
 // ダメージを受ける
-void CharaBase::TakeDamage(int damage)
+void CharaBase::TakeDamage(int s_damage)
 {
-	if (m_hp == 0) return;	// HP0なのでスルー
+	if (mHp == 0) return;	// HP0なのでスルー
 
 	// 現在HPよりダメージ量が少ない
-	if (m_hp > damage)
+	if (mHp > s_damage)
 	{
-		m_hp -= damage;	// そのままHPを減らす
+		mHp -= s_damage;	// そのままHPを減らす
 	}
 	// ダメージ量の方が大きい
 	else
 	{
 		// HPを0にして、死亡処理を実行
-		m_hp = 0;
+		mHp = 0;
 		Death();
 	}
 }
@@ -41,5 +41,5 @@ void CharaBase::TakeDamage(int damage)
 // 死亡処理
 void CharaBase::Death()
 {
-	m_isDeath = true;
+	mIsDeath = true;
 }

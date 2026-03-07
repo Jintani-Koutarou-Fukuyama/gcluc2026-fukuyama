@@ -12,9 +12,9 @@ public:
 	static void ClearInstance();
 
 	//タスクリストにタスクを追加
-	void Add(Task* task, bool sort = false);
+	void Add(Task* s_task, bool s_sort = false);
 	//タスクリストからタスクを取り除く
-	void Remove(Task* task, bool sort = false);
+	void Remove(Task* s_task, bool s_sort = false);
 	//すべてのタスクを削除
 	void DeleteAll();
 	//削除フラグが立っているタスクを削除
@@ -34,10 +34,10 @@ private:
 	~TaskManager();
 
 	//TaskManagerのインスタンスのポインタ
-	static TaskManager* ms_instance;
+	static TaskManager* msInstance;
 
 	//生成済みのタスクのリスト
-	std::list<Task*> m_taskuList;
+	std::list<Task*> mTaskuList;
 	//生成済みのオブジェクトのリスト
-	std::list<Task*>m_objectList;
+	std::list<Task*>mObjectList;
 };

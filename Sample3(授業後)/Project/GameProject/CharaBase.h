@@ -7,17 +7,17 @@ class CharaBase : public ObjectBase
 public:
 	// コンストラクタ
 	CharaBase();
-	CharaBase(const CVector3D& pos);
+	CharaBase(const CVector3D& s_pos);
 	// デストラクタ
 	virtual ~CharaBase();
 
 	// ダメージを受ける
-	void TakeDamage(int damage);
+	void TakeDamage(int s_damage);
 	// 死亡処理
 	virtual void Death();
 
 protected:
-	int m_maxHp;		// 最大HP
-	int m_hp;			// 現在HP
-	bool m_isDeath;		// 死亡フラグ
+	int mMmaxHp;		// 最大HP
+	int mHp;			// 現在HP
+	bool mIsDeath;		// 死亡フラグ
 };

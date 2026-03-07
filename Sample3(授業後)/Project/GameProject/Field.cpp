@@ -1,22 +1,24 @@
 #include "Field.h"
 
+#define TEXTURE "22仮.png"
+
 // コンストラクタ
 Field::Field()
-	: Task((int)ETaskPrio::Field)
-	,mp_fieldImg(nullptr)
+	: Task((int)ETaskPrio::EFIELD)
+	,mpFieldImg(nullptr)
 {
 	// フィールド画像を読み込み
-	mp_fieldImg = CImage::CreateImage("22仮.png");
+	mpFieldImg = CImage::CreateImage(TEXTURE);
 }
 
 // デストラクタ
 Field::~Field()
 {
 	// フィールドの画像を削除
-	if (mp_fieldImg != nullptr)
+	if (mpFieldImg != nullptr)
 	{
-		delete mp_fieldImg;
-		mp_fieldImg = nullptr;
+		delete mpFieldImg;
+		mpFieldImg = nullptr;
 	}
 }
 
@@ -29,5 +31,5 @@ void Field::Update()
 void Field::PreRender()
 {
 	// フィールドを描画
-	mp_fieldImg->Draw();
+	mpFieldImg->Draw();
 }
