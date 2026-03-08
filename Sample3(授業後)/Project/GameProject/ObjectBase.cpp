@@ -1,6 +1,8 @@
 #include "ObjectBase.h"
 #define FIELD_CENTER_Z (SCREEN_HEIGHT * 0.75f)
-#define TEXTURE "shadow.png"
+#define FIELD_DEPTH_ANGLE 0.0f  //この値で奥行の角度を設定する
+#define FIELD_DEPTH_DIR CVector2D(sinf(DtoR(FIELD_DEPTH_ANGLE)), cosf(DtoR(FIELD_DEPTH_ANGLE)))
+#define TEX_SHADOW "shadow.png"
 
 // コンストラクタ
 ObjectBase::ObjectBase()
@@ -15,7 +17,7 @@ ObjectBase::ObjectBase(const CVector3D& s_pos)
 	, mpShadowImg(nullptr)
 {
 	// 影の画像を読み込み
-	mpShadowImg = CImage::CreateImage(TEXTURE);
+	mpShadowImg = CImage::CreateImage(TEX_SHADOW);
 	mpShadowImg->SetCenter(mpShadowImg->GetSize() * 0.5f);
 }
 
@@ -45,22 +47,25 @@ void ObjectBase::SetPos(const CVector3D& s_pos)
 // 3次元座標から2次元座標を計算
 CVector2D ObjectBase::CalcScreenPos(bool s_grounded) const
 {
-	CVector2D ret;
+	CVector2D ret = CVector2D::zero;
+
+	float posZ = FIELD_CENTER_Z + mPos.z;
+
 
 	// X座標はそのまま設定
 	ret.x = mPos.x;
 	// 通常座標を求める場合
 	if (!s_grounded)
 	{
-		// Y座標は、3次元座標のY（高さ）とZ（奥行）を合わせる
-		float posZ = FIELD_CENTER_Z + mPos.z;
-		ret.y = -mPos.y + posZ;
+		ret.y = -mPos.y;
+		ret += FIELD_DEPTH_DIR * posZ;
+
 	}
 	// 高さを考慮しない地面の位置を求める場合
 	else
 	{
-		// Y座標は、3次元座標のZ（奥行）のみ反映する
-		ret.y = FIELD_CENTER_Z + mPos.z;
+
+		ret += FIELD_DEPTH_DIR * posZ;
 	}
 
 	return ret;

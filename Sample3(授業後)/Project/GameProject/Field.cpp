@@ -1,6 +1,6 @@
 #include "Field.h"
 
-#define TEXTURE "22仮.png"
+#define TEX_SHADOW "22仮.png"
 
 // コンストラクタ
 Field::Field()
@@ -8,7 +8,7 @@ Field::Field()
 	,mpFieldImg(nullptr)
 {
 	// フィールド画像を読み込み
-	mpFieldImg = CImage::CreateImage(TEXTURE);
+	mpFieldImg = CImage::CreateImage(TEX_SHADOW);
 }
 
 // デストラクタ
