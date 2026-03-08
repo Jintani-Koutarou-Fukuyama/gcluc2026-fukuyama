@@ -1,6 +1,7 @@
 #include "Player.h"
 #include "EnemyManager.h"
 #include "EnemyBase.h"
+#include"Camera.h"
 
 #define CHIP_SIZE 384		// 1コマのサイズ
 #define CENTER_POS CVector2D(192.0f, 328.0f)	// 中心座標
@@ -253,6 +254,9 @@ void Player::Update()
 	mpImage->UpdateAnimation();
 
 	DebugPrint::Print("プレイヤー位置：%.2f, %.2f, %.2f", mPos.x, mPos.y, mPos.z);
+
+	Camera::SetTargetPos(mPos);
+
 }
 
 // 描画処理

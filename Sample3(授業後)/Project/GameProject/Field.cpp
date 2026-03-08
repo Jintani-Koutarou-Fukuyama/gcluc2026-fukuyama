@@ -1,6 +1,10 @@
 #include "Field.h"
+#include"Camera.h"
 
 #define TEX_SHADOW "22仮.png"
+
+int Field::sFieldWidth = 0;
+
 
 // コンストラクタ
 Field::Field()
@@ -9,6 +13,8 @@ Field::Field()
 {
 	// フィールド画像を読み込み
 	mpFieldImg = CImage::CreateImage(TEX_SHADOW);
+	sFieldWidth = mpFieldImg->GetSize().x;//フィールドのサイズを取得
+
 }
 
 // デストラクタ
@@ -30,6 +36,8 @@ void Field::Update()
 // 描画
 void Field::PreRender()
 {
+	mpFieldImg->SetPos(Camera::GetOffset());
+
 	// フィールドを描画
 	mpFieldImg->Draw();
 }

@@ -14,6 +14,10 @@ public:
 	// 描画
 	void PreRender()override;
 
+	static int sFieldWidth;//フィールドのサイズを取得
+
 protected:
 	CImage* mpFieldImg;	// フィールドの画像
+	
+
 };

@@ -2,6 +2,7 @@
 #include "Player.h"
 #include"EnemyManager.h"
 #include"TaskManager.h"
+#include"Camera.h"
 //--------------------------------------------
 //グローバル変数領域
 //--------------------------------------------
@@ -67,6 +68,9 @@ void Init()
 
 	//エネミー管理クラスを生成
 	EnemyManager::Instance();
+	//カメラを生成
+	Camera::Instance();
+
 }
 
 
