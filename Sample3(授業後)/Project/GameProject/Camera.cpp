@@ -44,9 +44,8 @@ void Camera::Update()
 
     // スクロール制限（左端）
     if (mCameraX < 0) mCameraX = 0;
-    // 右端はフィールド画像の幅に合わせて調整する必要あり
-    //↑画像の大きさに自動で合わせてくれるようになったはず
-    
+   
+    //↓画像の大きさに自動で合わせてくれるようになったと思う
     // スクロール制限（右端）
     float maxX = Field::sFieldWidth - SCREEN_WIDTH;
 
