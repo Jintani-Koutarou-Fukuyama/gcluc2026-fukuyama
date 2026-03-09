@@ -60,9 +60,12 @@ void Init()
 	//‰Šú‰»‚Ì–½—ß‚ğ‘‚­
 	//ƒQ[ƒ€‹N“®‚Éˆê“x‚¾‚¯ŒÄ‚Î‚ê‚é
 	//-----------------------------------------------------
+
+
 	
 	SceneManager::ChangeScene(SceneManager::GAME);
 	
+
 }
 
 
@@ -78,6 +81,7 @@ void Release()
 }
 
 static void ResizeCallback(GLFWwindow* window, int w, int h)
+
 {
 	glViewport(0, 0, w, h);
 
