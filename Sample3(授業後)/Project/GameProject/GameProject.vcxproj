@@ -13,18 +13,21 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CharaBase.cpp" />
+    <ClCompile Include="ClearScene.cpp" />
     <ClCompile Include="DebugPrint.cpp" />
     <ClCompile Include="EnemyBase.cpp" />
     <ClCompile Include="EnemyManager.cpp" />
     <ClCompile Include="Field.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ObjectBase.cpp" />
+    <ClCompile Include="OverScene.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Shutome.cpp" />
     <ClCompile Include="Slime.cpp" />
     <ClCompile Include="Task.cpp" />
     <ClCompile Include="TaskManager.cpp" />
+    <ClCompile Include="TitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseScene.h" />

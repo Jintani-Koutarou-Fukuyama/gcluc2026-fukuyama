@@ -6,6 +6,9 @@ class TitleScene :public BaseScene
 
 public:
 
+	TitleScene();//コンストラクタ
+	 ~TitleScene();//デストラクタ
+
 	void Update();//タイトルシーン（でタイトル画面のアニメーションとか）の更新関数
 	void Draw();//タイトルシーン（でタイトル画面を描画したりとか）の描画関数
 

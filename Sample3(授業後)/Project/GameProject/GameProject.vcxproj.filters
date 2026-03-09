@@ -15,6 +15,9 @@
     <ClCompile Include="Shutome.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="TitleScene.cpp" />
+    <ClCompile Include="ClearScene.cpp" />
+    <ClCompile Include="OverScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Global.h" />

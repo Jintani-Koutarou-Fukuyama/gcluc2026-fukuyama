@@ -3,6 +3,7 @@
 #include"EnemyManager.h"
 #include"TaskManager.h"
 #include"Camera.h"
+#include"SceneManager.h"
 //--------------------------------------------
 //グローバル変数領域
 //--------------------------------------------
@@ -59,6 +60,7 @@ void Init()
 	//ゲーム起動時に一度だけ呼ばれる
 	//-----------------------------------------------------
 
+	SceneManager::ChangeScene(SceneManager::TITLE);
 	// フィールドを生成
 	new Field();
 

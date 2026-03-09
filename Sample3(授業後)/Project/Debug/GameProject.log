@@ -1,11 +1,17 @@
-﻿  Camera.cpp
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Camera.cpp(50,16): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+﻿  ClearScene.cpp
+  main.cpp
+C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\main.cpp(99,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\main.cpp(99,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  OverScene.cpp
+  SceneManager.cpp
+  TitleScene.cpp
+  コードを生成中...
+  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
 GLFW.lib(init.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(init.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(window.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(input.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(context.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(context.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_init.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(win32_init.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
 GLFW.lib(win32_monitor.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(win32_monitor.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_time.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(win32_time.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(monitor.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(monitor.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。

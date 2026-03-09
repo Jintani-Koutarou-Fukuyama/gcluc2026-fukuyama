@@ -1,1 +1,38 @@
 #include"SceneManager.h"
+#include"TitleScene.h"
+#include"ClearScene.h"
+#include"OverScene.h"
+//たぶんゲームシーンも入れる
+BaseScene* SceneManager::mpScene = NULL;       //始めはシーンを空にしておこう
+
+void SceneManager::ChangeScene(ESCENE s_scene) {
+
+    if (mpScene != NULL) {
+        delete mpScene;
+    }
+
+    switch (s_scene) {          //引数のシーン
+    case ESCENE::TITLE:
+        mpScene = new TitleScene(); //タイトルシーンを現在のシーンにする
+        break;
+    //case ESCENE::GAME:
+     //   mpScene = new GameScene(); //ゲームシーンを現在のシーンにする
+     //   break;
+    case ESCENE::CLEAR:
+        mpScene = new ClearScene(); //リザルトシーンを現在のシーンにする
+        break;
+    case ESCENE::OVER:
+        mpScene = new OverScene(); //ゲームオーバーシーンを現在のシーンにする
+    default:
+        break;
+    }
+
+}
+
+void SceneManager::Update() {
+    mpScene->Update();         //現在のシーンの更新関数
+}
+
+void SceneManager::Render() {
+    mpScene->Draw();           //現在のシーンの描画関数
+}
