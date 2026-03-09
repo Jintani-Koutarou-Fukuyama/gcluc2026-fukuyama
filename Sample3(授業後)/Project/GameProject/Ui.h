@@ -17,5 +17,8 @@ public:
 protected:
 	CImage* mpHpImg;	// HP‚Ì‰æ‘œ
 	int mpHp;
+	int mTimer;
+	CImage* mpNumberImg; //”š‚Ì‰æ‘œ
+	void DrawNumber(int num, int x, int y);
 
 };
