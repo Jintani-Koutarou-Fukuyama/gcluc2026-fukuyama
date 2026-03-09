@@ -3,7 +3,7 @@
 #include"ClearScene.h"
 #include"OverScene.h"
 #include"GameScene.h"
-
+#include"StoryScene.h"
 
 BaseScene* SceneManager::mpScene = nullptr;
 SceneManager::SceneManager()
@@ -15,7 +15,8 @@ void SceneManager::ChangeScene(ESCENE s_scene)
 
 {
 
-    if (mpScene != NULL) {
+    if (mpScene != NULL)
+    {
         delete mpScene;
     }
 
@@ -31,6 +32,9 @@ void SceneManager::ChangeScene(ESCENE s_scene)
         break;
     case ESCENE::OVER:
         mpScene = new OverScene(); //ゲームオーバーシーンを現在のシーンにする
+        break;
+    case ESCENE::STORY:
+        mpScene = new StoryScene(); //リザルトシーンを現在のシーンにする
     default:
         break;
     }

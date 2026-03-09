@@ -26,6 +26,7 @@
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Shutome.cpp" />
     <ClCompile Include="Slime.cpp" />
+    <ClCompile Include="StoryScene.cpp" />
     <ClCompile Include="Task.cpp" />
     <ClCompile Include="TaskManager.cpp" />
     <ClCompile Include="TitleScene.cpp" />
@@ -48,6 +49,7 @@
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Shutome.h" />
     <ClInclude Include="Slime.h" />
+    <ClInclude Include="StoryScene.h" />
     <ClInclude Include="Task.h" />
     <ClInclude Include="TaskManager.h" />
     <ClInclude Include="TitleScene.h" />

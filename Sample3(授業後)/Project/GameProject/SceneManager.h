@@ -8,7 +8,8 @@ public:
         TITLE,
         GAME,
         CLEAR,
-        OVER
+        OVER,
+        STORY
     };
 
     SceneManager();

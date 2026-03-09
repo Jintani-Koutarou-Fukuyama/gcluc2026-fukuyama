@@ -10,7 +10,7 @@ ClearScene::ClearScene()
 //デストラクタ
 ClearScene::~ClearScene()
 {
-	printf("シーンが変わりました");
+	printf("シーンが変わりました\n");
 }
 
 

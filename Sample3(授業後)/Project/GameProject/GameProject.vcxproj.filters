@@ -20,6 +20,7 @@
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="ClearScene.cpp" />
     <ClCompile Include="TitleScene.cpp" />
+    <ClCompile Include="StoryScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Global.h" />
@@ -42,5 +43,6 @@
     <ClInclude Include="ClearScene.h" />
     <ClInclude Include="BaseScene.h" />
     <ClInclude Include="TitleScene.h" />
+    <ClInclude Include="StoryScene.h" />
   </ItemGroup>
 </Project>

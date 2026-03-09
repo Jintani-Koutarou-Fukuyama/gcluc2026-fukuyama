@@ -22,12 +22,12 @@ GameScene::GameScene()
 	EnemyManager::Instance();
 	//カメラを生成
 	Camera::Instance();
-	printf("ゲームになりました");
+	printf("ゲームになりました\n");
 }
 
 GameScene::~GameScene()
 {
-	printf("シーンが変わりました");
+	printf("シーンが変わりました\n");
 }
 
 

@@ -9,21 +9,22 @@ TitleScene::TitleScene()
 {
 	// タイトル画像を読み込み
 	mpTitleImg = CImage::CreateImage(TITLEIMG);
-	printf("タイトルになりました");
+	printf("タイトルになりました\n");
 	
 }
 
 //デストラクタ
 TitleScene::~TitleScene()
 {
-
+	MessageBoxA(0, "TitleScene Destructor", "Debug", 0);
+	;
 	// タイトルの画像を削除
 	if (mpTitleImg != nullptr)
 	{
 		delete mpTitleImg;
 		mpTitleImg = nullptr;
 	}
-	printf("シーンが変わりました");
+	printf("シーンが変わりました\n");
 }
 
 //更新処理
@@ -34,7 +35,7 @@ void TitleScene::Update()
 	{
 		//シーンをゲームに変更
 		SceneManager::ChangeScene(SceneManager::GAME);
-
+		
 	}
 }
 
