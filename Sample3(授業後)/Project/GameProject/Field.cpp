@@ -12,11 +12,11 @@ Field::Field()
 	,mpFieldImg(nullptr)
 {
 	// フィールド画像を読み込み
-<<<<<<<<< Temporary merge branch 1
+
 	mpFieldImg = CImage::CreateImage(TEX_FIELD);
-=========
+
 	
->>>>>>>>> Temporary merge branch 2
+
 	sFieldWidth = mpFieldImg->GetSize().x;//フィールドのサイズを取得
 
 }
