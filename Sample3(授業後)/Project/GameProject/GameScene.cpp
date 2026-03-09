@@ -6,7 +6,7 @@
 #include"Camera.h"
 #include"SceneManager.h"
 
-#define PLAYER_COLLISIONRANGE 30.0f  //Ç†Ç∆Ç≈è¡Ç∑Ç©Ç‡
+#define PLAYER_COLLISIONRANGE 40.0f  //Ç†Ç∆Ç≈è¡Ç∑Ç©Ç‡
 
 
 GameScene::GameScene()

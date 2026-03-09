@@ -17,6 +17,8 @@ public:
 	// 指定した位置から一番近い敵を取得
 	EnemyBase* GetNearEnemy(const CVector3D& s_pos, const CVector3D& s_range);
 
+	bool Collision(CVector3D& s_pos, const float& s_collisionRange);
+
 	// 更新
 	void Update()override;
 
