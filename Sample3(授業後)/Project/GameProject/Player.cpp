@@ -12,9 +12,9 @@
 #define ATTACK_INDEX 2		// 攻撃が発生するアニメーションの番号
 #define ATTACK_RANGE CVector3D(300.0f, 10.0f, 50.0f)	// 攻撃範囲
 
-#define TEX_SHADOW "player.png"
+#define TEX_PLAYER "player.png"
 
-#define COLLISION_RANGE 20.0f
+#define COLLISION_RANGE 20.0f  //プレイヤーの当たり判定の大きさ
 
 // プレイヤーのアニメーションデータの前宣言
 TexAnimData Player::ANIM_DATA[(int)EAnimType::NUM] =
@@ -73,7 +73,7 @@ Player::Player(const CVector3D& s_pos, const float& s_collisionRange)
 	// プレイヤーの画像を読み込み
 	mpImage = CImage::CreateImage
 	(
-		TEX_SHADOW,	// 画像ファイルのパス
+		TEX_PLAYER,	// 画像ファイルのパス
 		ANIM_DATA,		// アニメーションのデータ
 		CHIP_SIZE, CHIP_SIZE	// 1コマの幅と高さ
 	);
