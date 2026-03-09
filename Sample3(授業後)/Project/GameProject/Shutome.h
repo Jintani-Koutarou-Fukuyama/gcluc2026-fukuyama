@@ -9,7 +9,7 @@ public:
 	/// コンストラクタ
 	/// </summary>
 	/// <param name="s_pos">初期位置</param>
-	Shutome(const CVector3D& s_pos);
+	Shutome(const CVector3D& s_pos, const float& s_collisionRange);
 	~Shutome();
 
 	void Update() override;
@@ -24,6 +24,9 @@ private:
 
 		ENUM
 	};
-	static TexAnimData ANIM_DATE[];
+	
+	int mStateStep;
+
+	static TexAnimData ANIM_DATA[];
 	CImage* mpImage;    //画像
 };

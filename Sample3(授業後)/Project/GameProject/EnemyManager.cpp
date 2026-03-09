@@ -9,6 +9,8 @@
 #define SPAWN_RANGE_MIN_Z -200	// Z軸の敵生成範囲の最小値
 #define SPAWN_RANGE_MAX_Z 100	// Z軸の敵生成範囲の最大値
 
+#define SLIME_COLLISIONRANGE  20.0f
+
 EnemyManager* EnemyManager::msInstance = nullptr;
 
 // コンストラクタ
@@ -95,7 +97,7 @@ void EnemyManager::Update()
 			pos.z = Utility::Rand(SPAWN_RANGE_MIN_Z, SPAWN_RANGE_MAX_Z);
 
 			// スライムを生成
-			new Slime(type, pos);
+			new Slime(type, pos, SLIME_COLLISIONRANGE);
 
 			mElapsedTime -= SPAWN_INTERVAL;
 		}

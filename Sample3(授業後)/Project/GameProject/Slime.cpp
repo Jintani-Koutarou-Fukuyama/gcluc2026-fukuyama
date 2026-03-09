@@ -25,8 +25,8 @@ TexAnimData Slime::ANIM_DATA[(int)EAnimType::Num] =
 };
 
 // コンストラクタ
-Slime::Slime(SlimeType type, const CVector3D& pos)
-	: EnemyBase(pos)
+Slime::Slime(SlimeType type, const CVector3D& pos, const float& s_collisionRange)
+	: EnemyBase(pos, s_collisionRange)
 	, mp_image(nullptr)
 	, m_type(type)
 {

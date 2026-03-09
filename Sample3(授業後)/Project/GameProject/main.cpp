@@ -3,6 +3,7 @@
 #include"EnemyManager.h"
 #include"TaskManager.h"
 #include"Camera.h"
+#include"SceneManager.h"
 #include "Ui.h"
 //--------------------------------------------
 //グローバル変数領域
@@ -47,6 +48,7 @@ void Init()
 	CInput::SetButton(0, CInput::eMouseL, VK_LBUTTON);
 	CInput::SetButton(0, CInput::eMouseR, VK_RBUTTON);
 	CInput::SetButton(0, CInput::eMouseC, VK_MBUTTON);
+
 	//	CInput::SetMouseInside(true);
 	//	CInput::ShowCursor(false);
 	CInput::Update();
@@ -60,19 +62,12 @@ void Init()
 	//ゲーム起動時に一度だけ呼ばれる
 	//-----------------------------------------------------
 
-	// フィールドを生成
-	new Field();
 
-	// プレイヤーを生成
-	new Player(
-		CVector3D(SCREEN_WIDTH * 0.5f, 0.0f, 0.0f));
+	
 
-	//エネミー管理クラスを生成
-	EnemyManager::Instance();
-	//カメラを生成
-	Camera::Instance();
 	//UIを生成
 	new Ui();
+	SceneManager::ChangeScene(SceneManager::GAME);
 
 }
 
@@ -89,6 +84,7 @@ void Release()
 }
 
 static void ResizeCallback(GLFWwindow* window, int w, int h)
+
 {
 	glViewport(0, 0, w, h);
 

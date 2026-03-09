@@ -7,11 +7,11 @@
 
 // コンストラクタ
 ObjectBase::ObjectBase()
-	: ObjectBase(CVector3D::zero)
+	: ObjectBase(CVector3D::zero, 0.0f)
 {
 }
 
-ObjectBase::ObjectBase(const CVector3D& s_pos)
+ObjectBase::ObjectBase(const CVector3D& s_pos, const float& s_collisionRange)
 	: Task((int)ETaskPrio::EOBJECT)
 	, mPos(s_pos)
 	, mIsGrounded(true)

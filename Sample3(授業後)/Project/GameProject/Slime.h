@@ -19,7 +19,7 @@ public:
 	/// </summary>
 	/// <param name="type">スライムの種類</param>
 	/// <param name="pos">初期位置</param>
-	Slime(SlimeType type, const CVector3D& pos);
+	Slime(SlimeType type, const CVector3D& pos, const float& s_collisionRange);
 	// デストラクタ
 	~Slime();
 
