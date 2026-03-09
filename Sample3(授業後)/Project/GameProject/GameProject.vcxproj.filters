@@ -18,6 +18,7 @@
     <ClCompile Include="TitleScene.cpp" />
     <ClCompile Include="ClearScene.cpp" />
     <ClCompile Include="OverScene.cpp" />
+    <ClCompile Include="GameScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Global.h" />
@@ -38,5 +39,6 @@
     <ClInclude Include="OverScene.h" />
     <ClInclude Include="BaseScene.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="GameScene.h" />
   </ItemGroup>
 </Project>

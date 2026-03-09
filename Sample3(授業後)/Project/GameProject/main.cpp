@@ -48,6 +48,7 @@ void Init()
 	CInput::SetButton(0, CInput::eMouseL, VK_LBUTTON);
 	CInput::SetButton(0, CInput::eMouseR, VK_RBUTTON);
 	CInput::SetButton(0, CInput::eMouseC, VK_MBUTTON);
+
 	//	CInput::SetMouseInside(true);
 	//	CInput::ShowCursor(false);
 	CInput::Update();
@@ -60,20 +61,7 @@ void Init()
 	//初期化の命令を書く
 	//ゲーム起動時に一度だけ呼ばれる
 	//-----------------------------------------------------
-
-	SceneManager::ChangeScene(SceneManager::TITLE);
-	// フィールドを生成
-	new Field();
-
-	// プレイヤーを生成
-	new Player(
-		CVector3D(SCREEN_WIDTH * 0.5f, 0.0f, 0.0f), PLAYER_COLLISITION_RANGE);
-
-	//エネミー管理クラスを生成
-	EnemyManager::Instance();
-	//カメラを生成
-	Camera::Instance();
-
+	SceneManager::ChangeScene(SceneManager::GAME);
 }
 
 

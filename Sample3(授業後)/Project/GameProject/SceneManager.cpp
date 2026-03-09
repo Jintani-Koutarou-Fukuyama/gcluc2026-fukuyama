@@ -2,10 +2,18 @@
 #include"TitleScene.h"
 #include"ClearScene.h"
 #include"OverScene.h"
-//たぶんゲームシーンも入れる
-BaseScene* SceneManager::mpScene = NULL;       //始めはシーンを空にしておこう
+#include"GameScene.h"
 
-void SceneManager::ChangeScene(ESCENE s_scene) {
+
+BaseScene* SceneManager::mpScene = nullptr;
+SceneManager::SceneManager()
+{
+    
+} 
+
+void SceneManager::ChangeScene(ESCENE s_scene)
+
+{
 
     if (mpScene != NULL) {
         delete mpScene;
@@ -15,9 +23,9 @@ void SceneManager::ChangeScene(ESCENE s_scene) {
     case ESCENE::TITLE:
         mpScene = new TitleScene(); //タイトルシーンを現在のシーンにする
         break;
-    //case ESCENE::GAME:
-     //   mpScene = new GameScene(); //ゲームシーンを現在のシーンにする
-     //   break;
+    case ESCENE::GAME:
+        mpScene = new GameScene(); //ゲームシーンを現在のシーンにする
+       break;
     case ESCENE::CLEAR:
         mpScene = new ClearScene(); //リザルトシーンを現在のシーンにする
         break;
@@ -29,10 +37,11 @@ void SceneManager::ChangeScene(ESCENE s_scene) {
 
 }
 
+
 void SceneManager::Update() {
-    mpScene->Update();         //現在のシーンの更新関数
+    if (mpScene) mpScene->Update();//現在のシーンの更新関数
 }
 
 void SceneManager::Render() {
-    mpScene->Draw();           //現在のシーンの描画関数
+    if (mpScene) mpScene->Draw();//現在のシーンの描画関数
 }

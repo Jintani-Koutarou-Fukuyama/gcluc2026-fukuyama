@@ -18,6 +18,7 @@
     <ClCompile Include="EnemyBase.cpp" />
     <ClCompile Include="EnemyManager.cpp" />
     <ClCompile Include="Field.cpp" />
+    <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ObjectBase.cpp" />
     <ClCompile Include="OverScene.cpp" />
@@ -38,6 +39,7 @@
     <ClInclude Include="EnemyBase.h" />
     <ClInclude Include="EnemyManager.h" />
     <ClInclude Include="Field.h" />
+    <ClInclude Include="GameScene.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="ObjectBase.h" />
     <ClInclude Include="OverScene.h" />
