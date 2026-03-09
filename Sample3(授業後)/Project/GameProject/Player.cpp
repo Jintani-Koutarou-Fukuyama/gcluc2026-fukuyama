@@ -60,8 +60,8 @@ TexAnimData Player::ANIM_DATA[(int)EAnimType::NUM] =
 
 
 // コンストラクタ
-Player::Player(const CVector3D& s_pos)
-	: CharaBase(s_pos)
+Player::Player(const CVector3D& s_pos, const float& s_collisionRange)
+	: CharaBase(s_pos, s_collisionRange)
 	, mState(EState::EIDLE)
 	, mStateStep(0)
 	, mpImage(nullptr)

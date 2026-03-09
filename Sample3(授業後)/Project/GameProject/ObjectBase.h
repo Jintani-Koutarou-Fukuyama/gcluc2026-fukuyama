@@ -6,7 +6,7 @@ class ObjectBase:public Task
 public:
 	// コンストラクタ
 	ObjectBase();
-	ObjectBase(const CVector3D& s_pos);
+	ObjectBase(const CVector3D& s_pos, const float& s_collisionRange);
 	// デストラクタ
 	virtual ~ObjectBase();
 

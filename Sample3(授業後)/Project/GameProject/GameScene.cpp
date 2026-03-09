@@ -6,6 +6,8 @@
 #include"Camera.h"
 #include"SceneManager.h"
 
+#define PLAYER_COLLISIONRANGE 30.0f  //あとで消すかも
+
 
 GameScene::GameScene()
 {
@@ -14,7 +16,7 @@ GameScene::GameScene()
 
 	// プレイヤーを生成
 	new Player(
-		CVector3D(SCREEN_WIDTH * 0.5f, 0.0f, 0.0f));
+		CVector3D(SCREEN_WIDTH * 0.5f, 0.0f, 0.0f), PLAYER_COLLISIONRANGE);
 
 	//エネミー管理クラスを生成
 	EnemyManager::Instance();

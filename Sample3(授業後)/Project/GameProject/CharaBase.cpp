@@ -2,12 +2,12 @@
 
 // コンストラクタ
 CharaBase::CharaBase()
-	: CharaBase(CVector3D::zero)
+	: CharaBase(CVector3D::zero, 0.0f)
 {
 }
 
-CharaBase::CharaBase(const CVector3D& s_pos)
-	: ObjectBase(s_pos)
+CharaBase::CharaBase(const CVector3D& s_pos, const float& s_collisionRange)
+	: ObjectBase(s_pos, s_collisionRange)
 	, mMmaxHp(100)
 	, mHp(mMmaxHp)
 	, mIsDeath(false)
