@@ -15,6 +15,11 @@
     <ClCompile Include="Shutome.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Ui.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="OverScene.cpp" />
+    <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="ClearScene.cpp" />
+    <ClCompile Include="TitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Global.h" />
@@ -31,5 +36,11 @@
     <ClInclude Include="Shutome.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Ui.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="OverScene.h" />
+    <ClInclude Include="GameScene.h" />
+    <ClInclude Include="ClearScene.h" />
+    <ClInclude Include="BaseScene.h" />
+    <ClInclude Include="TitleScene.h" />
   </ItemGroup>
 </Project>
