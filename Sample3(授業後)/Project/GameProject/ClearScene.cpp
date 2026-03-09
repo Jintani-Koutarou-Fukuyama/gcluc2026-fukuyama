@@ -1,14 +1,16 @@
 #include"ClearScene.h"
-
+#include"SceneManager.h"
 
 //コンストラクタ
 ClearScene::ClearScene()
 {
+	printf("ゲームクリアになりました");
 }
 
 //デストラクタ
 ClearScene::~ClearScene()
 {
+	printf("シーンが変わりました");
 }
 
 

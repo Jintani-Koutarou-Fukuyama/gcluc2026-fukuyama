@@ -13,6 +13,7 @@ Field::Field()
 {
 	// フィールド画像を読み込み
 	mpFieldImg = CImage::CreateImage(TEX_SHADOW);
+
 	sFieldWidth = mpFieldImg->GetSize().x;//フィールドのサイズを取得
 
 }

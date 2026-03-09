@@ -1,14 +1,17 @@
 #include"OverScene.h"
+#include"SceneManager.h"
 
 
 //コンストラクタ
 OverScene::OverScene()
 {
+	printf("ゲームオーバーになりました");
 }
 
 //デストラクタ
 OverScene::~OverScene()
 {
+	printf("シーンが変わりました");
 }
 
 

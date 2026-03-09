@@ -1,12 +1,14 @@
 #pragma once
-
+#include"Task.h"
 
 class BaseScene
 {
 
-public:
+
 
 public:
+	
+		
 
 	virtual void Update() = 0;
 	virtual void Draw() = 0;
