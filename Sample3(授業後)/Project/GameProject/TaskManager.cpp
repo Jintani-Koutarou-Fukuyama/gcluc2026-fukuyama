@@ -185,6 +185,12 @@ void TaskManager::Render()
 		//タスクが有効かつ表示状態ならば、描画
 		if (task->IsEnable()&&task->IsShow())
 		{
+
+
+
+
+
+
 			task->PreRender();
 		}
 	}
