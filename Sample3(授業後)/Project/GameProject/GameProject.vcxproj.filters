@@ -14,6 +14,7 @@
     <ClCompile Include="TaskManager.cpp" />
     <ClCompile Include="Shutome.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Global.h" />
@@ -29,5 +30,10 @@
     <ClInclude Include="TaskManager.h" />
     <ClInclude Include="Shutome.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="TitleScene.h" />
+    <ClInclude Include="ClearScene.h" />
+    <ClInclude Include="OverScene.h" />
+    <ClInclude Include="BaseScene.h" />
+    <ClInclude Include="SceneManager.h" />
   </ItemGroup>
 </Project>
