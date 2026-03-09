@@ -1,6 +1,7 @@
 #include "Player.h"
 #include "EnemyManager.h"
 #include "EnemyBase.h"
+#include"Camera.h"
 
 #define CHIP_SIZE 384		// 1コマのサイズ
 #define CENTER_POS CVector2D(192.0f, 328.0f)	// 中心座標
@@ -252,12 +253,39 @@ void Player::Update()
 		mMoveSpeedY = 0.0f;
 		mIsGrounded = true;
 	}
+	//画面の左（画像の一番左）に行くと
+	if (mPos.x <= 0.0f)
+	{
+		//それ以上いけないようにする
+		mPos.x = 0.0f;
+	}
 
+	//画面の下（画像の一番下）に行くと
+	if (mPos.z >= 180.0f)
+	{
+		//それ以上いけないようにする
+		mPos.z = 180.0f;
+	}
+	//画面の上（画像の壁）に行くと
+	if (mPos.z <= -120.0f)
+	{
+		//それ以上いけないようにする
+		mPos.z = -120.0f;
+	}
+	//画面の左（画像の一番右）に行くと
+	if (mPos.x >= 2600.0f)
+	{
+		//それ以上いけないようにする
+		mPos.x = 2600.0f;//画像の大きさが変わるたびに変更
+	}
 	// イメージに座標を設定して、アニメーションを更新
 	mpImage->SetPos(CalcScreenPos());
 	mpImage->UpdateAnimation();
 
 	DebugPrint::Print("プレイヤー位置：%.2f, %.2f, %.2f", mPos.x, mPos.y, mPos.z);
+
+	Camera::SetTargetPos(mPos);
+
 }
 
 // 描画処理

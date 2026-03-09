@@ -2,7 +2,8 @@
 #include "Player.h"
 #include"EnemyManager.h"
 #include"TaskManager.h"
-
+#include"Camera.h"
+#include"SceneManager.h"
 #define PLAYER_COLLISITION_RANGE 30.0f  //プレイヤーの当たり判定の大きさ
 //--------------------------------------------
 //グローバル変数領域
@@ -60,6 +61,7 @@ void Init()
 	//ゲーム起動時に一度だけ呼ばれる
 	//-----------------------------------------------------
 
+	SceneManager::ChangeScene(SceneManager::TITLE);
 	// フィールドを生成
 	new Field();
 
@@ -69,6 +71,9 @@ void Init()
 
 	//エネミー管理クラスを生成
 	EnemyManager::Instance();
+	//カメラを生成
+	Camera::Instance();
+
 }
 
 

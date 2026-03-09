@@ -1,4 +1,5 @@
 #include "ObjectBase.h"
+#include"Camera.h"
 #define FIELD_CENTER_Z (SCREEN_HEIGHT * 0.75f)
 #define FIELD_DEPTH_ANGLE 0.0f  //Ç±ÇÃílÇ≈âúçsÇÃäpìxÇê›íËÇ∑ÇÈ
 #define FIELD_DEPTH_DIR CVector2D(sinf(DtoR(FIELD_DEPTH_ANGLE)), cosf(DtoR(FIELD_DEPTH_ANGLE)))
@@ -75,7 +76,8 @@ CVector2D ObjectBase::CalcScreenPos(bool s_grounded) const
 		ret += FIELD_DEPTH_DIR * posZ;
 	}
 
-	return ret;
+	return ret + Camera::GetOffset();
+
 }
 
 
