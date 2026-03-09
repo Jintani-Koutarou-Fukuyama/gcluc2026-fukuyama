@@ -101,31 +101,31 @@ void Player::ChangeState(EState s_state)
 bool Player::UpdateMove()
 {
 	bool isMove = false;
-	// 左キーを押している間
-	if (HOLD(CInput::eLeft))
+	// Aキーを押している間
+	if (HOLD(CInput::eButton6))
 	{
 		// 左方向へ移動
 		mPos.x -= MOVE_SPEED_X;
 		mpImage->SetFlipH(true);
 		isMove = true;
 	}
-	// 右キーを押している間
-	else if (HOLD(CInput::eRight))
+	// Dキーを押している間
+	else if (HOLD(CInput::eButton9))
 	{
 		// 右方向へ移動
 		mPos.x += MOVE_SPEED_X;
 		mpImage->SetFlipH(false);
 		isMove = true;
 	}
-	// 上キーを押している間
-	if (HOLD(CInput::eUp))
+	// Wキーを押している間
+	if (HOLD(CInput::eButton7))
 	{
 		// 奥方向へ移動
 		mPos.z -= MOVE_SPEED_Z;
 		isMove = true;
 	}
-	// 下キーを押している間
-	else if (HOLD(CInput::eDown))
+	// Sキーを押している間
+	else if (HOLD(CInput::eButton8))
 	{
 		// 手前方向へ移動
 		mPos.z += MOVE_SPEED_Z;
@@ -145,8 +145,8 @@ void Player::StateIdle()
 	EAnimType anim = isMove ? EAnimType::MOVE : EAnimType::IDLE;
 	mpImage->ChangeAnimation((int)anim);
 
-	// [Z]キーでジャンプ状態へ移行
-	if (PUSH(CInput::eButton1))
+	// [SPACE]キーでジャンプ状態へ移行
+	if (PUSH(CInput::eButton5))
 	{
 		ChangeState(EState::JUMP);
 	}
