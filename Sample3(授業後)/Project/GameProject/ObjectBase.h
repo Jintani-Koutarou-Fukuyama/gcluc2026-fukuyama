@@ -12,6 +12,8 @@ public:
 
 	// 座標を取得
 	const CVector3D& GetPos() const;
+	//当たり判定を取得
+	const float &GetCollisionRange() const;
 	// 座標を設定
 	void SetPos(const CVector3D& s_pos);
 
@@ -31,6 +33,7 @@ public:
 
 protected:
 	CVector3D mPos;		// オブジェクトの座標
+	float mCollisionRange;
 	bool mIsGrounded;		// 地面に接地してあるかどうか
 	CImage* mpShadowImg;	// 影の画像
 };

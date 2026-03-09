@@ -15,12 +15,16 @@ void MainLoop()
 	//ゲーム中の動きはここに書く
 	//ゲーム中はこの関数_を1秒間に60回呼び出している
 	//--------------------------------------------------------------
-
+	
 	//タスクリストに登録されたタスクをすべて更新
 	TaskManager::Instance()->Update();
+	// シーンの更新
+	SceneManager::Update();
 	//タスクリストに登録されたタスクをすべて描画
 	TaskManager::Instance()->Render();
-	
+	// シーンの描画
+	SceneManager::Render();
+
 
 	
 	// デバッグ文字の描画
@@ -67,7 +71,8 @@ void Init()
 
 	//UIを生成
 	new Ui();
-	SceneManager::ChangeScene(SceneManager::GAME);
+	//最初にタイトルを表示
+	SceneManager::ChangeScene(SceneManager::TITLE);
 
 }
 

@@ -14,6 +14,7 @@ ObjectBase::ObjectBase()
 ObjectBase::ObjectBase(const CVector3D& s_pos, const float& s_collisionRange)
 	: Task((int)ETaskPrio::EOBJECT)
 	, mPos(s_pos)
+	, mCollisionRange(s_collisionRange)
 	, mIsGrounded(true)
 	, mpShadowImg(nullptr)
 {
@@ -39,6 +40,10 @@ const CVector3D& ObjectBase::GetPos() const
 	return mPos;
 }
 
+const float& ObjectBase::GetCollisionRange() const
+{
+	return mCollisionRange;
+}
 // ç¿ïWÇê›íË
 void ObjectBase::SetPos(const CVector3D& s_pos)
 {

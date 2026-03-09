@@ -1,7 +1,7 @@
 #include"TitleScene.h"
 #include"SceneManager.h"
 
-#define TITLEIMG "仮タイトル画面.png"//←ここにタイトル画像をのせる
+#define TITLEIMG "仮タイトル.png"//←ここにタイトル画像をのせる
 
 // コンストラクタ
 TitleScene::TitleScene()
@@ -42,6 +42,7 @@ void TitleScene::Update()
 //描画処理
 void TitleScene::Draw()
 {
+	
 	mpTitleImg->Draw();
-	printf("描画");
+	
 }
