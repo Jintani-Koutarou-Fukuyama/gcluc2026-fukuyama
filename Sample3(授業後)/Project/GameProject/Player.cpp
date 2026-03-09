@@ -14,6 +14,7 @@
 
 #define TEX_SHADOW "player.png"
 
+Player* Player::mspInstance = nullptr;
 // プレイヤーのアニメーションデータの前宣言
 TexAnimData Player::ANIM_DATA[(int)EAnimType::NUM] =
 {
@@ -66,7 +67,7 @@ Player::Player(const CVector3D& s_pos)
 	, mStateStep(0)
 	, mpImage(nullptr)
 {
-	mHp = 100;
+	mHp = 5;
 
 	// プレイヤーの画像を読み込み
 	mpImage = CImage::CreateImage
@@ -77,6 +78,7 @@ Player::Player(const CVector3D& s_pos)
 	);
 	mpImage->ChangeAnimation((int)EAnimType::IDLE);
 	mpImage->SetCenter(CENTER_POS);
+	mspInstance = this;
 }
 
 // デストラクタ
@@ -288,3 +290,9 @@ void Player::Render()
 {
 	mpImage->Draw();
 }
+
+Player* Player::GetInstance()
+{
+	return mspInstance;
+}
+

@@ -14,7 +14,11 @@ public:
 	// •`‰æˆ—
 	void Render() override;
 
+	static Player* GetInstance();
+	
 private:
+
+	static Player* mspInstance;
 	// ó‘Ô
 	enum class EState
 	{

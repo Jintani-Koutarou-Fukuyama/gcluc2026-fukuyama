@@ -16,6 +16,9 @@ public:
 	// €–Sˆ—
 	virtual void Death();
 
+	int GetHp() const;
+	int GetMaxHp() const;
+
 protected:
 	int mMmaxHp;		// Å‘åHP
 	int mHp;			// Œ»İHP

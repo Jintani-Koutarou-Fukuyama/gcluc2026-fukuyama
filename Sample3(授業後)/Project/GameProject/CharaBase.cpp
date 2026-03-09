@@ -8,7 +8,7 @@ CharaBase::CharaBase()
 
 CharaBase::CharaBase(const CVector3D& s_pos)
 	: ObjectBase(s_pos)
-	, mMmaxHp(100)
+	, mMmaxHp(5)
 	, mHp(mMmaxHp)
 	, mIsDeath(false)
 {
@@ -42,4 +42,14 @@ void CharaBase::TakeDamage(int s_damage)
 void CharaBase::Death()
 {
 	mIsDeath = true;
+}
+
+int CharaBase::GetHp() const
+{
+	return mHp;
+}
+
+int CharaBase::GetMaxHp() const
+{
+	return mMmaxHp;
 }
