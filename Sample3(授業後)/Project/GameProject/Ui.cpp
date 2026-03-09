@@ -65,23 +65,23 @@ void Ui::PreRender()
 	int min = total / 60;
 	int sec = total % 60;
 
-	int tx = SCREEN_WIDTH - 300;
+	int tx = SCREEN_WIDTH - 550;
 	int ty = 20;
 
 	DrawNumber(min / 10, tx, ty);
-	DrawNumber(min % 10, tx + 60, ty);
+	DrawNumber(min % 10, tx + 110, ty);
 
-	DrawNumber(10, tx + 120, ty);
+	DrawNumber(10, tx + 220, ty);
 
-	DrawNumber(sec / 10, tx + 180, ty);
-	DrawNumber(sec % 10, tx + 240, ty);
+	DrawNumber(sec / 10, tx + 330, ty);
+	DrawNumber(sec % 10, tx + 440, ty);
 	
 }
 
 void Ui::DrawNumber(int num, int x, int y)
 {
-	int w = 350;
-	int h = 350;
+	int w = 64;
+	int h = 64;
 
 	int sx;
 	int sy;
@@ -101,12 +101,12 @@ void Ui::DrawNumber(int num, int x, int y)
 	// :
 	else
 	{
-		sx = 4 * w;
-		sy = h;
+		sx = 0;
+		sy = h * 2;
 	}
 
 	mpNumberImg->SetRect(sx, sy, sx + w, sy + h);
-	mpNumberImg->SetSize(40, 40);
+	mpNumberImg->SetSize(120, 120);
 	mpNumberImg->SetPos(CVector2D(x, y));
 	mpNumberImg->Draw();
 }
