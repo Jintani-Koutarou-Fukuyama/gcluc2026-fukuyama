@@ -13,6 +13,8 @@
 
 #define TEX_SHADOW "player.png"
 
+#define COLLISION_RANGE 20.0f
+
 // プレイヤーのアニメーションデータの前宣言
 TexAnimData Player::ANIM_DATA[(int)EAnimType::NUM] =
 {
@@ -59,8 +61,8 @@ TexAnimData Player::ANIM_DATA[(int)EAnimType::NUM] =
 
 
 // コンストラクタ
-Player::Player(const CVector3D& s_pos)
-	: CharaBase(s_pos)
+Player::Player(const CVector3D& s_pos, const float& s_collisionRange)
+	: CharaBase(s_pos, s_collisionRange)
 	, mState(EState::EIDLE)
 	, mStateStep(0)
 	, mpImage(nullptr)
@@ -235,6 +237,9 @@ void Player::Update()
 	case EState::ATTACK:	StateAttack();	break;
 	case EState::DEATH:		StateDeath();	break;
 	}
+
+	//敵との当たり判定をする　位置調整もしている
+	EnemyManager::Instance()->Collision(mPos, COLLISION_RANGE);
 
 	// Y軸（高さ）の移動を座標に反映
 	mPos.y += mMoveSpeedY;

@@ -1,3 +1,4 @@
+#include <math.h>
 #include "EnemyManager.h"
 #include "EnemyBase.h"
 #include "Slime.h"
@@ -8,6 +9,8 @@
 #define SPAWN_RANGE_MAX_X (SCREEN_WIDTH - 100)	// X軸の敵生成範囲の最大値
 #define SPAWN_RANGE_MIN_Z -200	// Z軸の敵生成範囲の最小値
 #define SPAWN_RANGE_MAX_Z 100	// Z軸の敵生成範囲の最大値
+
+#define SLIME_COLLISION_RANGE 30.0f //スライムの当たり判定の大きさ
 
 EnemyManager* EnemyManager::msInstance = nullptr;
 
@@ -76,6 +79,60 @@ EnemyBase* EnemyManager::GetNearEnemy(const CVector3D& s_pos, const CVector3D& s
 	return nearEnemy;
 }
 
+// 敵との当たり判定をする、当たっていれば位置調整をする
+bool EnemyManager::Collision(CVector3D& s_pos, const float& s_collisionRange)
+{
+
+	for (EnemyBase* enemy : mEnemies)
+	{
+		float x, z, dist, overlap, nx, nz;
+		CVector3D enemyPos = enemy->GetPos();
+
+		//当たり判定の距離の総和(半径の合計)
+		float collisionRange = s_collisionRange + enemy->GetCollisionRange();
+
+		//当たり判定の処理、敵との距離が総和より大きければ、スキップ
+		if (abs(s_pos.x - enemyPos.x) > collisionRange) continue;
+		if (abs(s_pos.y - enemyPos.y) > collisionRange) continue;
+		if (abs(s_pos.z - enemyPos.z) > collisionRange) continue;
+
+
+		//ここから位置調整の処理
+		//何をしているのかはあまりよくわからない。
+
+		//距離を測る
+		x = s_pos.x - enemyPos.x;
+		z = s_pos.z - enemyPos.z;
+		
+		//実際の距離√x^2y^2
+		dist = sqrtf(x * x + z * z);
+
+		//重なってたら押し戻す
+		overlap = collisionRange - dist;
+
+		//正規化して押し戻し方向を決める
+		nx = x / dist;
+		nz = z / dist;
+		
+		//それぞれを半分ずつ押し戻す
+		s_pos.x += nx * overlap * 0.5;
+		s_pos.z += nz * overlap * 0.5;
+		enemyPos.x -= nx * overlap * 0.5;
+		enemyPos.z -= nz * overlap * 0.5;
+
+
+		return true;
+
+
+
+		// TODO : PlayerにCollisionメソッドを作って、ここから呼び出す。そこで当たり判定位置調整する。Tagを使って識別するため。
+	}
+
+	
+
+}
+
+
 // 更新
 void EnemyManager::Update()
 {
@@ -95,7 +152,7 @@ void EnemyManager::Update()
 			pos.z = Utility::Rand(SPAWN_RANGE_MIN_Z, SPAWN_RANGE_MAX_Z);
 
 			// スライムを生成
-			new Slime(type, pos);
+			new Slime(type, pos, SLIME_COLLISION_RANGE);
 
 			mElapsedTime -= SPAWN_INTERVAL;
 		}

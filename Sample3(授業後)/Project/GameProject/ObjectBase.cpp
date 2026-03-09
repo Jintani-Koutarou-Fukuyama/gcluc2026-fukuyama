@@ -6,13 +6,14 @@
 
 // コンストラクタ
 ObjectBase::ObjectBase()
-	: ObjectBase(CVector3D::zero)
+	: ObjectBase(CVector3D::zero, 0.0f)
 {
 }
 
-ObjectBase::ObjectBase(const CVector3D& s_pos)
+ObjectBase::ObjectBase(const CVector3D& s_pos, const float& s_collisionRange)
 	: Task((int)ETaskPrio::EOBJECT)
 	, mPos(s_pos)
+	, mCollisionRange(s_collisionRange)
 	, mIsGrounded(true)
 	, mpShadowImg(nullptr)
 {
@@ -42,6 +43,12 @@ const CVector3D& ObjectBase::GetPos() const
 void ObjectBase::SetPos(const CVector3D& s_pos)
 {
 	mPos = s_pos;
+}
+
+//当たり判定の大きさを取得
+const float& ObjectBase::GetCollisionRange() const
+{
+	return mCollisionRange;
 }
 
 // 3次元座標から2次元座標を計算

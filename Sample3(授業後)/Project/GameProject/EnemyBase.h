@@ -7,7 +7,7 @@ class EnemyBase : public CharaBase
 public:
 	// コンストラクタ
 	EnemyBase();
-	EnemyBase(const CVector3D& s_pos);
+	EnemyBase(const CVector3D& s_pos, const float& p_colliisionRange);
 	// デストラクタ
 	virtual ~EnemyBase();
 

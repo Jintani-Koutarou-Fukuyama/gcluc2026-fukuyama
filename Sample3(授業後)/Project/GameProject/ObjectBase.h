@@ -6,7 +6,7 @@ class ObjectBase:public Task
 public:
 	// コンストラクタ
 	ObjectBase();
-	ObjectBase(const CVector3D& s_pos);
+	ObjectBase(const CVector3D& s_pos, const float& s_collisonRange);
 	// デストラクタ
 	virtual ~ObjectBase();
 
@@ -14,6 +14,8 @@ public:
 	const CVector3D& GetPos() const;
 	// 座標を設定
 	void SetPos(const CVector3D& s_pos);
+	// 当たり判定の大きさを取得
+	const float& GetCollisionRange() const;
 
 	/// <summary>
 	/// 3次元座標からスクリーン座標（2D）に変換
@@ -31,6 +33,7 @@ public:
 
 protected:
 	CVector3D mPos;		// オブジェクトの座標
+	float mCollisionRange; //オブジェクトの当たり判定
 	bool mIsGrounded;		// 地面に接地してあるかどうか
 	CImage* mpShadowImg;	// 影の画像
 };

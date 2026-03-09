@@ -5,7 +5,7 @@ class Player : public CharaBase
 {
 public:
 	// コンストラクタ
-	Player(const CVector3D& s_pos);
+	Player(const CVector3D& s_pos, const float& s_collisionRange);
 	// デストラクタ
 	~Player();
 

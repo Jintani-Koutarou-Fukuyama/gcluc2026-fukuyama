@@ -7,7 +7,7 @@ class CharaBase : public ObjectBase
 public:
 	// コンストラクタ
 	CharaBase();
-	CharaBase(const CVector3D& s_pos);
+	CharaBase(const CVector3D& s_pos, const float& s_collisionRange);
 	// デストラクタ
 	virtual ~CharaBase();
 

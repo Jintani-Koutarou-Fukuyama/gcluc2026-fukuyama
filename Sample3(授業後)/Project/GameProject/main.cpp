@@ -2,6 +2,8 @@
 #include "Player.h"
 #include"EnemyManager.h"
 #include"TaskManager.h"
+
+#define PLAYER_COLLISITION_RANGE 30.0f  //プレイヤーの当たり判定の大きさ
 //--------------------------------------------
 //グローバル変数領域
 //--------------------------------------------
@@ -63,7 +65,7 @@ void Init()
 
 	// プレイヤーを生成
 	new Player(
-		CVector3D(SCREEN_WIDTH * 0.5f, 0.0f, 0.0f));
+		CVector3D(SCREEN_WIDTH * 0.5f, 0.0f, 0.0f), PLAYER_COLLISITION_RANGE);
 
 	//エネミー管理クラスを生成
 	EnemyManager::Instance();
