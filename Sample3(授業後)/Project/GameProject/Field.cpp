@@ -15,7 +15,6 @@ Field::Field()
 
 	mpFieldImg = CImage::CreateImage(TEX_FIELD);
 
-	
 
 	sFieldWidth = mpFieldImg->GetSize().x;//フィールドのサイズを取得
 

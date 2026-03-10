@@ -31,9 +31,27 @@ public:
 	// 影描画
 	virtual void RenderShadow();
 
+	// Collision(衝突先のポインタ)
+	// 当たり判定の処理を書く
+	virtual bool Collision(ObjectBase* s_other);
+
+	// オブジェクトのタグ
+	enum class ETag
+	{
+		ENONE,
+		ESHUTOME,
+		EPLATE,
+	};
+
+
+	//タグを返す
+	const ETag GetTag() const;
+
 protected:
 	CVector3D mPos;		// オブジェクトの座標
-	float mCollisionRange;
+	float mCollisionRange; //当たり判定の大きさ
 	bool mIsGrounded;		// 地面に接地してあるかどうか
 	CImage* mpShadowImg;	// 影の画像
+
+	ETag mTag;  //当たり判定の時に使う識別タグ
 };

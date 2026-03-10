@@ -44,6 +44,11 @@ void CharaBase::Death()
 	mIsDeath = true;
 }
 
+bool CharaBase::Collision(ObjectBase* s_other)
+{
+	return false;
+}
+
 int CharaBase::GetHp() const
 {
 	return mHp;

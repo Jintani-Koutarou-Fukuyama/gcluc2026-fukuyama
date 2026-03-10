@@ -15,6 +15,8 @@ public:
 	void Update() override;
 	void Render() override;
 
+	bool Collision(ObjectBase* s_other) override;
+
 private:
 
 	//アニメーションの種類

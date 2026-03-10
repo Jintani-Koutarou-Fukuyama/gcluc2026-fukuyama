@@ -53,3 +53,9 @@ void Shutome::Update()
 void Shutome::Render()
 {
 }
+
+bool Shutome::Collision(ObjectBase* s_other)
+{
+	return false;
+}
+

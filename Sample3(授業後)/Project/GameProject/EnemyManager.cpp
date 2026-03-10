@@ -10,7 +10,7 @@
 #define SPAWN_RANGE_MIN_Z -200	// Z軸の敵生成範囲の最小値
 #define SPAWN_RANGE_MAX_Z 100	// Z軸の敵生成範囲の最大値
 
-#define SLIME_COLLISIONRANGE  30.0f // スライムの当たり判定
+#define SLIME_COLLISIONRANGE  20.0f // スライムの当たり判定
 
 EnemyManager* EnemyManager::msInstance = nullptr;
 
@@ -79,49 +79,12 @@ EnemyBase* EnemyManager::GetNearEnemy(const CVector3D& s_pos, const CVector3D& s
 	return nearEnemy;
 }
 
-bool EnemyManager::Collision(CVector3D& s_pos, const float& s_collision)
+void EnemyManager::Collision(ObjectBase* s_other)
 {
 	for (EnemyBase* enemy : mEnemies)
 	{
-		float dx, dz, dist, minDist, overlap, nx,nz;
-
-		
-		CVector3D enemyPos = enemy->GetPos();
-
-		//当たり判定の半径の合計を求める
-		minDist = s_collision + enemy->GetCollisionRange();
-
-		// 各軸の距離を求めて、範囲外であればスルー
-		if (abs(s_pos.x - enemyPos.x) > minDist) continue;
-		if (abs(s_pos.y - enemyPos.y) > minDist) continue;
-		if (abs(s_pos.z - enemyPos.z) > minDist) continue;
-		
-		// x,z軸の距離を求める
-		dx = s_pos.x - enemyPos.x;
-		dz = s_pos.z - enemyPos.z;
-
-		//√dx^2 dz^2 実際の距離を求める
-		dist = sqrtf(dx * dx + dz * dz);
-
-		//重なっていたら、押し戻す
-		overlap = minDist - dist;
-
-		//正規化して押し戻し方向を決める
-		nx = dx / dist;
-		nz = dz / dist;
-
-
-		//それぞれを半分ずつ押し戻す
-		s_pos.x += nx * overlap * 0.5;
-		s_pos.z += nz * overlap * 0.5;
-		enemyPos.x += nx * overlap * 0.5;
-		enemyPos.z += nz * overlap * 0.5;
-
+		s_other->Collision(enemy);
 	}
-
-	return true;
-
-	//TODO : ここからプレイヤーのCollision関数を呼び出し、Tagで処理を決める
 }
 
 // 更新
