@@ -274,13 +274,13 @@ void Player::Update()
 			//ÇªÇÍà»è„Ç¢ÇØÇ»Ç¢ÇÊÇ§Ç…Ç∑ÇÈ
 			mPos.z = -120.0f;
 		}
-		else if (mPos.x > 1130.0f)
+		else if (mPos.x > 1120.0f)
 		{
 			//ÇªÇÍà»è„Ç¢ÇØÇ»Ç¢ÇÊÇ§Ç…Ç∑ÇÈ
 			mPos.z = -120.0f;
 		}
 		
-		if (mPos.x >= 850.0f && mPos.x <= 1130.0f)
+		if (mPos.x >= 850.0f && mPos.x <= 1120.0f)
 		{
 			//ï«ÇÃâúÇ…ì¸Ç¡ÇΩéû
 			if (mPos.z <= -165.0f)
@@ -288,20 +288,20 @@ void Player::Update()
 				//ÇªÇÍà»è„Ç¢ÇØÇ»Ç¢ÇÊÇ§Ç…Ç∑ÇÈ
 				mPos.z = -165.0f;
 			}
-			if (mPos.x > 1120.0f)
+			if (mPos.x > 1110.0f)
 			{
 				//ÇªÇÍà»è„Ç¢ÇØÇ»Ç¢ÇÊÇ§Ç…Ç∑ÇÈ
-				mPos.x = 1120.0f;
+				mPos.x = 1110.0f;
 			}
 		}
 		if (mPos.z <= -130.0f)
 		{
 			//ï«Ç…ÇﬂÇËçûÇ‹Ç»Ç¢ÇÊÇ§Ç…Ç∑ÇÈ
-			if (mPos.x >= 850.0f && mPos.x <= 900.0f)
+			if (mPos.x >= 860.0f && mPos.x <= 900.0f)
 			{
 				mPos.z = -155.0f;
 			}
-			if (mPos.x >= 850.0f && mPos.x <= 875.0f)
+			if (mPos.x >= 860.0f && mPos.x <= 885.0f)
 			{
 				mPos.z = -145.0f;
 			}
