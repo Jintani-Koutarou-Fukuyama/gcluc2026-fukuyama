@@ -11,6 +11,10 @@
 #define PLAYER_COLLISIONRANGE 40.0f  //あとで消すかも プレイヤーの当たり判定
 #define COLLISION_RANGE 20.0f // 姑の当たり判定の大きさ
 
+#define STAGE_BGM1 "STAGEBGM1.wav"//ステージ道中のBGM１～２好きなの選んでください
+#define STAGE_BGM2 "STAGEBGM2.wav"//MP3からwavに変換しないといけない
+
+
 GameScene::GameScene()
 {
 	//ここにGameScene()が生成されたときに呼び出したい処理を入れる
@@ -30,12 +34,20 @@ GameScene::GameScene()
 	EnemyManager::Instance();
 	//カメラを生成
 	Camera::Instance();
+
+	// BGM読み込み
+	SOUND("stage_bgm")->Load(STAGE_BGM1, 1, false);
+	// 再生（trueはループ）
+	SOUND("stage_bgm")->Play(true);
 	printf("ゲームになりました\n");
 }
 
 GameScene::~GameScene()
 {
 	//ここにGameScene()が破棄されたときに呼び出したい処理を入れる
+	
+	// BGM停止
+	SOUND("stage_bgm")->Stop();
 	printf("シーンが変わりました\n");
 	//ここにスコアを保存してクリアシーンまたはオーバーシーンに持っていく処理を書く必要がある
 
