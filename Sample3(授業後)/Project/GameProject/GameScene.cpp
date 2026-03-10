@@ -11,6 +11,8 @@
 
 GameScene::GameScene()
 {
+	//ここにGameScene()が生成されたときに呼び出したい処理を入れる
+	
 	// フィールドを生成
 	new Field();
 
@@ -27,6 +29,7 @@ GameScene::GameScene()
 
 GameScene::~GameScene()
 {
+	//ここにGameScene()が破棄されたときに呼び出したい処理を入れる
 	printf("シーンが変わりました\n");
 }
 
@@ -34,11 +37,13 @@ GameScene::~GameScene()
 //更新処理
 void GameScene::Update()
 {
+	//ここにGameScene()があるときにずっと更新したい処理を入れる
 
 }
 
 //描画処理
 void GameScene::Draw()
 {
+	//ここにGameScene()があるときにずっと描画したいしたい処理を入れる
 	
 }

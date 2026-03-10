@@ -7,6 +7,8 @@
 TitleScene::TitleScene()
 	:mpTitleImg(nullptr)
 {
+	//ここにTitleScene()が生成されたときに呼び出したい処理を入れる
+
 	// タイトル画像を読み込み
 	mpTitleImg = CImage::CreateImage(TITLEIMG);
 	printf("タイトルになりました\n");
@@ -16,8 +18,8 @@ TitleScene::TitleScene()
 //デストラクタ
 TitleScene::~TitleScene()
 {
-	MessageBoxA(0, "TitleScene Destructor", "Debug", 0);
-	;
+	//ここにTitleScene()が破棄されたときに呼び出したい処理を入れる
+
 	// タイトルの画像を削除
 	if (mpTitleImg != nullptr)
 	{
@@ -30,6 +32,7 @@ TitleScene::~TitleScene()
 //更新処理
 void TitleScene::Update()
 {
+	//ここにTitleScene()があるときにずっと更新したい処理を入れる
 	// [Enter]キーでゲームへ移行
 	if (PUSH(CInput::eButton10))
 	{
@@ -43,7 +46,7 @@ void TitleScene::Update()
 //描画処理
 void TitleScene::Draw()
 {
-	
+	//ここにTitleScene()があるときにずっと描画したいしたい処理を入れる
 	mpTitleImg->Draw();
 	
 }

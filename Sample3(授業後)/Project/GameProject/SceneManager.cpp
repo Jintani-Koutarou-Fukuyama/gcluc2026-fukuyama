@@ -11,10 +11,10 @@ SceneManager::SceneManager()
     
 } 
 
-void SceneManager::ChangeScene(ESCENE s_scene)
+void SceneManager::ChangeScene(ESCENE s_scene)//シーンが変わるときに呼び出す
 
 {
-
+    //mpSceneにシーンが入っていたら破棄する
     if (mpScene != NULL)
     {
         delete mpScene;
@@ -34,7 +34,7 @@ void SceneManager::ChangeScene(ESCENE s_scene)
         mpScene = new OverScene(); //ゲームオーバーシーンを現在のシーンにする
         break;
     case ESCENE::STORY:
-        mpScene = new StoryScene(); //リザルトシーンを現在のシーンにする
+        mpScene = new StoryScene(); //ストーリーシーンを現在のシーンにする
     default:
         break;
     }
