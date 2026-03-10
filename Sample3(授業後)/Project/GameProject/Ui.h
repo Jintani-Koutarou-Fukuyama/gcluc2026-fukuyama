@@ -14,6 +14,8 @@ public:
 	// •`‰æ
 	void PreRender()override;
 
+	int UiKaisi = false;
+
 protected:
 	CImage* mpHpImg;	// HP‚Ì‰æ‘œ
 	int mpHp;

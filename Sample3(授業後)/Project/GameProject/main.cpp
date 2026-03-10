@@ -25,7 +25,7 @@ void MainLoop()
 	// シーンの描画
 	SceneManager::Render();
 
-
+	
 	
 	// デバッグ文字の描画
 	DebugPrint::Render();
@@ -73,11 +73,10 @@ void Init()
 
 	
 
-	//UIを生成
-	new Ui();
+	
 	//最初にタイトルを表示
 	SceneManager::ChangeScene(SceneManager::TITLE);
-
+	
 }
 
 
