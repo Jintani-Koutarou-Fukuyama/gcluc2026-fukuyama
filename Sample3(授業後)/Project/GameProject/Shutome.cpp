@@ -19,6 +19,7 @@ TexAnimData Shutome::ANIM_DATA[(int)EAnimeType::ENUM] =
 		    {0, 6}, {1, 6}, {2, 6},
 	        {3, 6}, {4, 6}, {5, 6},
         },
+		6
     }
 };
 
@@ -28,6 +29,8 @@ Shutome::Shutome(const CVector3D& s_pos, const float& s_collisionRange)
 	, mpImage(nullptr)
 {
 	mHp = 100; 
+	mTag = ObjectBase::ETag::ESHUTOME;
+
 
 	// 姑の画像を読み込み
 	mpImage = CImage::CreateImage
@@ -39,6 +42,7 @@ Shutome::Shutome(const CVector3D& s_pos, const float& s_collisionRange)
 	mpImage->ChangeAnimation((int)EAnimeType::EIDLE);
 	mpImage->SetCenter(CENTER_POS);
 
+	mpImage->SetFlipH(true);
 }
 
 Shutome::~Shutome()
@@ -46,12 +50,26 @@ Shutome::~Shutome()
 	delete mpImage;
 }
 
+void Shutome::StateIdle()
+{
+	mpImage->ChangeAnimation((int)EAnimeType::EIDLE);
+}
+
+
 void Shutome::Update()
 {
+
+	StateIdle();
+
+	// イメージに座標を設定して、アニメーションを更新
+	mpImage->SetPos(CalcScreenPos());
+	mpImage->UpdateAnimation();
+
 }
 
 void Shutome::Render()
 {
+	mpImage->Draw();
 }
 
 bool Shutome::Collision(ObjectBase* s_other)

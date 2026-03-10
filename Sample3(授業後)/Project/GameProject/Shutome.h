@@ -15,7 +15,10 @@ public:
 	void Update() override;
 	void Render() override;
 
+	void StateIdle();
+
 	bool Collision(ObjectBase* s_other) override;
+	
 
 private:
 
