@@ -5,9 +5,9 @@
 #include"TaskManager.h"
 #include"Camera.h"
 #include"SceneManager.h"
-
+#include"Shutome.h"
 #define PLAYER_COLLISIONRANGE 40.0f  //あとで消すかも プレイヤーの当たり判定
-
+#define COLLISION_RANGE 20.0f // 姑の当たり判定の大きさ
 
 GameScene::GameScene()
 {
@@ -17,8 +17,11 @@ GameScene::GameScene()
 	new Field();
 
 	// プレイヤーを生成
-	new Player(
-		CVector3D(SCREEN_WIDTH * 0.5f, 0.0f, 0.0f), PLAYER_COLLISIONRANGE);
+	new Player
+	(CVector3D(SCREEN_WIDTH * 0.5f, 0.0f, 0.0f), PLAYER_COLLISIONRANGE);
+	//姑を生成
+	new Shutome
+	(CVector3D(2600.0f, 0.0f, 0.0f), COLLISION_RANGE);
 
 	//エネミー管理クラスを生成
 	EnemyManager::Instance();

@@ -294,15 +294,19 @@ void Player::Update()
 				mPos.x = 1120.0f;
 			}
 		}
-		//•Ç‚É‚ß‚èž‚Ü‚È‚¢‚æ‚¤‚É‚·‚é
-		if (mPos.x >= 850.0f && mPos.x <= 900.0f)
+		if (mPos.z <= -130.0f)
 		{
-			mPos.z = -155.0f;
+			//•Ç‚É‚ß‚èž‚Ü‚È‚¢‚æ‚¤‚É‚·‚é
+			if (mPos.x >= 850.0f && mPos.x <= 900.0f)
+			{
+				mPos.z = -155.0f;
+			}
+			if (mPos.x >= 850.0f && mPos.x <= 875.0f)
+			{
+				mPos.z = -145.0f;
+			}
 		}
-		if (mPos.x >= 850.0f && mPos.x <= 875.0f)
-		{
-			mPos.z = -145.0f;
-		}
+		
 	}
 	
 
