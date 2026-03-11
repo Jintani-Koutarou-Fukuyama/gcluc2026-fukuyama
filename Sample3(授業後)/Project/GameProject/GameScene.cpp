@@ -58,6 +58,19 @@ GameScene::GameScene()
 		new Obstacle(CVector3D(x, 0, z));
 	}
 
+	// 姑が投げてくるものをランダム生成 テスト用（TODO:後で消す）
+	for (int i = 0; i < 10; i++)
+	{
+
+		//めちゃくちゃてきとう
+		float x = rand() % 2600;
+		float y = rand() % 200;
+		float z = rand() % 120;
+
+
+		new ThrowObject((ThrowObjectType)(i % 2), CVector3D(x, y, z), PLAYER_COLLISIONRANGE);
+	}
+
 }
 
 GameScene::~GameScene()

@@ -46,7 +46,7 @@ public:
 	};
 
 
-	//タグを返す
+	//識別タグを返す
 	const ETag GetTag() const;
 
 protected:
