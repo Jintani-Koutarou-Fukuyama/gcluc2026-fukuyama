@@ -6,6 +6,7 @@
 #include"Camera.h"
 #include"SceneManager.h"
 #include"Shutome.h"
+#include "ThrowObject.h"
 #include"Ui.h"
 #include"HealItem.h"
 
@@ -33,6 +34,8 @@ GameScene::GameScene()
 	(CVector3D(2600.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);
     //回復アイテムを生成
 	new HealItem(CVector3D(800, 0, 0));
+
+	new ThrowObject(ThrowObjectType::EPLATE,CVector3D(SCREEN_WIDTH, 400.0f, 50.0f), SHUTOME_COLLISION_RANGE);
 
 	//エネミー管理クラスを生成
 	EnemyManager::Instance();

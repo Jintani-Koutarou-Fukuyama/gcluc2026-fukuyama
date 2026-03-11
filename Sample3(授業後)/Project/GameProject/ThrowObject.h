@@ -21,23 +21,45 @@ public:
 	void Update() override;
 	void Render() override;
 
-	void StateIdle();
+
 
 	bool Collision(ObjectBase* s_other) override;
 
 
 private:
 
+
+	enum class EState
+	{
+		ETHROWING,   // 宙に浮かんでいる状態
+		EDEATH       // 消失する
+	};
+	void ChangeState(EState s_state);
+
+	void StateThrowing();
+	// 死亡時の更新処理
+	void StateDeath();
+
+	EState mState;
+
+	int mStateStep;
+
 	//アニメーションの種類
 	enum class EAnimeType
 	{
-		EIDLE,  //待機
+		ETHROWING,  // 宙に浮かんでいる状態
+
 
 		ENUM
 	};
 
-	int mStateStep;
+	
 
 	static TexAnimData ANIM_DATA[];
 	CImage* mpImage;    //画像
+
+	ThrowObjectType mType;
+
+	float mMoveSpeedX;
+
 };
