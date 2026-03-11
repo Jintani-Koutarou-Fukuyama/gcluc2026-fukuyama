@@ -52,8 +52,12 @@ ThrowObject::ThrowObject(ThrowObjectType s_type, const CVector3D& s_pos, const f
 
 ThrowObject::~ThrowObject()
 {
-	// ‰æ‘œƒf[ƒ^‚ğíœ
-	delete mpImage;
+	// ‰æ‘œ‚ğíœ
+	if (mpImage != nullptr)
+	{
+		delete mpImage;
+		mpImage = nullptr;
+	}
 }
 
 void ThrowObject::Update()

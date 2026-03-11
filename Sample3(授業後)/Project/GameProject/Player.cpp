@@ -106,8 +106,12 @@ Player::Player(const CVector3D& s_pos, const float& s_collisionRange)
 // デストラクタ
 Player::~Player()
 {
-	// 画像データを削除
-	delete mpImage;
+	// 画像を削除
+	if (mpImage != nullptr)
+	{
+		delete mpImage;
+		mpImage = nullptr;
+	}
 }
 
 // 現在の状態を切り替え

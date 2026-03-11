@@ -46,7 +46,12 @@ Shutome::Shutome(const CVector3D& s_pos, const float& s_collisionRange)
 
 Shutome::~Shutome()
 {
-	delete mpImage;
+	// ‰æ‘œ‚ğíœ
+	if (mpImage != nullptr)
+	{
+		delete mpImage;
+		mpImage = nullptr;
+	}
 }
 
 void Shutome::StateIdle()

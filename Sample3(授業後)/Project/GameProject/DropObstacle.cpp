@@ -59,11 +59,20 @@ DropObstacle::DropObstacle(DropObstacleType s_type, const CVector3D& s_pos, cons
 
 DropObstacle::~DropObstacle()
 {
+	// H‰æ‘œ‚ğíœ
+	if (mpImage != nullptr)
+	{
+		delete mpImage;
+		mpImage = nullptr;
+	}
 }
 
 void DropObstacle::ChangeState(EState s_state)
 {
+	if (mState == s_state) return;
 
+	mState = s_state;
+	mStateStep = 0;
 }
 
 //  ‚Â‚è‰º‚ª‚Á‚Ä‚¢‚éó‘Ô‚ÌXVˆ—
