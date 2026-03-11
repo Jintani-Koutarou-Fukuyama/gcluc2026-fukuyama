@@ -467,7 +467,7 @@ bool Player::Collision(ObjectBase* s_other)
 			ChangeState(EState::ESTUN);
 
 			// TODO:hp‚ğŒ¸‚ç‚·ˆ—
-
+			TakeDamage(1);
 			mInvincibilityCnt = INVINCIBILITY_TIME;
 			mIsStun = true;
 			break;
