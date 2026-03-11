@@ -9,6 +9,7 @@
 #include "ThrowObject.h"
 #include"Ui.h"
 #include"HealItem.h"
+#include"Obstacle.h"
 
 
 #define PLAYER_COLLISIONRANGE 30.0f  //あとで消すかも プレイヤーの当たり判定
@@ -47,6 +48,16 @@ GameScene::GameScene()
 	// 再生（trueはループ）
 	SOUND("stage_bgm")->Play(true);
 	printf("ゲームになりました\n");
+
+	// 障害物をランダム生成
+	for (int i = 0; i < 10; i++)
+	{
+		float x = rand() % 2000 + 800;
+		float z = rand() % 300 - 120;
+
+		new Obstacle(CVector3D(x, 0, z));
+	}
+
 }
 
 GameScene::~GameScene()

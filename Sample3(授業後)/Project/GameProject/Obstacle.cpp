@@ -8,15 +8,15 @@ Obstacle::Obstacle(const CVector3D& pos)
 
     if (type == 0)
     {
-        mpImage = CImage::CreateImage("kuma.png");
+        mpImage = CImage::CreateImage("ŒF.png");
     }
     else
     {
-        mpImage = CImage::CreateImage("tubo.png");
+        mpImage = CImage::CreateImage("šâ.png");
     }
 
     mpImage->SetSize(120, 120);
-    mpImage->SetCenter(mpImage->GetSize() * 0.5f);
+    mpImage->SetCenter(CVector2D(60, 100));
 }
 
 void Obstacle::Update()
@@ -33,9 +33,10 @@ void Obstacle::Update()
 
     float dist = sqrtf(dx * dx + dz * dz);
 
-    if (dist < 90.0f)
+    if (dist < 60.0f)
     {
         player->TakeDamage(1);
+        Kill(); // ˆê‰ñ‚¾‚¯ƒ_ƒ[ƒW
     }
 }
 
