@@ -14,5 +14,5 @@ public:
 private:
 
 	CImage* mpImage;
-
+	float mFloatTime;
 };

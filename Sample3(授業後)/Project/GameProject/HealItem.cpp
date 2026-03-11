@@ -10,11 +10,15 @@ HealItem::HealItem(const CVector3D& pos)
     //mpImage->SetSize(200, 200);
     mpImage->SetCenter(mpImage->GetSize() * 0.5f);
 
+    mFloatTime = 0.0f;
+
     mTag = ETag::EHEALITEM;
 }
 
 void HealItem::Update()
 {
+    mFloatTime += 0.1f;
+    mPos.y = sinf(mFloatTime) * 10;
     mpImage->SetPos(CalcScreenPos());
 
     Player* player = Player::GetInstance();
