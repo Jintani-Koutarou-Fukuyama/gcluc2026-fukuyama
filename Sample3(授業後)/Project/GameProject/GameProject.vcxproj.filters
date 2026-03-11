@@ -23,6 +23,7 @@
     <ClCompile Include="StoryScene.cpp" />
     <ClCompile Include="ThrowObject.cpp" />
     <ClCompile Include="HealItem.cpp" />
+    <ClCompile Include="Obstacle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Global.h" />
@@ -48,5 +49,6 @@
     <ClInclude Include="StoryScene.h" />
     <ClInclude Include="ThrowObject.h" />
     <ClInclude Include="HealItem.h" />
+    <ClInclude Include="Obstacle.h" />
   </ItemGroup>
 </Project>
