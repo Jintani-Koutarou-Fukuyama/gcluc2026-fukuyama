@@ -19,6 +19,7 @@
     <ClCompile Include="EnemyManager.cpp" />
     <ClCompile Include="Field.cpp" />
     <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="HealItem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ObjectBase.cpp" />
     <ClCompile Include="OverScene.cpp" />
@@ -44,6 +45,7 @@
     <ClInclude Include="Field.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="Global.h" />
+    <ClInclude Include="HealItem.h" />
     <ClInclude Include="ObjectBase.h" />
     <ClInclude Include="OverScene.h" />
     <ClInclude Include="Player.h" />

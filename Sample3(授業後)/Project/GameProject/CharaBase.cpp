@@ -58,3 +58,13 @@ int CharaBase::GetMaxHp() const
 {
 	return mMmaxHp;
 }
+
+void CharaBase::Heal(int value)
+{
+	mHp += value;
+
+	if (mHp > mMmaxHp)
+	{
+		mHp = mMmaxHp;
+	}
+}

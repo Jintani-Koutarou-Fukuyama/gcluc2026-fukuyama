@@ -7,6 +7,7 @@
 #include"SceneManager.h"
 #include"Shutome.h"
 #include"Ui.h"
+#include"HealItem.h"
 
 
 #define PLAYER_COLLISIONRANGE 30.0f  //あとで消すかも プレイヤーの当たり判定
@@ -30,6 +31,8 @@ GameScene::GameScene()
 	//姑を生成←ステージの一番後ろに配置
 	new Shutome
 	(CVector3D(2600.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);
+    //回復アイテムを生成
+	new HealItem(CVector3D(800, 0, 0));
 
 	//エネミー管理クラスを生成
 	EnemyManager::Instance();

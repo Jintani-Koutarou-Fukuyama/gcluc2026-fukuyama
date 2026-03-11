@@ -20,6 +20,7 @@ public:
 
 	int GetHp() const;
 	int GetMaxHp() const;
+	void Heal(int value);
 
 protected:
 	int mMmaxHp;		// ç≈ëÂHP

@@ -41,6 +41,7 @@ public:
 		ENONE,
 		ESHUTOME,
 		ETHROW,
+		EHEALITEM
 	};
 
 
