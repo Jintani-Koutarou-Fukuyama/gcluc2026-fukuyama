@@ -10,7 +10,7 @@
 #define SPAWN_RANGE_MIN_Z -200	// Z軸の敵生成範囲の最小値
 #define SPAWN_RANGE_MAX_Z 100	// Z軸の敵生成範囲の最大値
 
-#define SLIME_COLLISIONRANGE  20.0f // スライムの当たり判定
+#define SLIME_COLLISIONRANGE  30.0f // スライムの当たり判定
 
 EnemyManager* EnemyManager::msInstance = nullptr;
 

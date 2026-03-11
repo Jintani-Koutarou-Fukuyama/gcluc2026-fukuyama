@@ -36,7 +36,7 @@ GameScene::GameScene()
     //回復アイテムを生成
 	new HealItem(CVector3D(800, 0, 0));
 	//姑が投げてくる物を生成
-	new ThrowObject(ThrowObjectType::EPLATE,CVector3D(SCREEN_WIDTH, 90.0f, 0.0f), SHUTOME_COLLISION_RANGE);
+	new ThrowObject(ThrowObjectType::EPLATE_RED,CVector3D(SCREEN_WIDTH, 60.0f , 0.0f), SHUTOME_COLLISION_RANGE);
 
 	//エネミー管理クラスを生成
 	EnemyManager::Instance();

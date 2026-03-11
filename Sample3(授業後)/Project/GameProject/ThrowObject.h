@@ -4,8 +4,8 @@
 
 enum class ThrowObjectType
 {
-	EPLATE,
-
+	EPLATE_RED,
+	EPLATE_BLUE
 };
 
 class ThrowObject : public EnemyBase
@@ -35,9 +35,9 @@ private:
 		EDEATH       // 消失する
 	};
 	void ChangeState(EState s_state);
-
+	//  宙に浮かんでいる状態の更新処理
 	void StateThrowing();
-	// 死亡時の更新処理
+	// 消失時の更新処理
 	void StateDeath();
 
 	EState mState;
@@ -58,8 +58,9 @@ private:
 	static TexAnimData ANIM_DATA[];
 	CImage* mpImage;    //画像
 
-	ThrowObjectType mType;
+	ThrowObjectType mType; //姑が投げるオブジェクトのタイプ
 
-	float mMoveSpeedX;
+	float mMoveSpeedX; // ものが飛んでいく速度
+	float mRotateCnt;  // 回転する量を決める値
 
 };

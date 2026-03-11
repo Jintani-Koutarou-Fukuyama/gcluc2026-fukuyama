@@ -433,13 +433,14 @@ bool Player::Collision(ObjectBase* s_other)
 		// 各軸の距離を求めて、範囲外であればスルー
 		if (abs(mPos.x - otherPos.x) > minDist) return false;
 		if (abs(mPos.y - otherPos.y) > minDist) return false;
-		if (abs(mPos.z - otherPos.z) > minDist) return false;
+		if (abs(mPos.z - otherPos.z )  > minDist * 0.1f) return false; //z軸は判定小さく
 
 
 
 		// x,z軸の距離を求める
 		dx = mPos.x - otherPos.x;
-		dz = mPos.z - otherPos.z;
+		dz = mPos.z  - otherPos.z ;
+
 
 		//√dx^2 dz^2 実際の距離を求める
 		dist = sqrtf(dx * dx + dz * dz);
