@@ -172,11 +172,12 @@ void Player::StateIdle()
 	{
 		ChangeState(EState::EJUMP);
 	}
-	// [X]キーで攻撃状態へ移行
+	/* [X] キーで攻撃状態へ移行
 	else if (PUSH(CInput::eButton2))
 	{
 		ChangeState(EState::EATTACK);
 	}
+	*/
 
 	if (mInvincibilityCnt >= 1)
 	{

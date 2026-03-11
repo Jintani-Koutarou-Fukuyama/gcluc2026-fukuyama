@@ -3,7 +3,7 @@
 #define FIELD_CENTER_Z (SCREEN_HEIGHT * 0.75f)
 #define FIELD_DEPTH_ANGLE 0.0f  //この値で奥行の角度を設定する
 #define FIELD_DEPTH_DIR CVector2D(sinf(DtoR(FIELD_DEPTH_ANGLE)), cosf(DtoR(FIELD_DEPTH_ANGLE)))
-#define CENTER_POS CVector2D(mpShadowImg->GetSize().x *0.5f, 195.0f)
+#define CENTER_POS CVector2D(mpShadowImg->GetSize().x * 0.5f - 3.0f, 195.0f)
 #define TEX_SHADOW "影.png"
 
 // コンストラクタ

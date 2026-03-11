@@ -1,6 +1,6 @@
 #pragma once
 #include "EnemyBase.h"
-
+// ŒÆ‚ÌƒNƒ‰ƒX
 
 class Shutome : public EnemyBase
 {

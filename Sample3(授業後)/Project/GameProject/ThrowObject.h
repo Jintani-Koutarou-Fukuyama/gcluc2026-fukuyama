@@ -1,6 +1,6 @@
 #pragma once
 #include "EnemyBase.h"
-
+// ŒÆ‚ª“Š‚°‚Ä‚­‚é•¨‚ÌƒNƒ‰ƒX
 
 enum class ThrowObjectType
 {

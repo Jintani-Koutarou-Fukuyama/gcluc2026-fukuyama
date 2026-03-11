@@ -15,6 +15,7 @@
 TexAnimData ThrowObject::ANIM_DATA[(int)EAnimeType::ENUM] =
 {
 	{
+		// ’ˆ‚É•‚‚¢‚Ä‚¢‚éó‘Ô
 		new TexAnim[1]
 		{ 
 			{ 0, 6}
@@ -46,7 +47,6 @@ ThrowObject::ThrowObject(ThrowObjectType s_type, const CVector3D& s_pos, const f
 
 	mpImage->ChangeAnimation(0);
 	mpImage->SetCenter(CENTER_POS);
-	mpImage->SetAng(90);
 	mpImage->SetFlipH(true);
 }
 

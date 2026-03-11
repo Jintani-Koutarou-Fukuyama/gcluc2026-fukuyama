@@ -1,6 +1,7 @@
 #pragma once
 #pragma once
 #include "ObjectBase.h"
+//‰ñ•œ–ò‚ÌƒNƒ‰ƒX
 
 class HealItem : public ObjectBase
 {

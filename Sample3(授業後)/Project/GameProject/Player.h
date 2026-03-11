@@ -1,5 +1,6 @@
 #pragma once
 #include "CharaBase.h"
+// プレイヤー(嫁)のクラス
 
 class Player : public CharaBase
 {
