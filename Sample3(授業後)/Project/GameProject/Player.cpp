@@ -472,7 +472,7 @@ bool Player::Collision(ObjectBase* s_other)
 			SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
 
 			break;
-		case ETag::EPLATE:
+		case ETag::ETHROW:
 			ChangeState(EState::ESTUN);
 
 			// hp‚ğŒ¸‚ç‚·ˆ—

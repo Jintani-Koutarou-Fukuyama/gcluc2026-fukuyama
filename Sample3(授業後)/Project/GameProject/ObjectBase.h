@@ -40,7 +40,7 @@ public:
 	{
 		ENONE,
 		ESHUTOME,
-		EPLATE,
+		ETHROW,
 	};
 
 

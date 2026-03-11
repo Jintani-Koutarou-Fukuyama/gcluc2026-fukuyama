@@ -31,7 +31,7 @@ Slime::Slime(SlimeType type, const CVector3D& pos, const float& s_collisionRange
 	, m_type(type)
 {
 	mHp = 1;
-	mTag = ETag::EPLATE;
+	mTag = ETag::ETHROW;
 
 	// ƒXƒ‰ƒCƒ€‚Ì‰æ‘œ‚ğ“Ç‚İ‚İ
 	std::string imagePath;
