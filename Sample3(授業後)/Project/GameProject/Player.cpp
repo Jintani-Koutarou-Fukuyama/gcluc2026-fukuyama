@@ -443,7 +443,7 @@ bool Player::Collision(ObjectBase* s_other)
 		// 各軸の距離を求めて、範囲外であればスルー
 		if (abs(mPos.x - otherPos.x) > minDist) return false;
 		if (abs(mPos.y - otherPos.y) > minDist) return false;
-		if (abs(mPos.z - otherPos.z )  > minDist * 0.5f) return false; //z軸は判定小さく
+		if (abs(mPos.z - otherPos.z )  > minDist * 0.2f) return false; //z軸は判定小さく
 
 
 
@@ -465,9 +465,9 @@ bool Player::Collision(ObjectBase* s_other)
 
 		//それぞれを半分ずつ押し戻す
 		mPos.x += nx * overlap * 0.5;
-		mPos.z += nz * overlap * 0.5 * 0.5;
+		mPos.z += nz * overlap * 0.5 * 0.2; //z軸は押し戻し小さく(判定に合わせる)
 		otherPos.x += nx * overlap * 0.5;
-		otherPos.z += nz * overlap * 0.5 * 0.5;
+		otherPos.z += nz * overlap * 0.5 * 0.2; //z軸は押し戻し小さく(判定に合わせる)
 
 		//ノックバック距離を設定する
 		mKnockbackdistance.x = nx * KNOCKBACK_RAITO;
