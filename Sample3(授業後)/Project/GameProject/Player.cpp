@@ -244,6 +244,7 @@ void Player::StateAttack()
 // 死亡時の更新処理
 void Player::StateDeath()
 {
+	SceneManager::ChangeScene(SceneManager::ESCENE::OVER);
 }
 
 // スタン時の更新処理
@@ -290,6 +291,11 @@ void Player::StateStun()
 // 更新処理
 void Player::Update()
 {
+	//死亡状態でシーンチェンジ
+	if (mHp <= 0 && mState != EState::EDEATH)
+	{
+		ChangeState(EState::EDEATH);
+	}
 
 	if (mInvincibilityCnt <= 0)
 	{
