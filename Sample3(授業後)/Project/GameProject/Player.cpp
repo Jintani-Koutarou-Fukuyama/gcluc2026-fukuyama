@@ -1,6 +1,7 @@
 #include "Player.h"
 #include "EnemyManager.h"
 #include "EnemyBase.h"
+#include "SceneManager.h"
 #include"Camera.h"
 
 #define CHIP_SIZE 384		// 1コマのサイズ
@@ -462,12 +463,15 @@ bool Player::Collision(ObjectBase* s_other)
 		case ETag::ENONE:
 			break;
 		case ETag::ESHUTOME:
+			SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
+
 			break;
 		case ETag::EPLATE:
 			ChangeState(EState::ESTUN);
 
-			// TODO:hpを減らす処理
+			// hpを減らす処理
 			TakeDamage(1);
+
 			mInvincibilityCnt = INVINCIBILITY_TIME;
 			mIsStun = true;
 			break;
