@@ -17,6 +17,7 @@ ObjectBase::ObjectBase(const CVector3D& s_pos, const float& s_collisionRange)
 	, mCollisionRange(s_collisionRange)
 	, mIsGrounded(true)
 	, mpShadowImg(nullptr)
+	, mTag(ETag::ENONE)
 {
 	// ‰e‚Ì‰æ‘œ‚ð“Ç‚Ýž‚Ý
 	mpShadowImg = CImage::CreateImage(TEX_SHADOW);
@@ -94,3 +95,16 @@ void ObjectBase::RenderShadow()
 	mpShadowImg->SetPos(CalcScreenPos(true));
 	mpShadowImg->Draw();
 }
+
+
+bool ObjectBase::Collision(ObjectBase* s_other)
+{
+	return false;
+}
+
+// “G‚Ìƒ^ƒO‚ð•Ô‚·
+const ObjectBase::ETag ObjectBase::GetTag() const
+{
+	return mTag;
+}
+

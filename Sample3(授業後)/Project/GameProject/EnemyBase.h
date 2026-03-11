@@ -11,5 +11,7 @@ public:
 	// デストラクタ
 	virtual ~EnemyBase();
 
-private:
+	bool Collision(ObjectBase* s_other) override;
+
+	
 };

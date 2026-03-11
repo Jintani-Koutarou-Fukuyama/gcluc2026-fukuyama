@@ -26,6 +26,8 @@ public:
 	// €–Sˆ—
 	virtual void Death() override;
 
+	bool Collision(ObjectBase* s_other) override;
+
 	// XVˆ—
 	void Update() override;
 	// •`‰æˆ—

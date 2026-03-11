@@ -16,6 +16,8 @@ public:
 	// €–Sˆ—
 	virtual void Death();
 
+	bool Collision(ObjectBase* s_other) override;
+
 	int GetHp() const;
 	int GetMaxHp() const;
 

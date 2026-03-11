@@ -31,6 +31,7 @@ Slime::Slime(SlimeType type, const CVector3D& pos, const float& s_collisionRange
 	, m_type(type)
 {
 	mHp = 1;
+	mTag = ETag::EPLATE;
 
 	// ƒXƒ‰ƒCƒ€‚Ì‰æ‘œ‚ğ“Ç‚İ‚İ
 	std::string imagePath;
@@ -60,6 +61,11 @@ void Slime::Death()
 {
 	// €–Só‘Ô‚ÖˆÚs
 	ChangeState(EState::Death);
+}
+
+bool Slime::Collision(ObjectBase* s_other)
+{
+	return false;
 }
 
 // Œ»İ‚Ìó‘Ô‚ğØ‚è‘Ö‚¦

@@ -1,5 +1,6 @@
 #pragma once
-#include"Task.h"
+#include "Task.h"
+#include "ObjectBase.h"
 class EnemyBase;
 
 // 敵管理クラス
@@ -17,7 +18,7 @@ public:
 	// 指定した位置から一番近い敵を取得
 	EnemyBase* GetNearEnemy(const CVector3D& s_pos, const CVector3D& s_range);
 
-	bool Collision(CVector3D& s_pos, const float& s_collisionRange);
+	void Collision(ObjectBase* s_other);
 
 	// 更新
 	void Update()override;
