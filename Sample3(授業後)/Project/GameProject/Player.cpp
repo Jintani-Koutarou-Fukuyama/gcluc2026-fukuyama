@@ -4,18 +4,18 @@
 #include "SceneManager.h"
 #include"Camera.h"
 
-#define CHIP_SIZE 384		// 1コマのサイズ
-#define CENTER_POS CVector2D(192.0f, 328.0f)	// 中心座標
+#define CHIP_SIZE 700.0f		// 1コマのサイズ
+#define CENTER_POS CVector2D(170.0f, 322.0f)	// 中心座標
 #define MOVE_SPEED_X 5.0f	// 横方向の移動速度
 #define MOVE_SPEED_Z 3.0f	// 奥方向の移動速度
-#define JUMP_SPEED 15.0f	// ジャンプ速度
+#define JUMP_SPEED 20.0f	// ジャンプ速度
 #define GRAVITY -1.0f		// 重力
 #define ATTACK_INDEX 2		// 攻撃が発生するアニメーションの番号
 #define ATTACK_RANGE CVector3D(300.0f, 10.0f, 50.0f)	// 攻撃範囲
 #define KNOCKBACK_RAITO 1.2f  //ノックバック距離、ノックバックの距離を決める
 #define INVINCIBILITY_TIME 10 //無敵時間
 
-#define TEX_PLAYER "player.png"
+#define TEX_PLAYER "嫁 .png"
 
 Player* Player::mspInstance = nullptr;
 // プレイヤーのアニメーションデータの前宣言
@@ -23,21 +23,19 @@ TexAnimData Player::ANIM_DATA[(int)EAnimType::ENUM] =
 {
 	// 待機アニメーション
 	{
-		new TexAnim[6]
+		new TexAnim[1]
 		{
-			{0, 6}, {1, 6}, {2, 6},
-			{3, 6}, {4, 6}, {5, 6},
+			{0, 6},
 		},
-		6
+		1
 	},
 	// 移動アニメーション
 	{
-		new TexAnim[6]
+		new TexAnim[2]
 		{
-			{6, 6}, {7, 6}, {8, 6},
-			{9, 6}, {10, 6}, {11, 6},
+			{1, 15}, {2, 15},
 		},
-		6
+		2
 	},
 	// 死亡アニメーション
 	{
@@ -47,7 +45,7 @@ TexAnimData Player::ANIM_DATA[(int)EAnimType::ENUM] =
 			{13, 12},
 			{14, 12},
 		},
-		3
+		
 	},
 	// 攻撃アニメーション
 	{
@@ -64,7 +62,15 @@ TexAnimData Player::ANIM_DATA[(int)EAnimType::ENUM] =
 	{
 		new TexAnim[1]
 		{
-			{12, 20},   //次の画像までの待機フレーム(2番目の値)でスタンの長さが変わる
+			{3, 20},   //次の画像までの待機フレーム(2番目の値)でスタンの長さが変わる
+		},
+		1
+	},
+	// ジャンプアニメーション
+	{
+		new TexAnim[1]
+		{
+			{4, 20},   
 		},
 		1
 	}
@@ -92,6 +98,8 @@ Player::Player(const CVector3D& s_pos, const float& s_collisionRange)
 	);
 	mpImage->ChangeAnimation((int)EAnimType::EIDLE);
 	mpImage->SetCenter(CENTER_POS);
+
+	mpImage->SetSize(CVector2D(350.0f, 340.0f));
 	mspInstance = this;
 }
 
@@ -184,6 +192,7 @@ void Player::StateJump()
 	{
 		// ステップ0：ジャンプ開始
 		case 0:
+
 			// Y軸（高さ）の移動速度にジャンプを速度を設定し、
 			// 接地状態を解除する
 			mMoveSpeedY = JUMP_SPEED;
@@ -196,13 +205,14 @@ void Player::StateJump()
 			if (mIsGrounded)
 			{
 				ChangeState(EState::EIDLE);
+				mpImage->ChangeAnimation((int)EAnimType::EJUNP);
 			}
 			break;
 	}
 
 	// 移動処理
 	bool isMove = UpdateMove();
-	mpImage->ChangeAnimation((int)EAnimType::EIDLE);
+	mpImage->ChangeAnimation((int)EAnimType::EJUNP);
 }
 
 // 攻撃中の更新処理
@@ -433,7 +443,7 @@ bool Player::Collision(ObjectBase* s_other)
 		// 各軸の距離を求めて、範囲外であればスルー
 		if (abs(mPos.x - otherPos.x) > minDist) return false;
 		if (abs(mPos.y - otherPos.y) > minDist) return false;
-		if (abs(mPos.z - otherPos.z )  > minDist * 0.1f) return false; //z軸は判定小さく
+		if (abs(mPos.z - otherPos.z )  > minDist * 0.5f) return false; //z軸は判定小さく
 
 
 
@@ -455,9 +465,9 @@ bool Player::Collision(ObjectBase* s_other)
 
 		//それぞれを半分ずつ押し戻す
 		mPos.x += nx * overlap * 0.5;
-		mPos.z += nz * overlap * 0.5;
+		mPos.z += nz * overlap * 0.5 * 0.5;
 		otherPos.x += nx * overlap * 0.5;
-		otherPos.z += nz * overlap * 0.5;
+		otherPos.z += nz * overlap * 0.5 * 0.5;
 
 		//ノックバック距離を設定する
 		mKnockbackdistance.x = nx * KNOCKBACK_RAITO;

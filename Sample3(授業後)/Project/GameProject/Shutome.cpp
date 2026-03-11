@@ -1,12 +1,11 @@
 #include "Shutome.h"
 
-#define CHIP_SIZE 384		// 1コマのサイズ
-#define CENTER_POS CVector2D(192.0f, 328.0f)	// 中心座標
+#define CHIP_SIZE 700		// 1コマのサイズ
+#define CENTER_POS CVector2D(173.0f, 350.0f)	// 中心座標
 
 
-#define TEX_SHUTOME "player.png"
+#define TEX_SHUTOME "姑.png"
 
-#define COLLISION_RANGE 20.0f // 姑の当たり判定の大きさ
 
 
 // 姑のアニメーションデータの前宣言
@@ -14,12 +13,11 @@ TexAnimData Shutome::ANIM_DATA[(int)EAnimeType::ENUM] =
 {
 	//待機アニメーション
 	{
-		new TexAnim[6]
+		new TexAnim[1]
 	    {
-		    {0, 6}, {1, 6}, {2, 6},
-	        {3, 6}, {4, 6}, {5, 6},
+		    {0, 6},
         },
-		6
+		1
     }
 };
 
@@ -42,7 +40,8 @@ Shutome::Shutome(const CVector3D& s_pos, const float& s_collisionRange)
 	mpImage->ChangeAnimation((int)EAnimeType::EIDLE);
 	mpImage->SetCenter(CENTER_POS);
 
-	mpImage->SetFlipH(true);
+	mpImage->SetSize(CVector2D(350.0f, 390.0f));
+
 }
 
 Shutome::~Shutome()

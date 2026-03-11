@@ -32,7 +32,7 @@ ThrowObject::ThrowObject(ThrowObjectType s_type, const CVector3D& s_pos, const f
 {
 	mTag = ETag::ETHROW;
 
-	// ƒXƒ‰ƒCƒ€‚Ì‰æ‘œ‚ğ“Ç‚İ‚İ
+	// ŒÆ‚ª“Š‚°‚é•¨‚Ì‰æ‘œ‚ğ“Ç‚İ‚İ
 	std::string imagePath;
 	if (mType == ThrowObjectType::EPLATE_RED) imagePath = TEX_PLATE_RED;
 	else if (mType == ThrowObjectType::EPLATE_BLUE) imagePath = TEX_PLATE_BLUE;

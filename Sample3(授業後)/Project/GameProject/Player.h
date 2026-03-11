@@ -53,6 +53,7 @@ private:
 		EDEATH,	// Ž€–S
 		EATTACK,	// UŒ‚
 		ESTUN,   //ƒXƒ^ƒ“ó‘Ô
+		EJUNP,
 
 		ENUM,
 	};
