@@ -1,7 +1,11 @@
 #include "ThrowObject.h"
+#include "math.h"
 
 #define CHIP_SIZE 256		// 1コマのサイズ
 #define CENTER_POS CVector2D(128.0f, 184.0f)	// 中心座標
+#define GRAVITY -3.0f		    // 重力
+#define INITIAL_VELOCITY  -30.0f //初速
+#define DECELERATION -0.01f      //減速値
 
 #define TEX_PLATE "slime_a.png"
 
@@ -61,9 +65,9 @@ void ThrowObject::Update()
 
 	
 
-	mPos.y -= 5.90; //重力
-	mPos.x -= mMoveSpeedX; //左に飛んでいく
-	mMoveSpeedX -= 1.0f; // 減速値を入れる
+	mPos.y += GRAVITY; //重力
+	mPos.x += mMoveSpeedX; //左に飛んでいく
+	mMoveSpeedX += sinf(DECELERATION); // 減速値を入れる
 
 	// 地面より下にいくと
 	if (mPos.y <= 0.0f)
@@ -99,7 +103,7 @@ void ThrowObject::StateThrowing()
 	case 0:
 		// X軸（幅）初速を設定し、
 		// 接地状態を解除する
-		mMoveSpeedX = 50;
+		mMoveSpeedX = INITIAL_VELOCITY;
 		mIsGrounded = false;
 		mStateStep++;
 		break;
