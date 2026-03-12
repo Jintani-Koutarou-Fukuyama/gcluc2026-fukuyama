@@ -1,11 +1,11 @@
 #pragma once
 #include "EnemyBase.h"
-
+// 姑が投げてくる物のクラス
 
 enum class ThrowObjectType
 {
-	EPLATE,
-
+	EPLATE_RED,
+	EPLATE_BLUE
 };
 
 class ThrowObject : public EnemyBase
@@ -21,23 +21,46 @@ public:
 	void Update() override;
 	void Render() override;
 
-	void StateIdle();
+
 
 	bool Collision(ObjectBase* s_other) override;
 
 
 private:
 
+
+	enum class EState
+	{
+		ETHROWING,   // 宙に浮かんでいる状態
+		EDEATH       // 消失する
+	};
+	void ChangeState(EState s_state);
+	//  宙に浮かんでいる状態の更新処理
+	void StateThrowing();
+	// 消失時の更新処理
+	void StateDeath();
+
+	EState mState;
+
+	int mStateStep;
+
 	//アニメーションの種類
 	enum class EAnimeType
 	{
-		EIDLE,  //待機
+		ETHROWING,  // 宙に浮かんでいる状態
+
 
 		ENUM
 	};
 
-	int mStateStep;
+	
 
 	static TexAnimData ANIM_DATA[];
 	CImage* mpImage;    //画像
+
+	ThrowObjectType mType; //姑が投げるオブジェクトのタイプ
+
+	float mMoveSpeedX; // ものが飛んでいく速度
+	float mRotateCnt;  // 回転する量を決める値
+
 };

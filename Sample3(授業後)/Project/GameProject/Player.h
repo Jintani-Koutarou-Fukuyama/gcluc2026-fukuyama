@@ -1,5 +1,6 @@
 #pragma once
 #include "CharaBase.h"
+// プレイヤー(嫁)のクラス
 
 class Player : public CharaBase
 {
@@ -13,6 +14,8 @@ public:
 	void Update() override;
 	// 描画処理
 	void Render() override;
+
+
 
 	static Player* GetInstance();
 	
@@ -53,6 +56,7 @@ private:
 		EDEATH,	// 死亡
 		EATTACK,	// 攻撃
 		ESTUN,   //スタン状態
+		EJUNP,
 
 		ENUM,
 	};
@@ -68,5 +72,6 @@ private:
 	bool mIsStun;   //スタン状態を判別する
 	CVector3D mKnockbackdistance; //ノックバックする距離
 	int mInvincibilityCnt; //無敵時間をカウントするカウンター
-
+	bool isDead = false;//死亡フラグ
+	bool isClear = false;//クリアフラグ
 };

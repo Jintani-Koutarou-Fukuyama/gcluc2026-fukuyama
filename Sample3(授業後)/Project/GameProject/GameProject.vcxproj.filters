@@ -21,6 +21,10 @@
     <ClCompile Include="ClearScene.cpp" />
     <ClCompile Include="TitleScene.cpp" />
     <ClCompile Include="StoryScene.cpp" />
+    <ClCompile Include="ThrowObject.cpp" />
+    <ClCompile Include="HealItem.cpp" />
+    <ClCompile Include="Obstacle.cpp" />
+    <ClCompile Include="DropObstacle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Global.h" />
@@ -44,5 +48,9 @@
     <ClInclude Include="BaseScene.h" />
     <ClInclude Include="TitleScene.h" />
     <ClInclude Include="StoryScene.h" />
+    <ClInclude Include="ThrowObject.h" />
+    <ClInclude Include="HealItem.h" />
+    <ClInclude Include="Obstacle.h" />
+    <ClInclude Include="DropObstacle.h" />
   </ItemGroup>
 </Project>

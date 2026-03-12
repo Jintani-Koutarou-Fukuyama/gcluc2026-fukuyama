@@ -35,16 +35,18 @@ public:
 	// 当たり判定の処理を書く
 	virtual bool Collision(ObjectBase* s_other);
 
-	// オブジェクトのタグ
+	// オブジェクトの識別タグ
 	enum class ETag
 	{
-		ENONE,
-		ESHUTOME,
-		ETHROW,
+		ENONE,     // 初期状態
+		ESHUTOME,  // 姑
+		ETHROW,    // 姑が投げてくるもの
+		EHEALITEM, // 回復薬
+		EDROPOBSTACLE // 落ちてくる障害物
 	};
 
 
-	//タグを返す
+	//識別タグを返す
 	const ETag GetTag() const;
 
 protected:

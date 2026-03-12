@@ -38,10 +38,14 @@ Ui::~Ui()
 
 void Ui::Update()
 {
-	mTimer++;
 	if (Player::GetInstance() != nullptr)
 	{
 		mpHp = Player::GetInstance()->GetHp();
+		// HPが0より大きいときだけタイマーを進める
+		if (mpHp > 0)
+		{
+			mTimer++;
+		}
 	}
 }
 

@@ -4,18 +4,18 @@
 #include "SceneManager.h"
 #include"Camera.h"
 
-#define CHIP_SIZE 384		// 1コマのサイズ
-#define CENTER_POS CVector2D(192.0f, 328.0f)	// 中心座標
+#define CHIP_SIZE 700.0f		// 1コマのサイズ
+#define CENTER_POS CVector2D(170.0f, 322.0f)	// 中心座標
 #define MOVE_SPEED_X 5.0f	// 横方向の移動速度
 #define MOVE_SPEED_Z 3.0f	// 奥方向の移動速度
-#define JUMP_SPEED 15.0f	// ジャンプ速度
+#define JUMP_SPEED 20.0f	// ジャンプ速度
 #define GRAVITY -1.0f		// 重力
 #define ATTACK_INDEX 2		// 攻撃が発生するアニメーションの番号
 #define ATTACK_RANGE CVector3D(300.0f, 10.0f, 50.0f)	// 攻撃範囲
 #define KNOCKBACK_RAITO 1.2f  //ノックバック距離、ノックバックの距離を決める
 #define INVINCIBILITY_TIME 10 //無敵時間
 
-#define TEX_PLAYER "player.png"
+#define TEX_PLAYER "嫁 .png"
 
 Player* Player::mspInstance = nullptr;
 // プレイヤーのアニメーションデータの前宣言
@@ -23,21 +23,19 @@ TexAnimData Player::ANIM_DATA[(int)EAnimType::ENUM] =
 {
 	// 待機アニメーション
 	{
-		new TexAnim[6]
+		new TexAnim[1]
 		{
-			{0, 6}, {1, 6}, {2, 6},
-			{3, 6}, {4, 6}, {5, 6},
+			{0, 6},
 		},
-		6
+		1
 	},
 	// 移動アニメーション
 	{
-		new TexAnim[6]
+		new TexAnim[2]
 		{
-			{6, 6}, {7, 6}, {8, 6},
-			{9, 6}, {10, 6}, {11, 6},
+			{1, 15}, {2, 15},
 		},
-		6
+		2
 	},
 	// 死亡アニメーション
 	{
@@ -47,7 +45,7 @@ TexAnimData Player::ANIM_DATA[(int)EAnimType::ENUM] =
 			{13, 12},
 			{14, 12},
 		},
-		3
+		
 	},
 	// 攻撃アニメーション
 	{
@@ -64,7 +62,15 @@ TexAnimData Player::ANIM_DATA[(int)EAnimType::ENUM] =
 	{
 		new TexAnim[1]
 		{
-			{12, 20},   //次の画像までの待機フレーム(2番目の値)でスタンの長さが変わる
+			{3, 20},   //次の画像までの待機フレーム(2番目の値)でスタンの長さが変わる
+		},
+		1
+	},
+	// ジャンプアニメーション
+	{
+		new TexAnim[1]
+		{
+			{4, 20},   
 		},
 		1
 	}
@@ -92,14 +98,20 @@ Player::Player(const CVector3D& s_pos, const float& s_collisionRange)
 	);
 	mpImage->ChangeAnimation((int)EAnimType::EIDLE);
 	mpImage->SetCenter(CENTER_POS);
+
+	mpImage->SetSize(CVector2D(350.0f, 340.0f));
 	mspInstance = this;
 }
 
 // デストラクタ
 Player::~Player()
 {
-	// 画像データを削除
-	delete mpImage;
+	// 画像を削除
+	if (mpImage != nullptr)
+	{
+		delete mpImage;
+		mpImage = nullptr;
+	}
 }
 
 // 現在の状態を切り替え
@@ -164,11 +176,12 @@ void Player::StateIdle()
 	{
 		ChangeState(EState::EJUMP);
 	}
-	// [X]キーで攻撃状態へ移行
+	/* [X] キーで攻撃状態へ移行
 	else if (PUSH(CInput::eButton2))
 	{
 		ChangeState(EState::EATTACK);
 	}
+	*/
 
 	if (mInvincibilityCnt >= 1)
 	{
@@ -184,6 +197,7 @@ void Player::StateJump()
 	{
 		// ステップ0：ジャンプ開始
 		case 0:
+
 			// Y軸（高さ）の移動速度にジャンプを速度を設定し、
 			// 接地状態を解除する
 			mMoveSpeedY = JUMP_SPEED;
@@ -196,13 +210,14 @@ void Player::StateJump()
 			if (mIsGrounded)
 			{
 				ChangeState(EState::EIDLE);
+				mpImage->ChangeAnimation((int)EAnimType::EJUNP);
 			}
 			break;
 	}
 
 	// 移動処理
 	bool isMove = UpdateMove();
-	mpImage->ChangeAnimation((int)EAnimType::EIDLE);
+	mpImage->ChangeAnimation((int)EAnimType::EJUNP);
 }
 
 // 攻撃中の更新処理
@@ -244,8 +259,14 @@ void Player::StateAttack()
 // 死亡時の更新処理
 void Player::StateDeath()
 {
-	SceneManager::ChangeScene(SceneManager::ESCENE::OVER);
+	if (!isDead) {
+		isDead = true;  // 一度だけ true にする
+		SceneManager::ChangeScene(SceneManager::ESCENE::OVER);
+	}
+
+
 }
+	
 
 // スタン時の更新処理
 void Player::StateStun()
@@ -344,53 +365,16 @@ void Player::Update()
 	//画面の上（画像の壁）に行くと
 	if (mPos.z <= -120.0f)
 	{
-		if (mPos.x <= 850.0f)
-		{
-			//それ以上いけないようにする
-			mPos.z = -120.0f;
-		}
-		else if (mPos.x > 1120.0f)
-		{
-			//それ以上いけないようにする
-			mPos.z = -120.0f;
-		}
-		
-		if (mPos.x >= 850.0f && mPos.x <= 1120.0f)
-		{
-			//壁の奥に入った時
-			if (mPos.z <= -165.0f)
-			{
-				//それ以上いけないようにする
-				mPos.z = -165.0f;
-			}
-			if (mPos.x > 1110.0f)
-			{
-				//それ以上いけないようにする
-				mPos.x = 1110.0f;
-			}
-		}
-		if (mPos.z <= -130.0f)
-		{
-			//壁にめり込まないようにする
-			if (mPos.x >= 860.0f && mPos.x <= 900.0f)
-			{
-				mPos.z = -155.0f;
-			}
-			if (mPos.x >= 860.0f && mPos.x <= 885.0f)
-			{
-				mPos.z = -145.0f;
-			}
-		}
-		
+		mPos.z = -120.0f;
 	}
 	
 
 
 	//画面の左（画像の一番右）に行くと
-	if (mPos.x >= 2600.0f)
+	if (mPos.x >= 7930.0f)
 	{
 		//それ以上いけないようにする
-		mPos.x = 2600.0f;//画像の大きさが変わるたびに変更
+		mPos.x = 7930.0f;//画像の大きさが変わるたびに変更
 	}
 	// イメージに座標を設定して、アニメーションを更新
 	mpImage->SetPos(CalcScreenPos());
@@ -433,13 +417,14 @@ bool Player::Collision(ObjectBase* s_other)
 		// 各軸の距離を求めて、範囲外であればスルー
 		if (abs(mPos.x - otherPos.x) > minDist) return false;
 		if (abs(mPos.y - otherPos.y) > minDist) return false;
-		if (abs(mPos.z - otherPos.z) > minDist) return false;
+		if (abs(mPos.z - otherPos.z )  > minDist * 0.2f) return false; //z軸は判定小さく
 
 
 
 		// x,z軸の距離を求める
 		dx = mPos.x - otherPos.x;
-		dz = mPos.z - otherPos.z;
+		dz = mPos.z  - otherPos.z ;
+
 
 		//√dx^2 dz^2 実際の距離を求める
 		dist = sqrtf(dx * dx + dz * dz);
@@ -454,9 +439,9 @@ bool Player::Collision(ObjectBase* s_other)
 
 		//それぞれを半分ずつ押し戻す
 		mPos.x += nx * overlap * 0.5;
-		mPos.z += nz * overlap * 0.5;
+		mPos.z += nz * overlap * 0.5 * 0.2; //z軸は押し戻し小さく(判定に合わせる)
 		otherPos.x += nx * overlap * 0.5;
-		otherPos.z += nz * overlap * 0.5;
+		otherPos.z += nz * overlap * 0.5 * 0.2; //z軸は押し戻し小さく(判定に合わせる)
 
 		//ノックバック距離を設定する
 		mKnockbackdistance.x = nx * KNOCKBACK_RAITO;
@@ -469,7 +454,12 @@ bool Player::Collision(ObjectBase* s_other)
 		case ETag::ENONE:
 			break;
 		case ETag::ESHUTOME:
-			SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
+			if (!isClear)
+			{
+				isClear = true;//一度だけtrueにする
+				SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
+			}
+			
 
 			break;
 		case ETag::ETHROW:

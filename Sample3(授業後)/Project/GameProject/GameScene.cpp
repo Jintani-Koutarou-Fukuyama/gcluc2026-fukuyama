@@ -6,11 +6,14 @@
 #include"Camera.h"
 #include"SceneManager.h"
 #include"Shutome.h"
+#include "ThrowObject.h"
 #include"Ui.h"
+#include"HealItem.h"
+#include"Obstacle.h"
 
 
-#define PLAYER_COLLISIONRANGE 30.0f  //あとで消すかも プレイヤーの当たり判定
-#define SHUTOME_COLLISION_RANGE 20.0f // 姑の当たり判定の大きさ
+#define PLAYER_COLLISIONRANGE 40.0f  //あとで消すかも プレイヤーの当たり判定
+#define SHUTOME_COLLISION_RANGE 30.0f // 姑の当たり判定の大きさ
 
 #define STAGE_BGM1 "STAGEBGM1.wav"//ステージ道中のBGM１～２好きなの選んでください
 #define STAGE_BGM2 "STAGEBGM2.wav"//MP3からwavに変換しないといけない
@@ -30,6 +33,10 @@ GameScene::GameScene()
 	//姑を生成←ステージの一番後ろに配置
 	new Shutome
 	(CVector3D(2600.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);
+    //回復アイテムを生成
+	new HealItem(CVector3D(800, 0, 0));
+	//姑が投げてくる物を生成
+	new ThrowObject(ThrowObjectType::EPLATE_RED,CVector3D(SCREEN_WIDTH, 60.0f , 0.0f), SHUTOME_COLLISION_RANGE);
 
 	//エネミー管理クラスを生成
 	EnemyManager::Instance();
@@ -41,6 +48,29 @@ GameScene::GameScene()
 	// 再生（trueはループ）
 	SOUND("stage_bgm")->Play(true);
 	printf("ゲームになりました\n");
+
+	// 障害物をランダム生成
+	for (int i = 0; i < 10; i++)
+	{
+		float x = rand() % 2000 + 800;
+		float z = rand() % 300 - 120;
+
+		new Obstacle(CVector3D(x, 0, z));
+	}
+
+	// 姑が投げてくるものをランダム生成 テスト用（TODO:後で消す）
+	for (int i = 0; i < 10; i++)
+	{
+
+		//めちゃくちゃてきとう
+		float x = rand() % 2600;
+		float y = rand() % 200;
+		float z = rand() % 120;
+
+
+		new ThrowObject((ThrowObjectType)(i % 2), CVector3D(x, y, z), PLAYER_COLLISIONRANGE);
+	}
+
 }
 
 GameScene::~GameScene()
