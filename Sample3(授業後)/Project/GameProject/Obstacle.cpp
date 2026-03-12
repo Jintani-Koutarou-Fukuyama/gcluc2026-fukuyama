@@ -26,17 +26,18 @@ void Obstacle::Update()
     Player* player = Player::GetInstance();
     if (player == nullptr) return;
 
-    CVector3D ppos = player->GetPos();
+    if (player->GetPos().y > 0) return; // ジャンプ中は無視
 
-    float dx = ppos.x - mPos.x;
-    float dz = ppos.z - mPos.z;
+    float dx = player->GetPos().x - mPos.x;
+    float dz = player->GetPos().z - mPos.z;
 
     float dist = sqrtf(dx * dx + dz * dz);
 
-    if (dist < 60.0f)
+    float minDist = (mCollisionRange + player->GetCollisionRange())*0.8f;
+
+    if (dist < minDist)
     {
-        player->TakeDamage(1);
-        Kill(); // 一回だけダメージ
+        player->SetPos(player->GetPos() + CVector3D(dx, 0, dz) * 0.05f);
     }
 }
 

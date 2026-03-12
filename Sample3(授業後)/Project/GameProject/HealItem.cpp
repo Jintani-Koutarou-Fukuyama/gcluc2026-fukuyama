@@ -7,8 +7,9 @@ HealItem::HealItem(const CVector3D& pos)
 {
     mpImage = CImage::CreateImage("kaihuku.png");
 
-    //mpImage->SetSize(200, 200);
-    mpImage->SetCenter(mpImage->GetSize() * 0.5f);
+    mpImage->SetSize(200, 200);
+    //mpShadowImg->SetSize(160, 80);
+    mpImage->SetCenter(CVector2D(100, 140));
 
     mFloatTime = 0.0f;
 
@@ -17,8 +18,8 @@ HealItem::HealItem(const CVector3D& pos)
 
 void HealItem::Update()
 {
-    mFloatTime += 0.1f;
-    mPos.y = sinf(mFloatTime) * 10;
+    //mFloatTime += 0.1f;
+    //mPos.y = sinf(mFloatTime) * 10;
     mpImage->SetPos(CalcScreenPos());
 
     Player* player = Player::GetInstance();
@@ -36,6 +37,7 @@ void HealItem::Update()
         player->Heal(1);
         Kill();
     }
+    
 }
 
 void HealItem::Render()
