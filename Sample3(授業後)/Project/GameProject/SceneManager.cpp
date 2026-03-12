@@ -6,11 +6,22 @@
 #include"StoryScene.h"
 
 BaseScene* SceneManager::mpScene = nullptr;
+SceneManager* SceneManager::msInstance = nullptr;
+
 
 SceneManager::SceneManager()
 {
     
 } 
+
+SceneManager* SceneManager::Instance()
+{
+    if (msInstance == nullptr)
+    {
+        msInstance = new SceneManager();
+    }
+    return msInstance;
+}
 
 void SceneManager::ChangeScene(ESCENE s_scene)//ƒV[ƒ“‚ª•Ï‚í‚é‚Æ‚«‚ÉŒÄ‚Ño‚·
 

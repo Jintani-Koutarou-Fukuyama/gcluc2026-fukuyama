@@ -74,4 +74,6 @@ private:
 	int mInvincibilityCnt; //無敵時間をカウントするカウンター
 	bool isDead = false;//死亡フラグ
 	bool isClear = false;//クリアフラグ
+
+
 };

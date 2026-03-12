@@ -27,7 +27,7 @@ void MainLoop()
 	SceneManager::Render();
 
 	
-	
+	if (SceneManager::Instance()->isover == true) { SceneManager::ChangeScene(SceneManager::OVER); }
 	// デバッグ文字の描画
 	DebugPrint::Render();
 }
@@ -70,9 +70,6 @@ void Init()
 	//初期化の命令を書く
 	//ゲーム起動時に一度だけ呼ばれる
 	//-----------------------------------------------------
-
-
-	
 
 	
 	//最初にタイトルを表示

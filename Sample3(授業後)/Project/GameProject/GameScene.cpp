@@ -35,7 +35,7 @@ GameScene::GameScene()
 	new Shutome
 	(CVector3D(2600.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);
     //回復アイテムを生成
-	new HealItem(CVector3D(700, 0, 0));
+	new HealItem(CVector3D(100, 0, 0));
 	//姑が投げてくる物を生成
 	new ThrowObject(ThrowObjectType::EPLATE_RED,CVector3D(1300, 300.0f , -110.0f), SHUTOME_COLLISION_RANGE);
 
@@ -86,6 +86,8 @@ GameScene::~GameScene()
 	printf("シーンが変わりました\n");
 	//ここにスコアを保存してクリアシーンまたはオーバーシーンに持っていく処理を書く必要がある
 
+	TaskManager::Instance()->ClearInstance();
+	
 }
 
 

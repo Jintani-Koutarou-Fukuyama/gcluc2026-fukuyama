@@ -466,10 +466,10 @@ bool Player::Collision(ObjectBase* s_other)
 			if (!isClear)
 			{
 				isClear = true;//ˆê“x‚¾‚¯true‚É‚·‚é
-				SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
-			}
-			
+				//SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
 
+				SceneManager::Instance()->isover = true;
+			}
 			break;
 		case ETag::ETHROW:
 			ChangeState(EState::ESTUN);
