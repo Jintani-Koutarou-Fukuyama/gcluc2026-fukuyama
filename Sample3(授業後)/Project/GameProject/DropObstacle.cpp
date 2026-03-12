@@ -5,7 +5,7 @@
 #define CENTER_POS_EHANGING CVector2D(100.0f, 140.0f)	// 中心座標(つり下がっているとき)
 #define CENTER_POS_EDEATH CVector2D(80.0f, 110.0f)	// 中心座標(破壊された時)
 
-#define GRAVITY -5.0f		    // 重力
+#define GRAVITY -10.0f		    // 重力
 
 #define TEX_DROP_OBSTACLE "bonbori.png"
 // 落ちてくる障害物のアニメーションデータ

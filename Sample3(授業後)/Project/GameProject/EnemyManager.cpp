@@ -84,10 +84,10 @@ void EnemyManager::Collision(ObjectBase* s_other)
 	for (EnemyBase* enemy : mEnemies)
 	{
 		// 当たり判定が無効であればスルー
-		if (enemy->GetIsCollision() == false) return;
+		if (enemy->GetIsCollision() == false) continue;
 
 		s_other->Collision(enemy);
-
+		
 
 		// トラップなどの処理
 		switch (enemy->GetTag())

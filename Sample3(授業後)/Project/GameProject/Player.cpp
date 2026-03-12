@@ -303,7 +303,7 @@ void Player::StateStun()
 		}
 		
 
-		// 攻撃アニメーションが終了したら、待機状態へ移行
+		// スタンアニメーションが終了したら、待機状態へ移行
 		if (mpImage->CheckAnimationEnd())
 		{
 			
