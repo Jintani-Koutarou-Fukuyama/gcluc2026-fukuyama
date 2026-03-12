@@ -31,3 +31,9 @@ void OverScene::Draw()
 	//ここにOverScene()があるときにずっと描画したいしたい処理を入れる
 
 }
+void OverScene::Init()
+{
+	//ゲームオーバー、ゲームクリアのフラグをリセット（リトライ用）
+	SceneManager::Instance()->requestChange = false;
+
+}

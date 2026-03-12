@@ -24,6 +24,30 @@ GameScene::GameScene()
 {
 	//ここにGameScene()が生成されたときに呼び出したい処理を入れる
 	
+	
+	
+
+}
+
+GameScene::~GameScene()
+{
+	//ここにGameScene()が破棄されたときに呼び出したい処理を入れる
+	
+
+	
+	// BGM停止
+	SOUND("stage_bgm")->Stop();
+	printf("シーンが変わりました\n");
+	//ここにスコアを保存してクリアシーンまたはオーバーシーンに持っていく処理を書く必要がある
+
+	
+	
+}
+
+void GameScene::Init()
+{
+	//カメラリセット
+	Camera::Instance()->Reset();
 	// フィールドを生成
 	new Field();
 	//UIを生成
@@ -34,20 +58,20 @@ GameScene::GameScene()
 	//姑を生成←ステージの一番後ろに配置
 	new Shutome
 	(CVector3D(2600.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);
-    //回復アイテムを生成
+	//回復アイテムを生成
 	new HealItem(CVector3D(100, 0, 0));
 	//姑が投げてくる物を生成
-	new ThrowObject(ThrowObjectType::EPLATE_RED,CVector3D(1300, 300.0f , -110.0f), SHUTOME_COLLISION_RANGE);
+	new ThrowObject(ThrowObjectType::EPLATE_RED, CVector3D(1300, 300.0f, -110.0f), SHUTOME_COLLISION_RANGE);
 
 	//エネミー管理クラスを生成
 	EnemyManager::Instance();
 	//カメラを生成
 	Camera::Instance();
-
 	// BGM読み込み
 	SOUND("stage_bgm")->Load(STAGE_BGM1, 1, false);
 	// 再生（trueはループ）
 	SOUND("stage_bgm")->Play(true);
+
 	printf("ゲームになりました\n");
 
 	// 障害物をランダム生成
@@ -74,22 +98,7 @@ GameScene::GameScene()
 
 		new ThrowObject((ThrowObjectType)(i % 2), CVector3D(x, y, z), PLAYER_COLLISIONRANGE);
 	}
-
 }
-
-GameScene::~GameScene()
-{
-	//ここにGameScene()が破棄されたときに呼び出したい処理を入れる
-	
-	// BGM停止
-	SOUND("stage_bgm")->Stop();
-	printf("シーンが変わりました\n");
-	//ここにスコアを保存してクリアシーンまたはオーバーシーンに持っていく処理を書く必要がある
-
-	TaskManager::Instance()->ClearInstance();
-	
-}
-
 
 //更新処理
 void GameScene::Update()

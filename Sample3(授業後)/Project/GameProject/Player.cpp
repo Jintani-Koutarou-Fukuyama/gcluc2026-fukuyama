@@ -136,6 +136,7 @@ bool Player::UpdateMove()
 		mPos.x -= MOVE_SPEED_X;
 		mpImage->SetFlipH(true);
 		isMove = true;
+		TakeDamage(1);
 	}
 	// Dキーを押している間
 	else if (HOLD(CInput::eButton9))
@@ -265,7 +266,9 @@ void Player::StateDeath()
 {
 	if (!isDead) {
 		isDead = true;  // 一度だけ true にする
-		SceneManager::ChangeScene(SceneManager::ESCENE::OVER);
+		//SceneManager::ChangeScene(SceneManager::ESCENE::OVER);
+		SceneManager::Instance()->isover = true;
+		return;
 	}
 
 
@@ -391,7 +394,8 @@ void Player::Update()
 
 	DebugPrint::Print("プレイヤー位置：%.2f, %.2f, %.2f", mPos.x, mPos.y, mPos.z);
 
-	Camera::SetTargetPos(mPos);
+	Camera::Instance()->SetTargetPos(mPos);
+
 
 }
 
@@ -468,7 +472,8 @@ bool Player::Collision(ObjectBase* s_other)
 				isClear = true;//一度だけtrueにする
 				//SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
 
-				SceneManager::Instance()->isover = true;
+				SceneManager::Instance()->isclear = true;
+				
 			}
 			break;
 		case ETag::ETHROW:

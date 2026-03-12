@@ -2,19 +2,18 @@
 #include "Task.h"
 #include"GLLibrary.h"
 
-class Camera : public Task
+class Camera 
 {
 public:
     static Camera* Instance();
 
    
-    void Update() override;
+    void Update();
 
     
     static const CVector2D& GetOffset();
-
-
     static void SetTargetPos(const CVector3D& s_pos);
+     void Reset();//カメラのリセット
 
 private:
     Camera();

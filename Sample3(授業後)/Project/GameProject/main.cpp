@@ -27,7 +27,21 @@ void MainLoop()
 	SceneManager::Render();
 
 	
-	if (SceneManager::Instance()->isover == true) { SceneManager::ChangeScene(SceneManager::OVER); }
+	if (!SceneManager::Instance()->requestChange) 
+	{
+		//プレイヤーが死んだときに１回だけ呼ぶ
+		if (SceneManager::Instance()->isover) {
+			SceneManager::Instance()->requestChange = true;
+			SceneManager::ChangeScene(SceneManager::OVER);
+		}
+		//プレイヤーがゲームクリアしたときに１回だけ呼ぶ
+		if (SceneManager::Instance()->isclear)
+		{
+			SceneManager::Instance()->requestChange = true;
+			SceneManager::ChangeScene(SceneManager::CLEAR);
+		}
+	}
+
 	// デバッグ文字の描画
 	DebugPrint::Render();
 }

@@ -28,3 +28,7 @@ void StoryScene::Draw()
 	//‚±‚±‚ÉStoryScene()‚ª‚ ‚é‚Æ‚«‚É‚¸‚Á‚Æ•`‰æ‚µ‚½‚¢‚µ‚½‚¢ˆ—‚ð“ü‚ê‚é
 
 }
+void StoryScene::Init()
+{
+	
+}
