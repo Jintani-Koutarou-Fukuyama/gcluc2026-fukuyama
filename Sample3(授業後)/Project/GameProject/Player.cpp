@@ -491,7 +491,12 @@ bool Player::Collision(ObjectBase* s_other)
 		case ETag::ENONE:
 			break;
 		case ETag::ESHUTOME:
-			SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
+			if (!isClear)
+			{
+				isClear = true;//ˆê“x‚¾‚¯true‚É‚·‚é
+				SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
+			}
+			
 
 			break;
 		case ETag::ETHROW:
