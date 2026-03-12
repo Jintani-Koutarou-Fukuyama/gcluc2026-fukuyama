@@ -17,7 +17,7 @@ public:
 	static int sFieldWidth;//フィールドのサイズを取得
 
 protected:
-	CImage* mpFieldImg;	// フィールドの画像
+	CImage* mpFieldImg[3];	// フィールドの画像
 	
 
 };
