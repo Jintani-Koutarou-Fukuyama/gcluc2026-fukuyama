@@ -15,6 +15,8 @@ public:
 	// 描画処理
 	void Render() override;
 
+
+
 	static Player* GetInstance();
 	
 	bool Collision(ObjectBase* s_other) override;
@@ -70,5 +72,6 @@ private:
 	bool mIsStun;   //スタン状態を判別する
 	CVector3D mKnockbackdistance; //ノックバックする距離
 	int mInvincibilityCnt; //無敵時間をカウントするカウンター
+	bool isDead = false;//死亡フラグ
 
 };

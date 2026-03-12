@@ -6,6 +6,7 @@
 #include"StoryScene.h"
 
 BaseScene* SceneManager::mpScene = nullptr;
+
 SceneManager::SceneManager()
 {
     

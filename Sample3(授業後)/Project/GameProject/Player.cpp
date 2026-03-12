@@ -259,8 +259,14 @@ void Player::StateAttack()
 // 死亡時の更新処理
 void Player::StateDeath()
 {
-	SceneManager::ChangeScene(SceneManager::ESCENE::OVER);
+	if (!isDead) {
+		isDead = true;  // 一度だけ true にする
+		SceneManager::ChangeScene(SceneManager::ESCENE::OVER);
+	}
+
+
 }
+	
 
 // スタン時の更新処理
 void Player::StateStun()
