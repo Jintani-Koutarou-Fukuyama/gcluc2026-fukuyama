@@ -9,6 +9,7 @@ EnemyBase::EnemyBase()
 
 EnemyBase::EnemyBase(const CVector3D& s_pos, const float& s_collisionRange)
 	: CharaBase(s_pos, s_collisionRange)
+	, mIsCollision(true)
 {
 	// 敵の管理クラスのリストに自身を追加
 	EnemyManager::Instance()->Add(this);
@@ -24,5 +25,15 @@ EnemyBase::~EnemyBase()
 bool EnemyBase::Collision(ObjectBase* s_other)
 {
 	return false;
+}
+
+const bool& EnemyBase::GetIsCollision() const
+{
+	return mIsCollision;
+}
+
+void EnemyBase::SetIsCollision(bool s_iscolliion)
+{
+	mIsCollision = s_iscolliion;
 }
 

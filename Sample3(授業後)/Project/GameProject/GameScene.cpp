@@ -10,6 +10,7 @@
 #include"Ui.h"
 #include"HealItem.h"
 #include"Obstacle.h"
+#include "DropObstacle.h"
 
 
 #define PLAYER_COLLISIONRANGE 40.0f  //あとで消すかも プレイヤーの当たり判定
@@ -34,9 +35,9 @@ GameScene::GameScene()
 	new Shutome
 	(CVector3D(2600.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);
     //回復アイテムを生成
-	new HealItem(CVector3D(800, 0, 0));
+	new HealItem(CVector3D(700, 0, 0));
 	//姑が投げてくる物を生成
-	new ThrowObject(ThrowObjectType::EPLATE_RED,CVector3D(SCREEN_WIDTH, 60.0f , 0.0f), SHUTOME_COLLISION_RANGE);
+	new ThrowObject(ThrowObjectType::EPLATE_RED,CVector3D(1300, 300.0f , -110.0f), SHUTOME_COLLISION_RANGE);
 
 	//エネミー管理クラスを生成
 	EnemyManager::Instance();
@@ -57,6 +58,9 @@ GameScene::GameScene()
 
 		new Obstacle(CVector3D(x, 0, z));
 	}
+
+	// 落ちてくる障害物を生成
+	new DropObstacle(DropObstacleType::EBONBORI, CVector3D(700, 400, -100), PLAYER_COLLISIONRANGE);
 
 	// 姑が投げてくるものをランダム生成 テスト用（TODO:後で消す）
 	for (int i = 0; i < 10; i++)

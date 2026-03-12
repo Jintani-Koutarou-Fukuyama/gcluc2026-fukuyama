@@ -5,7 +5,7 @@
 #define CHIP_SIZE_HEIGHT 250    // 1コマのサイズ 高さ
 #define CENTER_POS CVector2D(150.0f, 125.0f)	// 中心座標
 #define GRAVITY 0.5f		    // 重力
-#define INITIAL_VELOCITY  -22.0f //初速
+#define INITIAL_VELOCITY  -15.0f //初速
 #define DECELERATION -0.08f      //減速値
 
 #define TEX_PLATE_RED "sara.png"

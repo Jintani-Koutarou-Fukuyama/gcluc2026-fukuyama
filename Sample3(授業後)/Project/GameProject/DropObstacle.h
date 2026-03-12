@@ -25,7 +25,8 @@ public:
 
 	bool Collision(ObjectBase* s_other) override;
 
-private:
+
+	// プレイヤーのCollisonから呼び出すためpublic
 	enum class EState
 	{
 		EHANGING,   // つり下がっている状態
@@ -34,6 +35,10 @@ private:
 		EDEATH       // 消失する
 	};
 	void ChangeState(EState s_state);
+
+private:
+	
+	
 	//  つり下がっている状態の更新処理
 	void StateHanging();
 	// 落ちている状態の更新処理
