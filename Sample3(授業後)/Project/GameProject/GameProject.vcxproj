@@ -29,6 +29,7 @@
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Shutome.cpp" />
+    <ClCompile Include="ShutomeCutIn.cpp" />
     <ClCompile Include="Slime.cpp" />
     <ClCompile Include="StoryScene.cpp" />
     <ClCompile Include="Task.cpp" />
@@ -57,6 +58,7 @@
     <ClInclude Include="Random.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Shutome.h" />
+    <ClInclude Include="ShutomeCutIn.h" />
     <ClInclude Include="Slime.h" />
     <ClInclude Include="StoryScene.h" />
     <ClInclude Include="Task.h" />

@@ -1,5 +1,6 @@
 #include "Field.h"
 #include"Camera.h"
+#include "ShutomeCutIn.h"
 
 #define TEX_FIELD "22‰¼.png"
 
@@ -42,6 +43,21 @@ Field::~Field()
 // XV
 void Field::Update()
 {
+	static int prevArea = -1;
+
+	int w = mpFieldImg[0]->GetSize().x;
+
+	int area = Camera::GetOffset().x / w;
+
+	if (area != prevArea)
+	{
+		prevArea = area;
+
+		if (area > 0)
+		{
+			new ShutomeCutIn(area);
+		}
+	}
 }
 
 // •`‰æ

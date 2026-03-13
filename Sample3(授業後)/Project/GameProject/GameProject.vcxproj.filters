@@ -25,7 +25,7 @@
     <ClCompile Include="HealItem.cpp" />
     <ClCompile Include="Obstacle.cpp" />
     <ClCompile Include="DropObstacle.cpp" />
-    <ClCompile Include="Random.cpp" />
+    <ClCompile Include="ShutomeCutIn.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Global.h" />
@@ -53,6 +53,6 @@
     <ClInclude Include="HealItem.h" />
     <ClInclude Include="Obstacle.h" />
     <ClInclude Include="DropObstacle.h" />
-    <ClInclude Include="Random.h" />
+    <ClInclude Include="ShutomeCutIn.h" />
   </ItemGroup>
 </Project>
