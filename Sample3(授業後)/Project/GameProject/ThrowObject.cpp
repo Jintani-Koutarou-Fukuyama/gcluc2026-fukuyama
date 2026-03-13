@@ -104,6 +104,7 @@ void ThrowObject::Update()
 	//‰æ–Ê‚Ìãi‰æ‘œ‚Ì•Çj‚És‚­‚Æ
 	if (mPos.z <= -120.0f)
 	{
+		/*
 		if (mPos.x <= 850.0f)
 		{
 			Kill();
@@ -142,7 +143,8 @@ void ThrowObject::Update()
 
 			}
 		}
-
+		*/
+		Kill();
 	}
 
 

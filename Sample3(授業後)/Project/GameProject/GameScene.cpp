@@ -15,8 +15,9 @@
 
 
 
-#define PLAYER_COLLISIONRANGE 40.0f  //あとで消すかも プレイヤーの当たり判定
+#define PLAYER_COLLISIONRANGE 90.0f  //あとで消すかも プレイヤーの当たり判定
 #define SHUTOME_COLLISION_RANGE 30.0f // 姑の当たり判定の大きさ
+#define THROWOBJECT_COLLISION_RANGE 100.0f // 姑が投げてくるものの当たり判定の大きさ
 #define SPAWN_COUNT 50
 #define STAGE_WIDTH 2666 * 3
 
@@ -77,8 +78,7 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	(CVector3D(7900.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);
 	//回復アイテムを生成
 	new HealItem(CVector3D(100, 0, 0));
-	//姑が投げてくる物を生成
-	//new ThrowObject(ThrowObjectType::EPLATE_RED, CVector3D(1300, 300.0f, -110.0f), SHUTOME_COLLISION_RANGE);
+
 
 	//エネミー管理クラスを生成
 	EnemyManager::Instance();
@@ -160,7 +160,7 @@ void GameScene::PopPlate()
 			pos.z = Utility::Rand(-120.0f, 180.0f);
 
 			// 生成する
-			new ThrowObject(type, pos, PLAYER_COLLISIONRANGE);  // TODO:　当たり判定を変える
+			new ThrowObject(type, pos, THROWOBJECT_COLLISION_RANGE);
 
 
 			mElapsedTime -= mInterval;
