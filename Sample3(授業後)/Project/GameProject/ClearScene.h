@@ -17,5 +17,9 @@ private:
 
 
 protected:
-	CImage* mpTitleImg;	// タイトルの画像
+	CImage* mpTitleImg;	// クリアシーンの画像
+	CImage* mpNumberImg;//数字の画像
+	int mClearTime;
+	void DrawNumber(int num, int x, int y);
+	
 };

@@ -18,9 +18,12 @@ public:
     static void Render(); //現在のシーンの描画関数
    
     
-    bool isover = false;
-    bool isclear = false;
-    bool requestChange = false;
+    bool isover = false;//ゲームオーバーフラグ
+    bool isclear = false;//クリアフラグ
+    bool requestChange = false;//フラグが立ったかのフラグ
+    int clearTime = 0;//秒
+
+
 
     static SceneManager* Instance();
 private:

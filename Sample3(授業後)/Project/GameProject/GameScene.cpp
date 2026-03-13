@@ -37,6 +37,7 @@ GameScene::~GameScene()
 	
 	// BGM停止
 	SOUND("stage_bgm")->Stop();
+
 	printf("シーンが変わりました\n");
 	//ここにスコアを保存してクリアシーンまたはオーバーシーンに持っていく処理を書く必要がある
 

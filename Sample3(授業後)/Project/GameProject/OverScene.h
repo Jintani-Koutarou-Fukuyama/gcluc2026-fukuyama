@@ -18,5 +18,5 @@ private:
 
 
 protected:
-	CImage* mpTitleImg;	// タイトルの画像
+	CImage* mpTitleImg;	// オーバーシーンの画像
 };

@@ -5,6 +5,7 @@
 #include "SceneManager.h"
 #include"Camera.h"
 
+
 #define CHIP_SIZE 700.0f		// 1コマのサイズ
 #define CENTER_POS CVector2D(170.0f, 322.0f)	// 中心座標
 #define MOVE_SPEED_X 5.0f	// 横方向の移動速度
@@ -471,7 +472,7 @@ bool Player::Collision(ObjectBase* s_other)
 			{
 				isClear = true;//一度だけtrueにする
 				//SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
-
+				
 				SceneManager::Instance()->isclear = true;
 				
 			}
