@@ -58,9 +58,12 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	// プレイヤーを生成
 	new Player
 	(CVector3D(SCREEN_WIDTH * 0.5f, 0.0f, 0.0f), PLAYER_COLLISIONRANGE);
-	//姑を生成←ステージの一番後ろに配置
+	//姑を生成←前にいる方
 	new Shutome
 	(CVector3D(2600.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);
+	//姑を生成←ステージの一番後ろにいる方
+	new Shutome
+	(CVector3D(7900.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);
 	//回復アイテムを生成
 	new HealItem(CVector3D(100, 0, 0));
 	//姑が投げてくる物を生成
