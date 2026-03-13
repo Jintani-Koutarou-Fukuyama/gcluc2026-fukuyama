@@ -1,8 +1,10 @@
 #include "Player.h"
 #include "EnemyManager.h"
 #include "EnemyBase.h"
+#include "DropObstacle.h"
 #include "SceneManager.h"
 #include"Camera.h"
+
 
 #define CHIP_SIZE 700.0f		// 1コマのサイズ
 #define CENTER_POS CVector2D(170.0f, 322.0f)	// 中心座標
@@ -88,6 +90,7 @@ Player::Player(const CVector3D& s_pos, const float& s_collisionRange)
 	, mInvincibilityCnt(0)
 {
 	mHp = 5;
+	mTag = ETag::PLAYER;
 
 	// プレイヤーの画像を読み込み
 	mpImage = CImage::CreateImage
@@ -134,6 +137,7 @@ bool Player::UpdateMove()
 		mPos.x -= MOVE_SPEED_X;
 		mpImage->SetFlipH(true);
 		isMove = true;
+		
 	}
 	// Dキーを押している間
 	else if (HOLD(CInput::eButton9))
@@ -203,6 +207,8 @@ void Player::StateJump()
 			mMoveSpeedY = JUMP_SPEED;
 			mIsGrounded = false;
 			mStateStep++;
+
+			mpImage->ChangeAnimation((int)EAnimType::EJUNP);
 			break;
 		// ステップ1：ジャンプ終了
 		case 1:
@@ -210,7 +216,7 @@ void Player::StateJump()
 			if (mIsGrounded)
 			{
 				ChangeState(EState::EIDLE);
-				mpImage->ChangeAnimation((int)EAnimType::EJUNP);
+				
 			}
 			break;
 	}
@@ -261,7 +267,9 @@ void Player::StateDeath()
 {
 	if (!isDead) {
 		isDead = true;  // 一度だけ true にする
-		SceneManager::ChangeScene(SceneManager::ESCENE::OVER);
+		//SceneManager::ChangeScene(SceneManager::ESCENE::OVER);
+		SceneManager::Instance()->isover = true;
+		return;
 	}
 
 
@@ -274,12 +282,17 @@ void Player::StateStun()
 	// ステップごとに処理を切り替え
 	switch (mStateStep)
 	{
-		// ステップ0：攻撃アニメーションに切り替え
+		// ステップ0：スタンアニメーションに切り替え
 	case 0:
+
 		mpImage->ChangeAnimation((int)EAnimType::ESTUN, false);
+
+		// 無敵時間をセット
+		mInvincibilityCnt = INVINCIBILITY_TIME;
+		mIsStun = true;
+
 		mStateStep++;
 
-		
 		break;
 
 		// ステップ2：アニメーション終了待ち
@@ -291,7 +304,7 @@ void Player::StateStun()
 		}
 		
 
-		// 攻撃アニメーションが終了したら、待機状態へ移行
+		// スタンアニメーションが終了したら、待機状態へ移行
 		if (mpImage->CheckAnimationEnd())
 		{
 			
@@ -382,7 +395,8 @@ void Player::Update()
 
 	DebugPrint::Print("プレイヤー位置：%.2f, %.2f, %.2f", mPos.x, mPos.y, mPos.z);
 
-	Camera::SetTargetPos(mPos);
+	Camera::Instance()->SetTargetPos(mPos);
+
 
 }
 
@@ -457,10 +471,11 @@ bool Player::Collision(ObjectBase* s_other)
 			if (!isClear)
 			{
 				isClear = true;//一度だけtrueにする
-				SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
+				//SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
+				
+				SceneManager::Instance()->isclear = true;
+				
 			}
-			
-
 			break;
 		case ETag::ETHROW:
 			ChangeState(EState::ESTUN);
@@ -468,8 +483,20 @@ bool Player::Collision(ObjectBase* s_other)
 			// hpを減らす処理
 			TakeDamage(1);
 
-			mInvincibilityCnt = INVINCIBILITY_TIME;
-			mIsStun = true;
+			
+			break;
+		case ETag::EDROPOBSTACLE:
+
+			ChangeState(EState::ESTUN);
+
+
+			// hpを減らす処理
+			TakeDamage(1);
+
+			// 落ちてくる障害物をDeath状態にする
+			DropObstacle* obj = (DropObstacle*)s_other;
+			obj->ChangeState(DropObstacle::EState::EDEATH);
+
 			break;
 		}
 

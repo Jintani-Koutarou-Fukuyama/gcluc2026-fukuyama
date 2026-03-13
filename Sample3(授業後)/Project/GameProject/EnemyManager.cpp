@@ -83,7 +83,19 @@ void EnemyManager::Collision(ObjectBase* s_other)
 {
 	for (EnemyBase* enemy : mEnemies)
 	{
+		// 当たり判定が無効であればスルー
+		if (enemy->GetIsCollision() == false) continue;
+
 		s_other->Collision(enemy);
+		
+
+		// トラップなどの処理
+		switch (enemy->GetTag())
+		{
+		case ObjectBase::ETag::EDROPOBSTACLE: // 落ちてくる障害物
+			enemy->Collision(s_other);
+			break;
+		}
 	}
 }
 

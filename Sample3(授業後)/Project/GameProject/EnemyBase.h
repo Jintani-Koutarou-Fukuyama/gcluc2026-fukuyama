@@ -13,5 +13,12 @@ public:
 
 	bool Collision(ObjectBase* s_other) override;
 
+	// “–‚½‚è”»’è‚ª—LŒø‚©‚Ç‚¤‚©‚ð•Ô‚·
+	const bool& GetIsCollision() const;
+	void SetIsCollision(bool s_iscolliion);
+
+private:
+
+	bool mIsCollision;
 	
 };

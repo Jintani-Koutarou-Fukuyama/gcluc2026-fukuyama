@@ -1,0 +1,144 @@
+﻿  Camera.cpp
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Camera.cpp(50,16): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CharaBase.cpp
+  ClearScene.cpp
+  DebugPrint.cpp
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\DebugPrint.cpp(49,17): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  DropObstacle.cpp
+  EnemyBase.cpp
+  EnemyManager.cpp
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\EnemyManager.cpp(116,25): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\EnemyManager.cpp(118,25): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  Field.cpp
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Field.cpp(22,8): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
+  GameScene.cpp
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(56,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(57,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(70,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(71,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(72,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+  HealItem.cpp
+  main.cpp
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\main.cpp(105,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\main.cpp(105,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  ObjectBase.cpp
+  Obstacle.cpp
+  OverScene.cpp
+  Player.cpp
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(99,14): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(99,3): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(450,26): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(451,32): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(452,30): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(453,36): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+  SceneManager.cpp
+  Shutome.cpp
+  Slime.cpp
+  StoryScene.cpp
+  Task.cpp
+  コードを生成中...
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(502,1): warning C4715: 'Player::Collision': 値を返さないコントロール パスがあります。
+  コンパイル中...
+  TaskManager.cpp
+  ThrowObject.cpp
+  TitleScene.cpp
+  Ui.cpp
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(62,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(62,32): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(112,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(112,34): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(112,27): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(112,23): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(114,35): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(114,32): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  コードを生成中...
+GLFW.lib(init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(input.obj) : warning LNK4099: PDB '' が 'GLFW.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_time.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_time.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(vulkan.obj) : warning LNK4099: PDB '' が 'GLFW.lib(vulkan.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_tls.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_tls.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_joystick.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_joystick.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(wgl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(wgl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(egl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(egl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
+     ライブラリ C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\/../Game/GameProject.lib とオブジェクト C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\/../Game/GameProject.exp を作成中
+  コード生成しています。
+  コード生成が終了しました。
+GLFW.lib(init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(input.obj) : warning LNK4099: PDB '' が 'GLFW.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_time.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_time.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(vulkan.obj) : warning LNK4099: PDB '' が 'GLFW.lib(vulkan.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_tls.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_tls.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(win32_joystick.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_joystick.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(wgl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(wgl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLFW.lib(egl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(egl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CVector.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CVector.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CFont.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CFont.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CImage.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CImage.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CFPS.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CFPS.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CSound.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CSound.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(GL.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(GL.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CResource.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CResource.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CCamera.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CCamera.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CInput.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CInput.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CLoadThread.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CLoadThread.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CRect.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CRect.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CMatrix.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CMatrix.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CTexture.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CTexture.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CCollision.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CCollision.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+GLLibrary.lib(CShader.obj) : warning LNK4099: PDB '' が 'GLLibrary.lib(CShader.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+alut.lib(alutInit.obj) : warning LNK4099: PDB '' が 'alut.lib(alutInit.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+alut.lib(alutLoader.obj) : warning LNK4099: PDB '' が 'alut.lib(alutLoader.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+alut.lib(alutError.obj) : warning LNK4099: PDB '' が 'alut.lib(alutError.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+alut.lib(alutCodec.obj) : warning LNK4099: PDB '' が 'alut.lib(alutCodec.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+alut.lib(alutInputStream.obj) : warning LNK4099: PDB '' が 'alut.lib(alutInputStream.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+alut.lib(alutBufferData.obj) : warning LNK4099: PDB '' が 'alut.lib(alutBufferData.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+alut.lib(alutUtil.obj) : warning LNK4099: PDB '' が 'alut.lib(alutUtil.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glew.lib(glew.obj) : warning LNK4099: PDB '' が 'glew.lib(glew.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(glpng.obj) : warning LNK4099: PDB '' が 'glpng.lib(glpng.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngrtran.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngrtran.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(png.obj) : warning LNK4099: PDB '' が 'glpng.lib(png.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngread.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngread.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngget.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngget.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngmem.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngmem.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngtrans.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngtrans.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngerror.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngerror.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(crc32.obj) : warning LNK4099: PDB '' が 'glpng.lib(crc32.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(inflate.obj) : warning LNK4099: PDB '' が 'glpng.lib(inflate.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngrutil.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngrutil.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngrio.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngrio.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(zutil.obj) : warning LNK4099: PDB '' が 'glpng.lib(zutil.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(infblock.obj) : warning LNK4099: PDB '' が 'glpng.lib(infblock.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(adler32.obj) : warning LNK4099: PDB '' が 'glpng.lib(adler32.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(pngset.obj) : warning LNK4099: PDB '' が 'glpng.lib(pngset.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(infutil.obj) : warning LNK4099: PDB '' が 'glpng.lib(infutil.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(inftrees.obj) : warning LNK4099: PDB '' が 'glpng.lib(inftrees.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(infcodes.obj) : warning LNK4099: PDB '' が 'glpng.lib(infcodes.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+glpng.lib(inffast.obj) : warning LNK4099: PDB '' が 'glpng.lib(inffast.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+LINK : warning LNK4286: シンボル '??0FTPixmapFont@@QEAA@PEBD@Z (public: __cdecl FTPixmapFont::FTPixmapFont(char const *))' ('ftgl_static.lib(FTPixmapFont.obj)' で定義) が 'GLLibrary.lib(CFont.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル '??1FTPixmapFont@@UEAA@XZ (public: virtual __cdecl FTPixmapFont::~FTPixmapFont(void))' ('ftgl_static.lib(FTPixmapFont.obj)' で定義) が 'GLLibrary.lib(CFont.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alcCreateContext' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alcMakeContextCurrent' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alcDestroyContext' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alcGetCurrentContext' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alcGetContextsDevice' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alcOpenDevice' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alcCloseDevice' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alcGetError' ('OpenAL32.lib(ALc.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alGetError' ('OpenAL32.lib(alError.obj)' で定義) が 'alut.lib(alutInit.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alGetError' ('OpenAL32.lib(alError.obj)' で定義) が 'alut.lib(alutBufferData.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alGenBuffers' ('OpenAL32.lib(alBuffer.obj)' で定義) が 'alut.lib(alutBufferData.obj)' によってインポートされています
+LINK : warning LNK4286: シンボル 'alBufferData' ('OpenAL32.lib(alBuffer.obj)' で定義) が 'alut.lib(alutBufferData.obj)' によってインポートされています
+  GameProject.vcxproj -> C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GameProject.exe

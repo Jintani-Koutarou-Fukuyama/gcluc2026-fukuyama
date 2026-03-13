@@ -3,7 +3,7 @@
 #define FIELD_CENTER_Z (SCREEN_HEIGHT * 0.75f)
 #define FIELD_DEPTH_ANGLE 0.0f  //この値で奥行の角度を設定する
 #define FIELD_DEPTH_DIR CVector2D(sinf(DtoR(FIELD_DEPTH_ANGLE)), cosf(DtoR(FIELD_DEPTH_ANGLE)))
-#define CENTER_POS CVector2D(mpShadowImg->GetSize().x * 0.5f - 3.0f, 195.0f)
+#define CENTER_POS CVector2D(350.f , 625.0f)
 #define TEX_SHADOW "影.png"
 
 // コンストラクタ
@@ -23,7 +23,9 @@ ObjectBase::ObjectBase(const CVector3D& s_pos, const float& s_collisionRange)
 	// 影の画像を読み込み
 	mpShadowImg = CImage::CreateImage(TEX_SHADOW);
 
-	mpShadowImg->SetCenter(CENTER_POS);
+	mpShadowImg->SetSize(mpShadowImg->GetSize() * 0.65);
+	mpShadowImg->SetCenter(CENTER_POS * 0.65);
+
 }
 
 // デストラクタ

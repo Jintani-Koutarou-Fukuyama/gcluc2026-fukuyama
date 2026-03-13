@@ -10,7 +10,6 @@ enum class ETaskPrio
 	ESHADOW,//影
 	EOBJECT,//オブジェクト（プレイヤーや敵など）
 	EUI,//UI（HPやタイマー、文字など）
-
 };
 
 class Task

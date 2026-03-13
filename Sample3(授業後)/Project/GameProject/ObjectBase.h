@@ -39,6 +39,7 @@ public:
 	enum class ETag
 	{
 		ENONE,     // ‰Šúó‘Ô
+		PLAYER,    // ƒvƒŒƒCƒ„[
 		ESHUTOME,  // ŒÆ
 		ETHROW,    // ŒÆ‚ª“Š‚°‚Ä‚­‚é‚à‚Ì
 		EHEALITEM, // ‰ñ•œ–ò

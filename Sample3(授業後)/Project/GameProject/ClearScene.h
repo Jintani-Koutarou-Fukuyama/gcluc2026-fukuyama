@@ -11,8 +11,15 @@ public:
 
 	void Update();//クリアシーン（でクリア画面のアニメーションとか）の更新関数
 	void Draw();//クリアシーン（でクリア画面を描画したりとか）の描画関数
-
+	void Init();
 private:
 	//ここにクリアシーンでいるものを書く(画像とかスコアとか)
 
+
+protected:
+	CImage* mpTitleImg;	// クリアシーンの画像
+	CImage* mpNumberImg;//数字の画像
+	int mClearTime;
+	void DrawNumber(int num, int x, int y);
+	
 };

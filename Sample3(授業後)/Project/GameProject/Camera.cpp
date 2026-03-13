@@ -6,9 +6,9 @@ CVector2D Camera::mOffset = CVector2D::zero;
 CVector3D Camera::mTargetPos = CVector3D::zero;
 
 Camera::Camera()
-    : Task((int)ETaskPrio::EFIELD - 1) // フィールドより前に更新
-    , mCameraX(0.0f)
+    : mCameraX(0.0f)
 {
+
 }
 
 Camera::~Camera()
@@ -27,6 +27,14 @@ Camera* Camera::Instance()
 void Camera::SetTargetPos(const CVector3D& s_pos)
 {
     mTargetPos = s_pos;
+}
+
+void Camera::Reset()
+{
+    mCameraX = 0.0f;
+    mOffset = CVector2D::zero;
+    mTargetPos = CVector3D::zero;
+
 }
 
 const CVector2D& Camera::GetOffset()

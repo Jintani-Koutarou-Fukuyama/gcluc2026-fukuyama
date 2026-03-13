@@ -63,3 +63,7 @@ void TitleScene::Draw()
 	mpTitleImg->Draw();
 	
 }
+void TitleScene::Init()
+{
+
+}

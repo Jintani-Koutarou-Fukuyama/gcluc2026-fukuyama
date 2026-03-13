@@ -16,6 +16,8 @@ public:
 
 	int UiKaisi = false;
 
+	int GetTimeSec() const;
+
 protected:
 	CImage* mpHpImg;	// HP�̉摜
 	int mpHp;
