@@ -14,8 +14,16 @@ public:
 	void Draw();//ゲームシーン（でゲームを描画したりとか）の描画関数
 	void Init();//タスクマネージャーに登場された後に呼ぶもの
 
+
+	
+	void SetPlateGimmick(float s_interval);
+	void PopPlate();
 private:
 	//ここにゲームシーンでいるものを書く(画像とかスコアとか)
 	int mDifficultyLevel = 0;  //難易度フラグ 0=LEVEL1, 1=LEVEL2, 2=LEVEL3
 
+
+	float mElapsedTime;	// 経過時間計測用
+	int mSpawnCnt;    // スポーンカウント
+	int mInterval;    //生成時間
 };

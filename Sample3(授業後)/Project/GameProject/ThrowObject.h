@@ -5,7 +5,9 @@
 enum class ThrowObjectType
 {
 	EPLATE_RED,
-	EPLATE_BLUE
+	EPLATE_BLUE,
+
+	ENUM
 };
 
 class ThrowObject : public EnemyBase
@@ -62,5 +64,4 @@ private:
 
 	float mMoveSpeedX; // ‚à‚Ì‚ª”ò‚ñ‚Å‚¢‚­‘¬“x
 	float mRotateCnt;  // ‰ñ“]‚·‚é—Ê‚ðŒˆ‚ß‚é’l
-
 };

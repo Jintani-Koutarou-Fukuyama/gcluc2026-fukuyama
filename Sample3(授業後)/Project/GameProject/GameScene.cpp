@@ -17,6 +17,8 @@
 
 #define PLAYER_COLLISIONRANGE 40.0f  //あとで消すかも プレイヤーの当たり判定
 #define SHUTOME_COLLISION_RANGE 30.0f // 姑の当たり判定の大きさ
+#define SPAWN_COUNT 50
+#define STAGE_WIDTH 2666 * 3
 
 #define STAGE_BGM1 "STAGEBGM1.wav"//ステージ道中のBGM１～２好きなの選んでください
 #define STAGE_BGM2 "STAGEBGM2.wav"//MP3からwavに変換しないといけない
@@ -29,6 +31,8 @@
 
 
 GameScene::GameScene()
+	: mElapsedTime(0.0f)
+	, mInterval(0.0f)
 {
 	//ここにGameScene()が生成されたときに呼び出したい処理を入れる
 	
@@ -134,10 +138,71 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	}
 }
 
+
+void GameScene::SetPlateGimmick(float s_interval)
+{
+
+	mInterval = s_interval;
+
+}
+
+void GameScene::PopPlate()
+{
+	if (mSpawnCnt < SPAWN_COUNT)
+	{
+		float spawnPointX = Player::GetInstance()->GetPos().x + SCREEN_WIDTH + 20.0f;
+		if (spawnPointX >= STAGE_WIDTH) return;
+
+		if (mElapsedTime >= mInterval)
+		{
+			ThrowObjectType type = (ThrowObjectType)Utility::Rand(0, (int)ThrowObjectType::ENUM - 1);
+
+			CVector3D pos;
+			pos.x = spawnPointX;
+			pos.y = 400.0f;
+			pos.z = Utility::Rand(-120.0f, 180.0f);
+
+		 new ThrowObject(type, pos, PLAYER_COLLISIONRANGE);
+
+			mElapsedTime -= mInterval;
+		}
+
+		mElapsedTime += CFPS::GetDeltaTime();
+	}
+	else
+	{
+		mElapsedTime = 0.0f;
+	}
+}
+
 //更新処理
 void GameScene::Update()
 {
 	//ここにGameScene()があるときにずっと更新したい処理を入れる
+	CVector3D player = Player::GetInstance()->GetPos();
+
+	if (player.x >= 0  && player.x <= 2226)
+	{
+
+		SetPlateGimmick(1.0f);
+		printf("ステージ1");
+	}
+	else if(player.x > 2226 && player.x <= 2226 * 2)
+	{
+		SetPlateGimmick(0.7f);
+		printf("ステージ2");
+
+	}
+	else
+	{
+		SetPlateGimmick(0.1f);
+		printf("ステージ3");
+
+	}
+
+
+ 	PopPlate();
+
 
 	//難易度調整処理
 	Player* p = Player::GetInstance();

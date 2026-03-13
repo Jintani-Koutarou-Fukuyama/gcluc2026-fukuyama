@@ -60,6 +60,7 @@ ThrowObject::~ThrowObject()
 	}
 }
 
+
 void ThrowObject::Update()
 {
 	// 状態に合わせて、更新処理を切り替える
@@ -88,10 +89,11 @@ void ThrowObject::Update()
 		mMoveSpeedX = 0.0f;
 		mIsGrounded = true;
 	}
-	//画面の左（画像の一番左）に行くと
+	// 消失地点(左)に行くと
 	if (mPos.x <= 0.0f)
 	{
 		Kill();
+		printf("消失しました");
 	}
 
 	//画面の下（画像の一番下）に行くと
