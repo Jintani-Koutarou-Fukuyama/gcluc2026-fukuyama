@@ -78,7 +78,7 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	//回復アイテムを生成
 	new HealItem(CVector3D(100, 0, 0));
 	//姑が投げてくる物を生成
-	new ThrowObject(ThrowObjectType::EPLATE_RED, CVector3D(1300, 300.0f, -110.0f), SHUTOME_COLLISION_RANGE);
+	//new ThrowObject(ThrowObjectType::EPLATE_RED, CVector3D(1300, 300.0f, -110.0f), SHUTOME_COLLISION_RANGE);
 
 	//エネミー管理クラスを生成
 	EnemyManager::Instance();
@@ -125,18 +125,7 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 		// 落ちてくる障害物を生成
 		new DropObstacle(DropObstacleType::EBONBORI, CVector3D(x, 400, z), PLAYER_COLLISIONRANGE);
 	}
-	// 姑が投げてくるものをランダム生成 テスト用（TODO:後で消す）
-	for (int i = 0; i < 10; i++)
-	{
 
-		//めちゃくちゃてきとう
-		float x = rand() % 2600;
-		float y = rand() % 200;
-		float z = rand() % 120;
-
-
-		new ThrowObject((ThrowObjectType)(i % 2), CVector3D(x, y, z), PLAYER_COLLISIONRANGE);
-	}
 }
 
 // 皿の設定(間隔を設定する)
