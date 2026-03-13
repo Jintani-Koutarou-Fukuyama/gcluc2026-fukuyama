@@ -21,6 +21,12 @@
 #define STAGE_BGM1 "STAGEBGM1.wav"//ステージ道中のBGM１～２好きなの選んでください
 #define STAGE_BGM2 "STAGEBGM2.wav"//MP3からwavに変換しないといけない
 
+#define LAST_STAGE_BGM1 "LASTSTAGEBGM1.wav"//ラストステージのBGM１～５好きなの選んでください
+#define LAST_STAGE_BGM2 "LASTSTAGEBGM2.wav"
+#define LAST_STAGE_BGM3 "LASTSTAGEBGM3.wav"
+#define LAST_STAGE_BGM4 "LASTSTAGEBGM4.wav"
+#define LAST_STAGE_BGM5 "LASTSTAGEBGM5.wav"
+
 
 GameScene::GameScene()
 {
@@ -39,7 +45,7 @@ GameScene::~GameScene()
 	
 	// BGM停止
 	SOUND("stage_bgm")->Stop();
-
+	SOUND("last_stage_bgm")->Stop();
 	printf("シーンが変わりました\n");
 	//ここにスコアを保存してクリアシーンまたはオーバーシーンに持っていく処理を書く必要がある
 
@@ -73,10 +79,14 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	EnemyManager::Instance();
 	//カメラを生成
 	Camera::Instance();
+
 	// BGM読み込み
 	SOUND("stage_bgm")->Load(STAGE_BGM1, 1, false);
 	// 再生（trueはループ）
 	SOUND("stage_bgm")->Play(true);
+	// BGM読み込み
+	SOUND("last_stage_bgm")->Load(LAST_STAGE_BGM2, 1, false);
+	
 
 	printf("ゲームになりました\n");
 
@@ -127,19 +137,24 @@ void GameScene::Update()
 
 	float x = p->GetPos().x;
 
-	//プレイヤーのX座標が2500を超えると難易度2になる
+	//プレイヤーのX座標が2666を超えると難易度2になる
 	if (mDifficultyLevel == 0 && x > 2666.0f)
 	{
 		mDifficultyLevel = 1;
 		printf("難易度アップ Lv1！\n");
+		
 	}
 
-	//プレイヤーのX座標が5200を超えると難易度3になる
+	//プレイヤーのX座標が5332を超えると難易度3になる
 	if (mDifficultyLevel == 1 && x > 5332.0f)
 	{
 		mDifficultyLevel = 2;
 		printf("難易度アップ Lv2！\n");
-
+		// BGM停止
+		SOUND("stage_bgm")->Stop();
+		// 再生（trueはループ）
+		SOUND("last_stage_bgm")->Play(true);
+		
 	}
 
 }
