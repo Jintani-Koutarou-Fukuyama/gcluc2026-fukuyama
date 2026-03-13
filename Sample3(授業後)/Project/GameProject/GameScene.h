@@ -15,8 +15,9 @@ public:
 	void Init();//タスクマネージャーに登場された後に呼ぶもの
 
 
-	
+	// 皿の設定(間隔を設定する)
 	void SetPlateGimmick(float s_interval);
+	// 皿を生成する
 	void PopPlate();
 private:
 	//ここにゲームシーンでいるものを書く(画像とかスコアとか)

@@ -37,7 +37,7 @@ GameScene::GameScene()
 	//ここにGameScene()が生成されたときに呼び出したい処理を入れる
 	
     // 皿の設定難易度1
-	SetPlateGimmick(1.0f);
+	SetPlateGimmick(2.0f);
 	
 
 }
@@ -139,7 +139,7 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	}
 }
 
-// 皿を設定(間隔を設定する)
+// 皿の設定(間隔を設定する)
 void GameScene::SetPlateGimmick(float s_interval)
 {
 
@@ -150,27 +150,37 @@ void GameScene::SetPlateGimmick(float s_interval)
 //　皿を生成する
 void GameScene::PopPlate()
 {
+	// 現在の敵の数が、敵生成数を超えてなければ、
 	if (mSpawnCnt < SPAWN_COUNT)
 	{
+		// 画面外にスポーン地点を設定
 		float spawnPointX = Player::GetInstance()->GetPos().x + SCREEN_WIDTH + 20.0f;
+		// 画面の端が画面に映っているなら生成しない
 		if (spawnPointX >= STAGE_WIDTH) return;
 
+		// 経過時間が生成間隔の時間を超えたら
 		if (mElapsedTime >= mInterval)
 		{
+			// 種類をランダムで生成する
 			ThrowObjectType type = (ThrowObjectType)Utility::Rand(0, (int)ThrowObjectType::ENUM - 1);
 
+			// 位置をランダムで決定する
 			CVector3D pos;
-			pos.x = spawnPointX;
-			pos.y = Utility::Rand(100.0f, 250.0f);
+			pos.x = Utility::Rand(spawnPointX, spawnPointX + 50.0f);
+			pos.y = Utility::Rand(200.0f, 250.0f);
 			pos.z = Utility::Rand(-120.0f, 180.0f);
 
-		 new ThrowObject(type, pos, PLAYER_COLLISIONRANGE);
+			// 生成する
+			new ThrowObject(type, pos, PLAYER_COLLISIONRANGE);  // TODO:　当たり判定を変える
+
 
 			mElapsedTime -= mInterval;
 		}
 
+		// 経過時間を加算
 		mElapsedTime += CFPS::GetDeltaTime();
 	}
+	// 生成数に達している状態
 	else
 	{
 		mElapsedTime = 0.0f;
@@ -196,7 +206,7 @@ void GameScene::Update()
 		printf("難易度アップ Lv1！\n");
 
 		//// 皿の設定難易度2
-		SetPlateGimmick(0.7f);
+		SetPlateGimmick(1.5f);
 		
 	}
 
@@ -211,11 +221,15 @@ void GameScene::Update()
 		SOUND("last_stage_bgm")->Play(true);
 		
 		// 皿の設定難易度3
-		SetPlateGimmick(0.1f);
+		SetPlateGimmick(0.999999999999f);
 	}
 	
 	// 皿を生成する
-	PopPlate();
+	for (int i = 0; i < 5; i++)
+	{
+		PopPlate();
+	}
+	
 }
 
 //描画処理
