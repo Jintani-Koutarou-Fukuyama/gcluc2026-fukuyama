@@ -45,7 +45,7 @@ const CVector2D& Camera::GetOffset()
 void Camera::Update()
 {
     // プレイヤーを画面中央に置く
-    float targetX = mTargetPos.x - SCREEN_WIDTH * 0.5f;
+    float targetX = mTargetPos.x - SCREEN_WIDTH * 0.3f;
 
     // スムーズ追従（リニア）
     mCameraX += (targetX - mCameraX) * 0.1f;

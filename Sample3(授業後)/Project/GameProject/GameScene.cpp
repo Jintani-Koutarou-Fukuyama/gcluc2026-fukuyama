@@ -15,7 +15,7 @@
 
 
 
-#define PLAYER_COLLISIONRANGE 90.0f  //あとで消すかも プレイヤーの当たり判定
+#define PLAYER_COLLISIONRANGE 60.0f  //あとで消すかも プレイヤーの当たり判定
 #define SHUTOME_COLLISION_RANGE 30.0f // 姑の当たり判定の大きさ
 #define THROWOBJECT_COLLISION_RANGE 100.0f // 姑が投げてくるものの当たり判定の大きさ
 #define SPAWN_COUNT 50
@@ -69,7 +69,7 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	new Ui();//ゲームシーンにUIを入れてしまったのでデストラクタするときにスコアもなくなります
 	// プレイヤーを生成
 	new Player
-	(CVector3D(SCREEN_WIDTH * 0.5f, 0.0f, 0.0f), PLAYER_COLLISIONRANGE);
+	(CVector3D(SCREEN_WIDTH * 0.3f, 0.0f, 0.0f), PLAYER_COLLISIONRANGE);
 	//姑を生成←前にいる方
 	new Shutome
 	(CVector3D(2600.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);

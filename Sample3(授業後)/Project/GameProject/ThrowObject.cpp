@@ -10,7 +10,6 @@
 
 #define TEX_PLATE_RED "sara.png"
 #define TEX_PLATE_BLUE "sara2.png"
-
 // 投げられるもののアニメーションデータ
 TexAnimData ThrowObject::ANIM_DATA[(int)EAnimeType::ENUM] =
 {
@@ -154,6 +153,7 @@ void ThrowObject::Update()
 	// イメージに座標を設定して、アニメーションを更新
 	mpImage->SetPos(CalcScreenPos());
 	mpImage->UpdateAnimation();
+
 }
 
 void ThrowObject::Render()
