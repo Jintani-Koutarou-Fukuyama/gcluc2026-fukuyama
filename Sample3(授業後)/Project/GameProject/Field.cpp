@@ -1,6 +1,7 @@
 #include "Field.h"
 #include"Camera.h"
 #include "ShutomeCutIn.h"
+#include "Player.h"
 
 #define TEX_FIELD "22‰¼.png"
 
@@ -45,9 +46,7 @@ void Field::Update()
 {
 	static int prevArea = -1;
 
-	int w = mpFieldImg[0]->GetSize().x;
-
-	int area = Camera::GetOffset().x / w;
+	int area = GetArea();
 
 	if (area != prevArea)
 	{
@@ -73,4 +72,20 @@ void Field::PreRender()
 		mpFieldImg[i]->Draw();
 	}
 
+}
+
+int Field::GetArea()
+{
+	if (Player::GetInstance() == nullptr) return 0;
+
+	float playerX = Player::GetInstance()->GetPos().x;
+
+	int w = sFieldWidth / 3;
+
+	int area = playerX / w;
+
+	if (area < 0) area = 0;
+	if (area > 2) area = 2;
+
+	return area;
 }

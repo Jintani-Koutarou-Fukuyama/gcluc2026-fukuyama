@@ -11,8 +11,9 @@
 #include"HealItem.h"
 #include"Obstacle.h"
 #include "DropObstacle.h"
+#include"ShutomeCutIn.h"
 #include "Random.h"
-
+#include"ShutomeCutIn.h"
 
 #define PLAYER_COLLISIONRANGE 40.0f  //‚ ‚Æ‚ÅÁ‚·‚©‚à ƒvƒŒƒCƒ„[‚Ì“–‚½‚è”»’è
 #define SHUTOME_COLLISION_RANGE 30.0f // ŒÆ‚Ì“–‚½‚è”»’è‚Ì‘å‚«‚³
