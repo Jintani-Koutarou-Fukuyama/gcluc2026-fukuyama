@@ -15,4 +15,7 @@ public:
 private:
 	//ここにクリアシーンでいるものを書く(画像とかスコアとか)
 
+
+protected:
+	CImage* mpTitleImg;	// タイトルの画像
 };

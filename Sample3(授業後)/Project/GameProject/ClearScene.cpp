@@ -1,13 +1,18 @@
 #include"ClearScene.h"
 #include"SceneManager.h"
 
+
+#define CREARIMG "CrearScene.png"//←ここにゲームクリア画像をのせる
+
 //コンストラクタ
 ClearScene::ClearScene()
+	:mpTitleImg(nullptr)
 {
 	//ここに:ClearScene()が生成されたときに呼び出したい処理を入れる
 
 	
-
+	// タイトル画像を読み込み
+	mpTitleImg = CImage::CreateImage(CREARIMG);
 	printf("ゲームクリアになりました");
 }
 
@@ -16,7 +21,12 @@ ClearScene::~ClearScene()
 {
 	//ここに:ClearScene()が破棄されたときに呼び出したい処理を入れる
 
-	
+	// ゲームクリアの画像を削除
+	if (mpTitleImg != nullptr)
+	{
+		delete mpTitleImg;
+		mpTitleImg = nullptr;
+	}
 	printf("シーンが変わりました\n");
 }
 
@@ -25,9 +35,13 @@ ClearScene::~ClearScene()
 void ClearScene::Update()
 {
 	//ここに:ClearScene()があるときにずっと更新したい処理を入れる
-	if (PUSH(CInput::eButton5))
+	
+	// [Enter]キーでゲームへ移行
+	if (PUSH(CInput::eButton10))
 	{
+		//シーンをゲームに変更
 		SceneManager::ChangeScene(SceneManager::GAME);
+
 	}
 }
 
@@ -35,7 +49,7 @@ void ClearScene::Update()
 void ClearScene::Draw()
 {
 	//ここに:ClearScene()があるときにずっと描画したいしたい処理を入れる
-
+	mpTitleImg->Draw();
 }
 
 void ClearScene::Init()
