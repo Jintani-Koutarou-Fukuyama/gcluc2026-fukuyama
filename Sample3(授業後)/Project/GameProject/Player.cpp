@@ -136,7 +136,7 @@ bool Player::UpdateMove()
 		mPos.x -= MOVE_SPEED_X;
 		mpImage->SetFlipH(true);
 		isMove = true;
-		TakeDamage(1);
+		
 	}
 	// DƒL[‚ğ‰Ÿ‚µ‚Ä‚¢‚éŠÔ
 	else if (HOLD(CInput::eButton9))

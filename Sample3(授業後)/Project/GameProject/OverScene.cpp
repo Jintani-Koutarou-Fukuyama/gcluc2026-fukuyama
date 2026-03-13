@@ -34,6 +34,8 @@ void OverScene::Draw()
 void OverScene::Init()
 {
 	//ゲームオーバー、ゲームクリアのフラグをリセット（リトライ用）
+	SceneManager::Instance()->isclear = false;
+	SceneManager::Instance()->isover = false;
 	SceneManager::Instance()->requestChange = false;
 
 }
