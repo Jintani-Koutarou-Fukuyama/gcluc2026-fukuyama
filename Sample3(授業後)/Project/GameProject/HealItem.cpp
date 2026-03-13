@@ -5,7 +5,7 @@
 HealItem::HealItem(const CVector3D& pos)
 	: ObjectBase(pos, 40.0f)
 {
-    mpImage = CImage::CreateImage("kaihuku.png");
+    mpImage = CImage::CreateImage("‰ñ•œ.png");
 
     mpImage->SetSize(200, 200);
     //mpShadowImg->SetSize(160, 80);

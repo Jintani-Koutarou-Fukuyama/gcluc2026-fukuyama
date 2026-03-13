@@ -8,15 +8,15 @@ Obstacle::Obstacle(const CVector3D& pos)
 
     if (type == 0)
     {
-        mpImage = CImage::CreateImage("ŒF.png");
+        mpImage = CImage::CreateImage("kibori.png");
     }
     else
     {
-        mpImage = CImage::CreateImage("šâ.png");
+        mpImage = CImage::CreateImage("tubo.png");
     }
 
-    mpImage->SetSize(120, 120);
-    mpImage->SetCenter(CVector2D(60, 100));
+    mpImage->SetSize(200, 200);
+    mpImage->SetCenter(CVector2D(95, 170));
 }
 
 void Obstacle::Update()
