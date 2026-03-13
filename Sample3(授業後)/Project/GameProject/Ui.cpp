@@ -68,9 +68,8 @@ void Ui::Update()
 	}
 }
 
-void Ui::PreRender()
-{
-	//HPフレーム
+void Ui::Render()
+{//HPフレーム
 	mpUiFrame->SetPos(CVector2D(10, 10));
 	mpUiFrame->SetSize(350, 150);
 	mpUiFrame->Draw();
@@ -93,7 +92,7 @@ void Ui::PreRender()
 			mpHpImg->Draw();
 		}
 	}
-	
+
 	//タイマーの表示
 	int total = mTimer / 60;
 	int min = total / 60;
@@ -102,7 +101,7 @@ void Ui::PreRender()
 	int tx = SCREEN_WIDTH - 370;
 	int ty = 40;
 
-	
+
 	DrawNumber(min / 10, tx, ty);
 	DrawNumber(min % 10, tx + 80, ty);
 
@@ -110,6 +109,10 @@ void Ui::PreRender()
 
 	DrawNumber(sec / 10, tx + 190, ty);
 	DrawNumber(sec % 10, tx + 270, ty);
+
+}
+void Ui::PreRender()
+{
 	
 }
 

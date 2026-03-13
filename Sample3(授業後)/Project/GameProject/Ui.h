@@ -13,6 +13,7 @@ public:
 	void Update()override;
 	// •`‰æ
 	void PreRender()override;
+	void Render() override;
 
 	int UiKaisi = false;
 

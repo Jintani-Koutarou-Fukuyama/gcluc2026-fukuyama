@@ -8,8 +8,10 @@ enum class ETaskPrio
 
 	EFIELD,//フィールド
 	ESHADOW,//影
-	EUI,//UI（HPやタイマー、文字など）
+	
 	EOBJECT,//オブジェクト（プレイヤーや敵など）
+
+	EUI,//UI（HPやタイマー、文字など）
 	
 };
 

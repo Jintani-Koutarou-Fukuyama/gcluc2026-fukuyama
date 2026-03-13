@@ -39,8 +39,7 @@ void ShutomeCutIn::Update()
         Kill(); // ƒ^ƒXƒNíœ
     }
 }
-
-void ShutomeCutIn::PreRender()
+void ShutomeCutIn::Render()
 {
     CVector2D pos;
 
@@ -52,4 +51,10 @@ void ShutomeCutIn::PreRender()
 
     mpSerif->SetPos(CVector2D(300, SCREEN_HEIGHT - 700));
     mpSerif->Draw();
+}
+
+
+void ShutomeCutIn::PreRender()
+{
+ 
 }

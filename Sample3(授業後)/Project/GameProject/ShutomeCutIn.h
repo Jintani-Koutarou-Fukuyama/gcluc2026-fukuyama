@@ -9,6 +9,7 @@ public:
     ~ShutomeCutIn();
 
     void Update() override;
+    void Render() override;
     void PreRender() override;
 
 private:
