@@ -1,17 +1,19 @@
-﻿  Ui.cpp
-C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(91,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(91,32): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(143,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(143,34): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(143,27): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(143,23): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(145,35): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(145,32): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+﻿  GameScene.cpp
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(96,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(97,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(104,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(105,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(116,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(117,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(128,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(129,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(130,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
 GLFW.lib(init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB '' が 'GLFW.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
 GLFW.lib(win32_monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_time.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_time.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
@@ -21,7 +23,6 @@ GLFW.lib(win32_tls.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_tls.obj)' 
 GLFW.lib(win32_joystick.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_joystick.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(wgl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(wgl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(egl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(egl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
 LINK : warning LNK4075: /INCREMENTAL は /LTCG の指定によって無視されます。
      ライブラリ C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\/../Game/GameProject.lib とオブジェクト C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\/../Game/GameProject.exp を作成中
 LINK : warning LNK4098: defaultlib 'LIBCMT' は他のライブラリの使用と競合しています。/NODEFAULTLIB:library を使用してください。

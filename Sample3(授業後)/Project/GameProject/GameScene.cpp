@@ -90,10 +90,18 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 
 	printf("ゲームになりました\n");
 
-	// 障害物をランダム生成
+	// 落下障害物をランダム生成ステージ2
 	for (int i = 0; i < 10; i++)
 	{
-		float x = rand() % 2000 + 800;
+		float x = rand() % 2000 + 2800;
+		float z = rand() % 300 - 120;
+
+		new Obstacle(CVector3D(x, 0, z));
+	}
+	// 落下障害物をランダム生成ステージ3
+	for (int i = 0; i < 15; i++)
+	{
+		float x = rand() % 2000 + 5200;
 		float z = rand() % 300 - 120;
 
 		new Obstacle(CVector3D(x, 0, z));
