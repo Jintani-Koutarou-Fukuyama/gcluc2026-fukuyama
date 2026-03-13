@@ -36,7 +36,8 @@ GameScene::GameScene()
 {
 	//ここにGameScene()が生成されたときに呼び出したい処理を入れる
 	
-	
+    // 皿の設定難易度1
+	SetPlateGimmick(1.0f);
 	
 
 }
@@ -138,7 +139,7 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	}
 }
 
-
+// 皿を設定(間隔を設定する)
 void GameScene::SetPlateGimmick(float s_interval)
 {
 
@@ -146,6 +147,7 @@ void GameScene::SetPlateGimmick(float s_interval)
 
 }
 
+//　皿を生成する
 void GameScene::PopPlate()
 {
 	if (mSpawnCnt < SPAWN_COUNT)
@@ -159,7 +161,7 @@ void GameScene::PopPlate()
 
 			CVector3D pos;
 			pos.x = spawnPointX;
-			pos.y = 400.0f;
+			pos.y = Utility::Rand(100.0f, 250.0f);
 			pos.z = Utility::Rand(-120.0f, 180.0f);
 
 		 new ThrowObject(type, pos, PLAYER_COLLISIONRANGE);
@@ -179,29 +181,6 @@ void GameScene::PopPlate()
 void GameScene::Update()
 {
 	//ここにGameScene()があるときにずっと更新したい処理を入れる
-	CVector3D player = Player::GetInstance()->GetPos();
-
-	if (player.x >= 0  && player.x <= 2226)
-	{
-
-		SetPlateGimmick(1.0f);
-		printf("ステージ1");
-	}
-	else if(player.x > 2226 && player.x <= 2226 * 2)
-	{
-		SetPlateGimmick(0.7f);
-		printf("ステージ2");
-
-	}
-	else
-	{
-		SetPlateGimmick(0.1f);
-		printf("ステージ3");
-
-	}
-
-
- 	PopPlate();
 
 
 	//難易度調整処理
@@ -215,6 +194,9 @@ void GameScene::Update()
 	{
 		mDifficultyLevel = 1;
 		printf("難易度アップ Lv1！\n");
+
+		//// 皿の設定難易度2
+		SetPlateGimmick(0.7f);
 		
 	}
 
@@ -228,8 +210,12 @@ void GameScene::Update()
 		// 再生（trueはループ）
 		SOUND("last_stage_bgm")->Play(true);
 		
+		// 皿の設定難易度3
+		SetPlateGimmick(0.1f);
 	}
-
+	
+	// 皿を生成する
+	PopPlate();
 }
 
 //描画処理
