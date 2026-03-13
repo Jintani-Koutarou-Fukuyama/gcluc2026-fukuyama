@@ -163,6 +163,7 @@ void GameScene::PopPlate()
 			new ThrowObject(type, pos, THROWOBJECT_COLLISION_RANGE);
 
 
+
 			mElapsedTime -= mInterval;
 		}
 
@@ -214,7 +215,7 @@ void GameScene::Update()
 	}
 	
 	// éMÇê∂ê¨Ç∑ÇÈ
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 2; i++)
 	{
 		PopPlate();
 	}

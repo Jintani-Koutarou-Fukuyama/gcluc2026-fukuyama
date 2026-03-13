@@ -30,6 +30,9 @@ ThrowObject::ThrowObject(ThrowObjectType s_type, const CVector3D& s_pos, const f
 	, mpImage(nullptr)
 	, mType(s_type)
 	, mRotateCnt(0.0f)
+	, mState((EState)0)
+	, mMoveSpeedX(0.0f)
+	, mStateStep(0)
 {
 	mTag = ETag::ETHROW;
 

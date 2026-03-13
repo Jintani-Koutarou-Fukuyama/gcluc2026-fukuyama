@@ -187,10 +187,7 @@ void Player::StateIdle()
 	}
 	*/
 
-	if (mInvincibilityCnt >= 1)
-	{
-		mInvincibilityCnt--;
-	}
+	
 }
 
 // ジャンプ中の更新処理
@@ -397,7 +394,10 @@ void Player::Update()
 
 	Camera::Instance()->SetTargetPos(mPos);
 
-
+	if (mInvincibilityCnt >= 1)
+	{
+		mInvincibilityCnt--;
+	}
 }
 
 // 描画処理
@@ -417,6 +417,7 @@ bool Player::Collision(ObjectBase* s_other)
 	
 	if (mIsStun == false) 
 	{
+
 		// TODO: Z軸の当たり判定が大きいかもしれない。直方体型にする
 
 
