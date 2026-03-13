@@ -16,6 +16,8 @@ public:
 
 	static int sFieldWidth;//フィールドのサイズを取得
 
+	static int GetArea();
+
 protected:
 	CImage* mpFieldImg[3];	// フィールドの画像
 	
