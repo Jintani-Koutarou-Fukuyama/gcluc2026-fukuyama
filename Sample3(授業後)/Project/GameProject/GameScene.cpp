@@ -12,7 +12,8 @@
 #include"Obstacle.h"
 #include "DropObstacle.h"
 #include"ShutomeCutIn.h"
-
+#include "Random.h"
+#include"ShutomeCutIn.h"
 
 #define PLAYER_COLLISIONRANGE 40.0f  //あとで消すかも プレイヤーの当たり判定
 #define SHUTOME_COLLISION_RANGE 30.0f // 姑の当たり判定の大きさ
@@ -46,7 +47,7 @@ GameScene::~GameScene()
 	
 }
 
-void GameScene::Init()
+void GameScene::Init()//TaskManagerに追加された後に行う
 {
 	//カメラリセット
 	Camera::Instance()->Reset();
@@ -85,8 +86,20 @@ void GameScene::Init()
 		new Obstacle(CVector3D(x, 0, z));
 	}
 
-	// 落ちてくる障害物を生成
-	new DropObstacle(DropObstacleType::EBONBORI, CVector3D(700, 400, -100), PLAYER_COLLISIONRANGE);
+	// 障害物をランダム生成
+	for (int i = 0; i < 15; i++)
+	{
+		std::uniform_int_distribution<int> distX(2800, 7500);
+		std::uniform_int_distribution<int> distZ(-120, 179);
+
+		float x = distX(g_mt);
+		float z = distZ(g_mt);
+
+
+		// 落ちてくる障害物を生成
+		new DropObstacle(DropObstacleType::EBONBORI, CVector3D(x, 400, z), PLAYER_COLLISIONRANGE);
+	}
+	
 
 	// 姑が投げてくるものをランダム生成 テスト用（TODO:後で消す）
 	for (int i = 0; i < 10; i++)
