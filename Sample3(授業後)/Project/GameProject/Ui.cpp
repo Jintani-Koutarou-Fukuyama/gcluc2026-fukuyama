@@ -2,7 +2,7 @@
 #include "Player.h"
 #include"SceneManager.h"
 
-#define TEX_SHADOW "heart.png"
+#define TEX_SHADOW "ハート.png"
 
 const int mMmaxHp = 5;
 
@@ -15,6 +15,10 @@ Ui::Ui()
 	mpHpImg = CImage::CreateImage(TEX_SHADOW);
 	//数字の画像を読み込み
 	mpNumberImg = CImage::CreateImage("number.png");
+	//HPフレームの画像を読み込み
+	mpUiFrame = CImage::CreateImage("Frame.png");
+	//タイマーフレームの画像を読み込み
+	mpUiFrameTimer = CImage::CreateImage("Frame.png");
 
 	mTimer = 0;
 
@@ -35,6 +39,18 @@ Ui::~Ui()
 		delete mpNumberImg;
 		mpNumberImg = nullptr;
 	}
+
+	if (mpUiFrame != nullptr)
+	{
+		delete mpUiFrame;
+		mpUiFrame = nullptr;
+	}
+
+	if (mpUiFrameTimer != nullptr)
+	{
+		delete mpUiFrameTimer;
+		mpUiFrameTimer = nullptr;
+	}
 }
 
 void Ui::Update()
@@ -54,15 +70,26 @@ void Ui::Update()
 
 void Ui::PreRender()
 {
+	//HPフレーム
+	mpUiFrame->SetPos(CVector2D(10, 10));
+	mpUiFrame->SetSize(350, 150);
+	mpUiFrame->Draw();
+
+	//タイマーフレーム
+	mpUiFrameTimer->SetPos(CVector2D(SCREEN_WIDTH - 360, 10));
+	mpUiFrameTimer->SetSize(350, 150);
+	mpUiFrameTimer->Draw();
+
 	//HPの表示
 	int x = 20;
-	int y = 20;
+	int y = 50;
 
 	for (int i = 0; i < 5; i++)
 	{
 		if (i < mpHp)
 		{
-			mpHpImg->SetPos(CVector2D(x + i * 90, y));
+			mpHpImg->SetPos(CVector2D(x + i * 65, y));
+			mpHpImg->SetSize(70, 70);
 			mpHpImg->Draw();
 		}
 	}
@@ -72,16 +99,17 @@ void Ui::PreRender()
 	int min = total / 60;
 	int sec = total % 60;
 
-	int tx = SCREEN_WIDTH - 550;
-	int ty = 20;
+	int tx = SCREEN_WIDTH - 370;
+	int ty = 40;
 
+	
 	DrawNumber(min / 10, tx, ty);
-	DrawNumber(min % 10, tx + 110, ty);
+	DrawNumber(min % 10, tx + 80, ty);
 
-	DrawNumber(10, tx + 220, ty);
+	DrawNumber(10, tx + 140, ty);
 
-	DrawNumber(sec / 10, tx + 330, ty);
-	DrawNumber(sec % 10, tx + 440, ty);
+	DrawNumber(sec / 10, tx + 190, ty);
+	DrawNumber(sec % 10, tx + 270, ty);
 	
 }
 
@@ -113,7 +141,7 @@ void Ui::DrawNumber(int num, int x, int y)
 	}
 
 	mpNumberImg->SetRect(sx, sy, sx + w, sy + h);
-	mpNumberImg->SetSize(120, 120);
+	mpNumberImg->SetSize(100, 100);
 	mpNumberImg->SetPos(CVector2D(x, y));
 	mpNumberImg->Draw();
 }

@@ -20,6 +20,8 @@ public:
 
 protected:
 	CImage* mpHpImg;	// HPの画像
+	CImage* mpUiFrame; //HPフレームの画像
+	CImage* mpUiFrameTimer;//タイマーフレーム
 	int mpHp;
 	int mTimer;
 	CImage* mpNumberImg; //数字の画像
