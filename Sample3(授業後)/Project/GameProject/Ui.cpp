@@ -1,5 +1,6 @@
 #include "Ui.h"
 #include "Player.h"
+#include"SceneManager.h"
 
 #define TEX_SHADOW "heart.png"
 
@@ -45,6 +46,8 @@ void Ui::Update()
 		if (mpHp > 0)
 		{
 			mTimer++;
+			SceneManager::Instance()->clearTime = mTimer / 60;
+
 		}
 	}
 }
@@ -113,4 +116,8 @@ void Ui::DrawNumber(int num, int x, int y)
 	mpNumberImg->SetSize(120, 120);
 	mpNumberImg->SetPos(CVector2D(x, y));
 	mpNumberImg->Draw();
+}
+int Ui::GetTimeSec() const
+{
+	return mTimer / 60;  //•bŒvZ
 }
