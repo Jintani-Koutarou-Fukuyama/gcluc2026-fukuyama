@@ -16,5 +16,6 @@ public:
 
 private:
 	//ここにゲームシーンでいるものを書く(画像とかスコアとか)
+	int mDifficultyLevel = 0;  //難易度フラグ 0=LEVEL1, 1=LEVEL2, 2=LEVEL3
 
 };
