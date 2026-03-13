@@ -85,20 +85,6 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 
 		new Obstacle(CVector3D(x, 0, z));
 	}
-
-	// 落ちてくるをランダム生成（ステージ２用）
-	for (int i = 0; i < 10; i++)
-	{
-		std::uniform_int_distribution<int> distX(2800, 5200);
-		std::uniform_int_distribution<int> distZ(-120, 179);
-
-		float x = distX(g_mt);
-		float z = distZ(g_mt);
-
-
-		// 落ちてくる障害物を生成
-		new DropObstacle(DropObstacleType::EBONBORI, CVector3D(x, 400, z), PLAYER_COLLISIONRANGE);
-	}
 	
 	// 落ちてくるをランダム生成（ステージ３用）
 	for (int i = 0; i < 15; i++)
@@ -139,14 +125,14 @@ void GameScene::Update()
 	float x = p->GetPos().x;
 
 	//プレイヤーのX座標が2500を超えると難易度2になる
-	if (mDifficultyLevel == 0 && x > 2500.0f)
+	if (mDifficultyLevel == 0 && x > 2666.0f)
 	{
 		mDifficultyLevel = 1;
 		printf("難易度アップ Lv1！\n");
 	}
 
 	//プレイヤーのX座標が5200を超えると難易度3になる
-	if (mDifficultyLevel == 1 && x > 5200.0f)
+	if (mDifficultyLevel == 1 && x > 5332.0f)
 	{
 		mDifficultyLevel = 2;
 		printf("難易度アップ Lv2！\n");
