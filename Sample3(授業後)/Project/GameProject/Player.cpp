@@ -431,7 +431,11 @@ bool Player::Collision(ObjectBase* s_other)
 
 		// 各軸の距離を求めて、範囲外であればスルー
 		if (abs(mPos.x - otherPos.x) > minDist) return false;
-		if (abs(mPos.y - otherPos.y) > minDist) return false;
+		if (s_other->GetTag() != ETag::ETHROW)   // ← 皿以外ならY判定する
+		{
+			float heightRange = minDist * 1.2f;
+			if (abs(mPos.y - otherPos.y) > heightRange) return false;
+		}
 		if (abs(mPos.z - otherPos.z )  > minDist * 0.2f) return false; //z軸は判定小さく
 
 

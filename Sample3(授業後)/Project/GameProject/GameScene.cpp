@@ -15,9 +15,9 @@
 
 
 
-#define PLAYER_COLLISIONRANGE 60.0f  //あとで消すかも プレイヤーの当たり判定
+#define PLAYER_COLLISIONRANGE 40.0f  //あとで消すかも プレイヤーの当たり判定
 #define SHUTOME_COLLISION_RANGE 30.0f // 姑の当たり判定の大きさ
-#define THROWOBJECT_COLLISION_RANGE 100.0f // 姑が投げてくるものの当たり判定の大きさ
+#define THROWOBJECT_COLLISION_RANGE 20.0f // 姑が投げてくるものの当たり判定の大きさ
 #define SPAWN_COUNT 50
 #define STAGE_WIDTH 2666 * 3
 
@@ -125,7 +125,7 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 		// 落ちてくる障害物を生成
 		new DropObstacle(DropObstacleType::EBONBORI, CVector3D(x, 400, z), PLAYER_COLLISIONRANGE);
 	}
-
+	new DropObstacle(DropObstacleType::EBONBORI, CVector3D(200, 400, 100), PLAYER_COLLISIONRANGE);
 }
 
 // 皿の設定(間隔を設定する)
