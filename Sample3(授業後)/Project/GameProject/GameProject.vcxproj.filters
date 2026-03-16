@@ -26,6 +26,8 @@
     <ClCompile Include="Obstacle.cpp" />
     <ClCompile Include="DropObstacle.cpp" />
     <ClCompile Include="ShutomeCutIn.cpp" />
+    <ClCompile Include="Random.cpp" />
+    <ClCompile Include="TutorialScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Global.h" />
@@ -54,5 +56,7 @@
     <ClInclude Include="Obstacle.h" />
     <ClInclude Include="DropObstacle.h" />
     <ClInclude Include="ShutomeCutIn.h" />
+    <ClInclude Include="Random.h" />
+    <ClInclude Include="TutorialScene.h" />
   </ItemGroup>
 </Project>

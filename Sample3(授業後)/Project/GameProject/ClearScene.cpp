@@ -9,7 +9,7 @@ ClearScene::ClearScene()
 	:mpTitleImg(nullptr)
 {
 	//ここに:ClearScene()が生成されたときに呼び出したい処理を入れる
-
+	RankTime = false;//フラグをオフにする
 	
 	// タイトル画像を読み込み
 	mpTitleImg = CImage::CreateImage(CREARIMG);
@@ -35,7 +35,7 @@ ClearScene::~ClearScene()
 		delete mpNumberImg;
 		mpNumberImg = nullptr;
 	}
-
+	
 	printf("シーンが変わりました\n");
 }
 
@@ -52,6 +52,28 @@ void ClearScene::Update()
 		SceneManager::ChangeScene(SceneManager::GAME);
 
 	}
+	
+	if (!RankTime)//フラグがONだったら何もしない
+	{
+		//クリアタイムの評価によって展開を変える
+		if (mClearTime <= 30)//クリアタイムが30秒いないだったらA評価
+		{
+			printf("A評価\n");
+			RankTime = true;
+		}
+		else if (mClearTime <= 40)//クリアタイムが40秒いないだったらB評価
+		{
+			printf("B評価\n");
+			RankTime = true;
+		}
+		else//クリアタイムが40秒以上だったらC評価
+		{
+			printf("C評価\n");
+			RankTime = true;
+		}
+	}
+
+	
 }
 
 void ClearScene::DrawNumber(int num, int x, int y)

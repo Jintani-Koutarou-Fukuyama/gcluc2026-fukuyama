@@ -9,7 +9,8 @@ public:
         GAME,
         CLEAR,
         OVER,
-        STORY
+        STORY,
+        TUTORIAL
     };
 
     SceneManager();

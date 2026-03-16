@@ -51,6 +51,9 @@ void SceneManager::ChangeScene(ESCENE s_scene)//シーンが変わるときに呼び出す
     case ESCENE::STORY:
         mpScene = new StoryScene(); //ストーリーシーンを現在のシーンにする
         break;
+    case ESCENE::TUTORIAL:
+        mpScene = new StoryScene(); //ストーリーシーンを現在のシーンにする
+        break;
     default:
         break;
     }
