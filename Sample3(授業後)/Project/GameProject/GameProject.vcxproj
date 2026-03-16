@@ -21,6 +21,7 @@
     <ClCompile Include="Field.cpp" />
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="HealItem.cpp" />
+    <ClCompile Include="Hubby.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ObjectBase.cpp" />
     <ClCompile Include="Obstacle.cpp" />
@@ -52,6 +53,7 @@
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="HealItem.h" />
+    <ClInclude Include="Hubby.h" />
     <ClInclude Include="ObjectBase.h" />
     <ClInclude Include="Obstacle.h" />
     <ClInclude Include="OverScene.h" />

@@ -43,7 +43,8 @@ public:
 		ESHUTOME,  // ŒÆ
 		ETHROW,    // ŒÆ‚ª“Š‚°‚Ä‚­‚é‚à‚Ì
 		EHEALITEM, // ‰ñ•œ–ò
-		EDROPOBSTACLE // —Ž‚¿‚Ä‚­‚éáŠQ•¨
+		EDROPOBSTACLE, // —Ž‚¿‚Ä‚­‚éáŠQ•¨
+		EHUBBY     // •v
 	};
 
 

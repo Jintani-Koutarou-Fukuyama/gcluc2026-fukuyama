@@ -11,6 +11,7 @@
 #include"HealItem.h"
 #include"Obstacle.h"
 #include "DropObstacle.h"
+#include "Hubby.h"
 #include "Random.h"
 
 
@@ -118,6 +119,8 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	new HealItem(CVector3D(2500, 0, 120));
 	new HealItem(CVector3D(5600, 0, -120));
 	new HealItem(CVector3D(7500, 0, 180));
+
+	new Hubby(CVector3D(2600.0f, 0.0f, -50.0f), SHUTOME_COLLISION_RANGE);
 
 
 	//エネミー管理クラスを生成
