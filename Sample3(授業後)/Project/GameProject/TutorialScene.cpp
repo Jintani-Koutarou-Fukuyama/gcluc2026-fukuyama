@@ -28,7 +28,7 @@ TutorialScene::TutorialScene()
 //デストラクタ
 TutorialScene::~TutorialScene()
 {
-	//ここにTitleScene()が破棄されたときに呼び出したい処理を入れる
+	//ここにTutorialScene()が破棄されたときに呼び出したい処理を入れる
 
 	// BGM停止
 	SOUND("title_bgm")->Stop();
@@ -45,7 +45,7 @@ TutorialScene::~TutorialScene()
 //更新処理
 void TutorialScene::Update()
 {
-	//ここにTitleScene()があるときにずっと更新したい処理を入れる
+	//ここにTutorialScene()があるときにずっと更新したい処理を入れる
 	// [Enter]キーでゲームへ移行
 	if (PUSH(CInput::eButton10))
 	{
@@ -59,7 +59,7 @@ void TutorialScene::Update()
 //描画処理
 void TutorialScene::Draw()
 {
-	//ここにTitleScene()があるときにずっと描画したいしたい処理を入れる
+	//ここにTutorialScene()があるときにずっと描画したいしたい処理を入れる
 	mpTutorialImg->Draw();
 
 }

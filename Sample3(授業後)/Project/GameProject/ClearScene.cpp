@@ -18,7 +18,7 @@ ClearScene::ClearScene()
 
 	mpRankImg = nullptr;
 
-	printf("ゲームクリアになりました");
+	printf("ゲームクリアになりました\n");
 }
 
 //デストラクタ
