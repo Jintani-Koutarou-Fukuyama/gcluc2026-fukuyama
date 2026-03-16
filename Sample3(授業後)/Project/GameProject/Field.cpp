@@ -15,9 +15,9 @@ Field::Field()
 {
 	// フィールド画像を読み込み
 
-	mpFieldImg[0] = CImage::CreateImage("22仮.png");
-	mpFieldImg[1] = CImage::CreateImage("22仮.png");
-	mpFieldImg[2] = CImage::CreateImage("22仮.png");
+	mpFieldImg[0] = CImage::CreateImage("HAIKEI.png");
+	mpFieldImg[1] = CImage::CreateImage("HAIKEI.png");
+	mpFieldImg[2] = CImage::CreateImage("HAIKEI.png");
 
 
 	// 1枚の幅を取得
