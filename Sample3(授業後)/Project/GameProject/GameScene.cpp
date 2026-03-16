@@ -113,9 +113,9 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	}
 	
 	// 落ちてくるをランダム生成（ステージ３用）
-	for (int i = 0; i < 15; i++)
+	for (int i = 0; i < 20; i++)
 	{
-		std::uniform_int_distribution<int> distX(5200, 7500);
+		std::uniform_int_distribution<int> distX(5200, 7700);
 		std::uniform_int_distribution<int> distZ(-120, 179);
 
 		float x = distX(g_mt);
