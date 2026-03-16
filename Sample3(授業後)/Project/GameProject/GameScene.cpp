@@ -115,7 +115,9 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	new Shutome
 	(CVector3D(9080.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);
 	//回復アイテムを生成
-	new HealItem(CVector3D(100, 0, 0));
+	new HealItem(CVector3D(2500, 0, 120));
+	new HealItem(CVector3D(5600, 0, -120));
+	new HealItem(CVector3D(7500, 0, 180));
 
 
 	//エネミー管理クラスを生成
