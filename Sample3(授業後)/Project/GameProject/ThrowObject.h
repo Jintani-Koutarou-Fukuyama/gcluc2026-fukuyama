@@ -6,6 +6,7 @@ enum class ThrowObjectType
 {
 	EPLATE_RED,
 	EPLATE_BLUE,
+	ETYAWAN,
 
 	ENUM
 };

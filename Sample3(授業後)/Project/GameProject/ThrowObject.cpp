@@ -10,6 +10,7 @@
 
 #define TEX_PLATE_RED "sara.png"
 #define TEX_PLATE_BLUE "sara2.png"
+#define TEX_TYAWAN "tyawan.png"
 // 投げられるもののアニメーションデータ
 TexAnimData ThrowObject::ANIM_DATA[(int)EAnimeType::ENUM] =
 {
@@ -39,7 +40,7 @@ ThrowObject::ThrowObject(ThrowObjectType s_type, const CVector3D& s_pos, const f
 	std::string imagePath;
 	if (mType == ThrowObjectType::EPLATE_RED) imagePath = TEX_PLATE_RED;
 	else if (mType == ThrowObjectType::EPLATE_BLUE) imagePath = TEX_PLATE_BLUE;
-	//else if (m_type == SlimeType::Yellow) imagePath = "slime_c.png";
+	else if (mType == ThrowObjectType::ETYAWAN) imagePath = TEX_TYAWAN;
 	mpImage = CImage::CreateImage
 	(
 		imagePath.c_str(),	// 画像ファイルのパス
