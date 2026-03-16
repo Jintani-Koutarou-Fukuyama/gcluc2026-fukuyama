@@ -23,6 +23,7 @@ private:
 protected:
 	CImage* mpTitleImg;	// クリアシーンの画像
 	CImage* mpNumberImg;//数字の画像
+	CImage* mpRankImg; //評価の画像
 	int mClearTime;
 	void DrawNumber(int num, int x, int y);
 	

@@ -2,7 +2,7 @@
 #include"SceneManager.h"
 
 
-#define CREARIMG "CrearScene.png"//←ここにゲームクリア画像をのせる
+#define CREARIMG "クリア画面1.png"//←ここにゲームクリア画像をのせる
 
 //コンストラクタ
 ClearScene::ClearScene()
@@ -15,6 +15,8 @@ ClearScene::ClearScene()
 	mpTitleImg = CImage::CreateImage(CREARIMG);
 	//数字の読み込み
 	mpNumberImg = CImage::CreateImage("number.png");
+
+	mpRankImg = nullptr;
 
 	printf("ゲームクリアになりました");
 }
@@ -35,6 +37,11 @@ ClearScene::~ClearScene()
 		delete mpNumberImg;
 		mpNumberImg = nullptr;
 	}
+	if (mpRankImg != nullptr)
+	{
+		delete mpRankImg;
+		mpRankImg = nullptr;
+	}
 	
 	printf("シーンが変わりました\n");
 }
@@ -43,37 +50,34 @@ ClearScene::~ClearScene()
 //更新処理
 void ClearScene::Update()
 {
-	//ここに:ClearScene()があるときにずっと更新したい処理を入れる
-	
-	// [Enter]キーでゲームへ移行
 	if (PUSH(CInput::eButton10))
 	{
-		//シーンをゲームに変更
-		SceneManager::ChangeScene(SceneManager::GAME);
+		if (!RankTime)
+		{
+			// ここで評価判定
+			if (mClearTime <= 30)
+			{
+				mpRankImg = CImage::CreateImage("評価S.png");
+				printf("S評価\n");
+			}
+			else if (mClearTime <= 40)
+			{
+				mpRankImg = CImage::CreateImage("評価A.png");
+				printf("A評価\n");
+			}
+			else
+			{
+				mpRankImg = CImage::CreateImage("評価B.png");
+				printf("B評価\n");
+			}
 
-	}
-	
-	if (!RankTime)//フラグがONだったら何もしない
-	{
-		//クリアタイムの評価によって展開を変える
-		if (mClearTime <= 30)//クリアタイムが30秒いないだったらA評価
-		{
-			printf("A評価\n");
 			RankTime = true;
 		}
-		else if (mClearTime <= 40)//クリアタイムが40秒いないだったらB評価
+		else
 		{
-			printf("B評価\n");
-			RankTime = true;
-		}
-		else//クリアタイムが40秒以上だったらC評価
-		{
-			printf("C評価\n");
-			RankTime = true;
+			SceneManager::ChangeScene(SceneManager::GAME);
 		}
 	}
-
-	
 }
 
 void ClearScene::DrawNumber(int num, int x, int y)
@@ -114,26 +118,32 @@ void ClearScene::DrawNumber(int num, int x, int y)
 void ClearScene::Draw()
 {
 	//ここに:ClearScene()があるときにずっと描画したいしたい処理を入れる
-	mpTitleImg->Draw();
+	if (!RankTime)
+	{
+		mpTitleImg->Draw();
 
-	int total = mClearTime;
-	int min = total / 60;
-	int sec = total % 60;
+		int total = mClearTime;
+		int min = total / 60;
+		int sec = total % 60;
 
-	int tx = 340;
-	int ty = 500;
+		int tx = 540;
+		int ty = 300;
 
-	// 分
-	DrawNumber(min / 10, tx, ty);
-	DrawNumber(min % 10, tx + 110, ty);
+		DrawNumber(min / 10, tx, ty);
+		DrawNumber(min % 10, tx + 110, ty);
 
-	// コロン（:）
-	DrawNumber(10, tx + 220, ty);
+		DrawNumber(10, tx + 220, ty);
 
-	// 秒
-	DrawNumber(sec / 10, tx + 330, ty);
-	DrawNumber(sec % 10, tx + 440, ty);
-
+		DrawNumber(sec / 10, tx + 330, ty);
+		DrawNumber(sec % 10, tx + 440, ty);
+	}
+	else
+	{
+		if (mpRankImg)
+		{
+			mpRankImg->Draw();
+		}
+	}
 
 }
 
