@@ -2,12 +2,13 @@
 #include "Player.h"
 
 
-#define CHIP_SIZE 700.0f		// 1コマのサイズ
-#define CENTER_POS CVector2D(170.0f, 322.0f)	// 中心座標
+#define CHIP_SIZE_WIDTH 700.0f		// 1コマのサイズ 幅
+#define CHIP_SIZE_HEIGHT 800.0f		// 1コマのサイズ 高さ
+#define CENTER_POS CVector2D(170.0f, 352.0f)	// 中心座標
 #define MOVE_SPEED_X 7.0f
 #define MOVE_SPEED_Z 5.0f
 
-#define TEX_HUBBY "嫁 .png"
+#define TEX_HUBBY "夫.png"
 
 TexAnimData Hubby::ANIM_DATA[(int)Hubby::EAnimeType::ENUM] =
 {
@@ -45,12 +46,12 @@ Hubby::Hubby(const CVector3D& s_pos, const float& s_collisionRange)
 	(
 		TEX_HUBBY,	// 画像ファイルのパス
 		ANIM_DATA,		// アニメーションのデータ
-		CHIP_SIZE, CHIP_SIZE	// 1コマの幅と高さ
+		CHIP_SIZE_WIDTH, CHIP_SIZE_HEIGHT	// 1コマの幅と高さ
 	);
 	mpImage->ChangeAnimation((int)EAnimeType::EIDLE);
 	mpImage->SetCenter(CENTER_POS);
 
-	mpImage->SetSize(CVector2D(350.0f, 340.0f));
+	mpImage->SetSize(CVector2D(350.0f, 380.0f));
 
 }
 
@@ -133,12 +134,13 @@ void Hubby::StateMove()
 			// 目的地が右にあるのなら
 			if (nx < 0) 
 			{
-				// 画像を反転させる
-				mpImage->SetFlipH(true);
+				
+				mpImage->SetFlipH(false);
 			}
 			else
 			{
-				mpImage->SetFlipH(false);
+				// 画像を反転させる
+				mpImage->SetFlipH(true);
 			}
 		}
 
