@@ -1,7 +1,7 @@
 #include"OverScene.h"
 #include"SceneManager.h"
 
-#define OVERIMG "OverScene.png"//←ここにゲームオーバー画像をのせる
+#define OVERIMG "ゲームオーバー.png"//←ここにゲームオーバー画像をのせる
 
 //コンストラクタ
 OverScene::OverScene()
