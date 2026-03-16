@@ -19,7 +19,7 @@
 #define SHUTOME_COLLISION_RANGE 30.0f // 姑の当たり判定の大きさ
 #define THROWOBJECT_COLLISION_RANGE 20.0f // 姑が投げてくるものの当たり判定の大きさ
 #define SPAWN_COUNT 50
-#define STAGE_WIDTH 2666 * 3
+#define STAGE_WIDTH 3060 * 3
 
 #define STAGE_BGM1 "STAGEBGM1.wav"//ステージ道中のBGM１～２好きなの選んでください
 #define STAGE_BGM2 "STAGEBGM2.wav"//MP3からwavに変換しないといけない
@@ -75,7 +75,7 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	(CVector3D(2600.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);
 	//姑を生成←ステージの一番後ろにいる方
 	new Shutome
-	(CVector3D(7900.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);
+	(CVector3D(9080.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);
 	//回復アイテムを生成
 	new HealItem(CVector3D(100, 0, 0));
 
@@ -98,7 +98,7 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	// 落下障害物をランダム生成ステージ2
 	for (int i = 0; i < 10; i++)
 	{
-		float x = rand() % 2000 + 2800;
+		float x = rand() % 2000 + 3060;
 		float z = rand() % 300 - 120;
 
 		new Obstacle(CVector3D(x, 0, z));
@@ -106,7 +106,7 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	// 落下障害物をランダム生成ステージ3
 	for (int i = 0; i < 15; i++)
 	{
-		float x = rand() % 2000 + 5200;
+		float x = rand() % 2000 + 6120;
 		float z = rand() % 300 - 120;
 
 		new Obstacle(CVector3D(x, 0, z));
@@ -115,7 +115,7 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	// 落ちてくるをランダム生成（ステージ３用）
 	for (int i = 0; i < 20; i++)
 	{
-		std::uniform_int_distribution<int> distX(5332, 7700);
+		std::uniform_int_distribution<int> distX(6120, 9000);
 		std::uniform_int_distribution<int> distZ(-120, 179);
 
 		float x = distX(g_mt);
@@ -189,8 +189,8 @@ void GameScene::Update()
 
 	float x = p->GetPos().x;
 
-	//プレイヤーのX座標が2666を超えると難易度2になる
-	if (mDifficultyLevel == 0 && x > 2666.0f)
+	//プレイヤーのX座標が3060を超えると難易度2になる
+	if (mDifficultyLevel == 0 && x > 3060.0f)
 	{
 		mDifficultyLevel = 1;
 		printf("難易度アップ Lv1！\n");
@@ -200,8 +200,8 @@ void GameScene::Update()
 		
 	}
 
-	//プレイヤーのX座標が5332を超えると難易度3になる
-	if (mDifficultyLevel == 1 && x > 5332.0f)
+	//プレイヤーのX座標が6120を超えると難易度3になる
+	if (mDifficultyLevel == 1 && x > 6120.0f)
 	{
 		mDifficultyLevel = 2;
 		printf("難易度アップ Lv2！\n");

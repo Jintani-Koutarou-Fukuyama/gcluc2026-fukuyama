@@ -1,24 +1,4 @@
-﻿  Camera.cpp
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Camera.cpp(58,16): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
-  CharaBase.cpp
-  ClearScene.cpp
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ClearScene.cpp(110,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ClearScene.cpp(110,34): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ClearScene.cpp(110,27): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ClearScene.cpp(110,23): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ClearScene.cpp(112,35): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ClearScene.cpp(112,32): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-  DebugPrint.cpp
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\DebugPrint.cpp(49,17): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  DropObstacle.cpp
-  EnemyBase.cpp
-  EnemyManager.cpp
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\EnemyManager.cpp(116,25): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\EnemyManager.cpp(118,25): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
-  Field.cpp
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Field.cpp(24,8): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Field.cpp(85,11): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
-  GameScene.cpp
+﻿  GameScene.cpp
 C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(36,13): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
 C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(101,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
 C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(102,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
@@ -27,46 +7,6 @@ C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授
 C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(121,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
 C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(122,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
 C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(135,14): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-  HealItem.cpp
-  main.cpp
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\main.cpp(116,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\main.cpp(116,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-  ObjectBase.cpp
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ObjectBase.cpp(26,48): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ObjectBase.cpp(27,38): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
-  Obstacle.cpp
-  OverScene.cpp
-  Player.cpp
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(100,14): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(100,3): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(460,26): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(461,32): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(462,30): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(463,36): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
-  Random.cpp
-  SceneManager.cpp
-  Shutome.cpp
-  ShutomeCutIn.cpp
-  Slime.cpp
-  コードを生成中...
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(513,1): warning C4715: 'Player::Collision': 値を返さないコントロール パスがあります。
-  コンパイル中...
-  StoryScene.cpp
-  Task.cpp
-  TaskManager.cpp
-  ThrowObject.cpp
-  TitleScene.cpp
-  TutorialScene.cpp
-  Ui.cpp
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(90,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(90,32): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(146,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(146,34): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(146,27): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(146,23): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(148,35): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(148,32): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-  コードを生成中...
 GLFW.lib(init.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(init.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(window.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(input.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
@@ -76,12 +16,12 @@ GLFW.lib(win32_monitor.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(win3
 GLFW.lib(win32_time.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(win32_time.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(monitor.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(monitor.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(vulkan.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(vulkan.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
 GLFW.lib(win32_window.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(win32_window.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_tls.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(win32_tls.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_joystick.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(win32_joystick.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(wgl_context.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(wgl_context.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(egl_context.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(egl_context.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
 LINK : warning LNK4075: /INCREMENTAL は /LTCG の指定によって無視されます。
      ライブラリ C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\/../Game/GameProject.lib とオブジェクト C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\/../Game/GameProject.exp を作成中
 LINK : warning LNK4098: defaultlib 'LIBCMT' は他のライブラリの使用と競合しています。/NODEFAULTLIB:library を使用してください。
