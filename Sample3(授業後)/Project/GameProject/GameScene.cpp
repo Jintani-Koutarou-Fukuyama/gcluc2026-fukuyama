@@ -91,7 +91,7 @@ GameScene::~GameScene()
 	SOUND("stage_bgm")->Stop();
 	SOUND("last_stage_bgm")->Stop();
 	printf("シーンが変わりました\n");
-	//ここにスコアを保存してクリアシーンまたはオーバーシーンに持っていく処理を書く必要がある
+	
 
 	
 	
@@ -104,7 +104,7 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	// フィールドを生成
 	new Field();
 	//UIを生成
-	new Ui();//ゲームシーンにUIを入れてしまったのでデストラクタするときにスコアもなくなります
+	new Ui();
 	// プレイヤーを生成
 	new Player
 	(CVector3D(SCREEN_WIDTH * 0.3f, 0.0f, 0.0f), PLAYER_COLLISIONRANGE);
@@ -119,7 +119,7 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 
 
 	//エネミー管理クラスを生成
-	EnemyManager::Instance();
+	//EnemyManager::Instance();
 	//カメラを生成
 	Camera::Instance();
 
@@ -148,7 +148,7 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 		new Obstacle(CVector3D(stage3Obstacle[i].x, 0, stage3Obstacle[i].z));
 	}
 	
-	// 落ちてくるをランダム生成（ステージ３用）
+	// 落下障害物をランダム生成（ステージ３用）
 	for (int i = 0; i < 20; i++)
 	{
 		std::uniform_int_distribution<int> distX(6120, 9000);
@@ -161,7 +161,7 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 		// 落ちてくる障害物を生成
 		new DropObstacle(DropObstacleType::EBONBORI, CVector3D(x, 400, z), PLAYER_COLLISIONRANGE);
 	}
-	new DropObstacle(DropObstacleType::EBONBORI, CVector3D(200, 400, 100), PLAYER_COLLISIONRANGE);
+	
 }
 
 // 皿の設定(間隔を設定する)
