@@ -1,72 +1,9 @@
-﻿  Camera.cpp
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Camera.cpp(58,16): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
-  CharaBase.cpp
-  ClearScene.cpp
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ClearScene.cpp(123,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ClearScene.cpp(123,34): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ClearScene.cpp(123,27): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ClearScene.cpp(123,23): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ClearScene.cpp(125,35): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ClearScene.cpp(125,32): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-  DebugPrint.cpp
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\DebugPrint.cpp(49,17): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  DropObstacle.cpp
-  EnemyBase.cpp
-  EnemyManager.cpp
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\EnemyManager.cpp(116,25): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\EnemyManager.cpp(118,25): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
-  Field.cpp
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Field.cpp(24,8): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Field.cpp(85,11): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
-  GameScene.cpp
+﻿  GameScene.cpp
 C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(63,13): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
 C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(148,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
 C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(149,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
 C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(162,14): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-  HealItem.cpp
-  Hubby.cpp
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Hubby.cpp(49,20): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Hubby.cpp(49,3): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Hubby.cpp(121,14): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
-  main.cpp
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\main.cpp(140,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\main.cpp(140,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-  ObjectBase.cpp
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ObjectBase.cpp(26,48): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ObjectBase.cpp(27,38): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
-  Obstacle.cpp
-  OverScene.cpp
-  Player.cpp
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(108,14): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(108,3): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(530,26): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(531,32): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(532,30): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(533,36): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
-  Random.cpp
-  SceneManager.cpp
-  Shutome.cpp
-  ShutomeCutIn.cpp
-  コードを生成中...
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(588,1): warning C4715: 'Player::Collision': 値を返さないコントロール パスがあります。
-  コンパイル中...
-  Slime.cpp
-  StoryScene.cpp
-  Task.cpp
-  TaskManager.cpp
-  TextUi.cpp
   ThrowObject.cpp
-  TitleScene.cpp
-  TutorialScene.cpp
-  Ui.cpp
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(90,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(90,32): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(146,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(146,34): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(146,27): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(146,23): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(148,35): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(148,32): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
   コードを生成中...
 GLFW.lib(init.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(init.obj)' で、または 'C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(window.obj)' で、または 'C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。

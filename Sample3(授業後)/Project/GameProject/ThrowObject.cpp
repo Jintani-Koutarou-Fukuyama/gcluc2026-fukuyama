@@ -33,6 +33,8 @@ ThrowObject::ThrowObject(ThrowObjectType s_type, const CVector3D& s_pos, const f
 	, mState((EState)0)
 	, mMoveSpeedX(0.0f)
 	, mStateStep(0)
+	, mIsDraw(false)
+	, mDrawCnt(1) // 不具合(描画すると画面左上に画像がちらつく)対策用
 {
 	mTag = ETag::ETHROW;
 
@@ -159,7 +161,10 @@ void ThrowObject::Update()
 
 void ThrowObject::Render()
 {
-	mpImage->Draw();
+	if (mIsDraw)
+	{
+		mpImage->Draw();
+	}
 }
 
 bool ThrowObject::Collision(ObjectBase* s_other)
@@ -182,6 +187,8 @@ void ThrowObject::StateThrowing()
 		break;
 		// ステップ1：地面に当たったら
 	case 1:
+		// カウントが0未満になると描画できるようにする
+		if (--mDrawCnt < 0) mIsDraw = true; // 不具合対策用(描画すると画面左上に画像がちらつくの対応策)
 		// 接地したら、死亡状態へ移行
 		if (mIsGrounded)
 		{
