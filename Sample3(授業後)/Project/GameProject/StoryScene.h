@@ -21,4 +21,10 @@ private:
 	float mBlinkSpeed;   // 点滅速度
 	bool mBlinkUp;       // α値が上昇中か下降中か
 	float mScale[4];
+	CImage* mpMaeokiImg;   // 最初に出す画像
+	bool mMaeokiDone;     // 導入画像が終わったかどうか
+	float mMaeokiY;        // 導入画像の現在のY座標
+	float mMaeokiSpeed;    // スクロール速度
+	bool mMaeokiScrollEnd; // スクロールが終わったかどうか
+
 };

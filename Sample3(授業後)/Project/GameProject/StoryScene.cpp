@@ -6,6 +6,22 @@ StoryScene::StoryScene()
 {
 	//ここにStoryScene()が生成されたときに呼び出したい処理を入れる
 
+
+	// 導入画像
+	mpMaeokiImg = CImage::CreateImage("前置き.png");
+	mpMaeokiImg->SetSize(1280, 720);
+	mpMaeokiImg->SetPos(0, 0);
+
+	// 画面の下からスタート（720px 下）
+	mMaeokiY = 720.0f;
+	mMaeokiSpeed = 2.0f;       // スクロール速度（調整可）
+	mMaeokiScrollEnd = false;
+
+	mpMaeokiImg->SetPos(0, mMaeokiY);
+
+	mMaeokiDone = false;  // 最初は導入画像モード
+
+
 	//読み込みはタイトルでやっている
 	// 再生（trueはループ）
 	SOUND("story_bgm")->Play(true);
@@ -60,7 +76,13 @@ StoryScene::~StoryScene()
 		mpNextIcon->Release();
 		delete mpNextIcon;
 	}
-	
+	if (mpMaeokiImg)
+	{
+		mpMaeokiImg->Release();
+		delete mpMaeokiImg;
+		mpMaeokiImg = nullptr;
+	}
+
 	// BGM停止
 	SOUND("story_bgm")->Stop();
 	printf("シーンが変わりました\n");
@@ -70,18 +92,65 @@ StoryScene::~StoryScene()
 void StoryScene::Update()
 {
 	//ここにStoryScene()があるときにずっと更新したい処理を入れる
-	// エンターが押されたら次の位置へ
+	// 導入画像がまだ終わっていない場合
+	if (!mMaeokiDone)
+	{
+		// スクロール中
+		if (!mMaeokiScrollEnd)
+		{
+			mMaeokiY -= mMaeokiSpeed;
+			mpMaeokiImg->SetPos(0, mMaeokiY);
+
+			if (mMaeokiY <= -720.0f)
+			{
+				mMaeokiScrollEnd = true;
+			}
+		}
+		else
+		{
+			// スクロールが終了したらEnterで4コマへ
+			if (PUSH(CInput::eButton10))
+			{
+				mMaeokiDone = true;
+				return;
+			}
+		}
+
+		//導入中でも点滅処理は動かす
+		if (mBlinkUp)
+		{
+			mBlinkAlpha += mBlinkSpeed;
+			if (mBlinkAlpha >= 1.0f)
+			{
+				mBlinkAlpha = 1.0f;
+				mBlinkUp = false;
+			}
+		}
+		else
+		{
+			mBlinkAlpha -= mBlinkSpeed;
+			if (mBlinkAlpha <= 0.0f)
+			{
+				mBlinkAlpha = 0.0f;
+				mBlinkUp = true;
+			}
+		}
+		mpNextIcon->SetColor(1.0f, 1.0f, 1.0f, mBlinkAlpha);
+
+		return; 
+	}
+
+
+
+	//4コマ漫画の処理
 	if (PUSH(CInput::eButton10))
 	{
-		// まだ4コマ出ていないなら次のコマへ
+		//4コマが全部出るまで
 		if (mPosIndex < 3)
 		{
 			mPosIndex++;
-
-			// 新しいコマのポップアップ開始
 			mScale[mPosIndex] = 0.8f;
 
-			// 4つの位置
 			switch (mPosIndex)
 			{
 			case 0: mpStoryImg[0]->SetPos(0, 0); break;
@@ -92,15 +161,13 @@ void StoryScene::Update()
 		}
 		else
 		{
-			//4コマ全部出た後にエンターを押すと
-			//シーンをゲームに変更
+			// 4コマが全部出たらゲームへ
 			SceneManager::ChangeScene(SceneManager::GAME);
 			return;
 		}
-
 	}
 
-	// 点滅処理
+	//点滅処理
 	if (mBlinkUp)
 	{
 		mBlinkAlpha += mBlinkSpeed;
@@ -119,17 +186,16 @@ void StoryScene::Update()
 			mBlinkUp = true;
 		}
 	}
-
-	// α値をセット（r,g,b,a）
 	mpNextIcon->SetColor(1.0f, 1.0f, 1.0f, mBlinkAlpha);
 
-	// 新しいコマをポップアップさせる
-		if (mScale[mPosIndex] < 1.0f)
-		{
-			mScale[mPosIndex] += 0.04f;   // 速度調整
-			if (mScale[mPosIndex] > 1.0f)
-				mScale[mPosIndex] = 1.0f;
-		}
+
+	// ポップアップ演出
+	if (mScale[mPosIndex] < 1.0f)
+	{
+		mScale[mPosIndex] += 0.04f;
+		if (mScale[mPosIndex] > 1.0f)
+			mScale[mPosIndex] = 1.0f;
+	}
 
 }
 
@@ -138,6 +204,23 @@ void StoryScene::Update()
 void StoryScene::Draw()
 {
 	//ここにStoryScene()があるときにずっと描画したいしたい処理を入れる
+	
+	//スクロール中は何もやらない
+	if (!mMaeokiDone)
+	{
+		mpMaeokiImg->Draw();
+
+		//スクロールが終わったらENTER矢印を出す
+		if (mMaeokiScrollEnd)
+		{
+			mpNextIcon->Draw();
+		}
+
+		return;
+	}
+
+
+	
 	for (int i = 0; i <= mPosIndex; i++)
 	{
 		// 拡大率を反映
@@ -145,7 +228,7 @@ void StoryScene::Draw()
 		mpStoryImg[i]->Draw();
 	}
 
-	// 点滅アイコンを描画
+	// ENTER矢印を描画
 	mpNextIcon->Draw();
 
 }
