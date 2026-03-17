@@ -479,9 +479,9 @@ bool Player::Collision(ObjectBase* s_other)
 			{
 				isClear = true;//ˆê“x‚¾‚¯true‚É‚·‚é
 				//SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
-				
+
 				SceneManager::Instance()->isclear = true;
-				
+
 			}
 			break;
 		case ETag::ETHROW:
@@ -490,7 +490,7 @@ bool Player::Collision(ObjectBase* s_other)
 			// hp‚ğŒ¸‚ç‚·ˆ—
 			TakeDamage(1);
 
-			
+
 			break;
 		case ETag::EDROPOBSTACLE:
 		{
@@ -506,6 +506,7 @@ bool Player::Collision(ObjectBase* s_other)
 			break;
 		}
 
+		}
 
 		return true;
 	}
