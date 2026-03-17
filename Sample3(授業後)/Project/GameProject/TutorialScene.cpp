@@ -1,11 +1,6 @@
 #include"TutorialScene.h"
 #include"SceneManager.h"
 
-#define TITLEIMG "仮タイトル.png"//←ここにチュートリアル画像をのせる
-#define TITLE_BGM1 "TITLEBGM1.wav"//チュートリアル画面のBGM１～４好きなの選んでください
-#define TITLE_BGM2 "TITLEBGM2.wav"//MP3からwavに変換しないといけない
-#define TITLE_BGM3 "TITLEBGM3.wav"
-#define TITLE_BGM4 "TITLEBGM4.wav"
 #define TUTORIAL1 "チュートリアル1.png"
 #define TUTORIAL2 "チュートリアル2.png"
 #define TUTORIAL3 "チュートリアル3.png"
@@ -26,8 +21,7 @@ TutorialScene::TutorialScene()
 	mpTutorialImg[4] = CImage::CreateImage(TUTORIAL5);
 	// チュートリアル画像を読み込み
 	//mpTutorialImg = CImage::CreateImage(TITLEIMG);
-	// BGM読み込み
-	SOUND("title_bgm")->Load(TITLE_BGM1, 1, false);
+	
 	// 再生（trueはループ）
 	SOUND("title_bgm")->Play(true);
 

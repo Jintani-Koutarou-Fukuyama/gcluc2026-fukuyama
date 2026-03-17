@@ -2,19 +2,7 @@
 #include"SceneManager.h"
 
 #define TITLEIMG "仮タイトル.png"//←ここにタイトル画像をのせる
-#define TITLE_BGM1 "TITLEBGM1.wav"//タイトル画面のBGM１～４好きなの選んでください
-#define TITLE_BGM2 "TITLEBGM2.wav"//MP3からwavに変換しないといけない
-#define TITLE_BGM3 "TITLEBGM3.wav"
-#define TITLE_BGM4 "TITLEBGM4.wav"
 
-#define STAGE_BGM1 "STAGEBGM1.wav"//ステージ道中のBGM１～２好きなの選んでください
-#define STAGE_BGM2 "STAGEBGM2.wav"//MP3からwavに変換しないといけない
-
-#define LAST_STAGE_BGM1 "LASTSTAGEBGM1.wav"//ラストステージのBGM１～５好きなの選んでください
-#define LAST_STAGE_BGM2 "LASTSTAGEBGM2.wav"
-#define LAST_STAGE_BGM3 "LASTSTAGEBGM3.wav"
-#define LAST_STAGE_BGM4 "LASTSTAGEBGM4.wav"
-#define LAST_STAGE_BGM5 "LASTSTAGEBGM5.wav"
 
 
 // コンストラクタ
@@ -25,18 +13,10 @@ TitleScene::TitleScene()
 
 	// タイトル画像を読み込み
 	mpTitleImg = CImage::CreateImage(TITLEIMG);
-	// BGM読み込み
-	SOUND("title_bgm")->Load(TITLE_BGM3, 1, false);
+	
 	// 再生（trueはループ）
 	SOUND("title_bgm")->Play(true);
-	//ストーリー用
-	SOUND("story_bgm")->Load(TITLE_BGM2, 1, false);
-	// BGM読み込み（ゲーム）
-	SOUND("stage_bgm")->Load(STAGE_BGM1, 1, false);
-	// BGM読み込み（最終ステージ）
-	SOUND("last_stage_bgm")->Load(LAST_STAGE_BGM2, 1, false);
 	
-
 	printf("タイトルになりました\n");
 	
 }
