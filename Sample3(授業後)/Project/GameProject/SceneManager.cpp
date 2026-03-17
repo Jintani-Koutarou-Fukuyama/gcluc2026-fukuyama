@@ -12,7 +12,7 @@ SceneManager* SceneManager::msInstance = nullptr;
 
 SceneManager::SceneManager()
 {
-    
+    bestTime = 9999;
 } 
 
 SceneManager* SceneManager::Instance()

@@ -23,7 +23,7 @@ public:
     bool isclear = false;//クリアフラグ
     bool requestChange = false;//フラグが立ったかのフラグ
     int clearTime = 0;//秒
-
+    int bestTime;
 
 
     static SceneManager* Instance();

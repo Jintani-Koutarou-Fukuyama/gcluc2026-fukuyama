@@ -117,7 +117,7 @@ void ClearScene::DrawNumber(int num, int x, int y)
 //描画処理
 void ClearScene::Draw()
 {
-	//ここに:ClearScene()があるときにずっと描画したいしたい処理を入れる
+	//クリアタイム
 	if (!RankTime)
 	{
 		mpTitleImg->Draw();
@@ -127,7 +127,7 @@ void ClearScene::Draw()
 		int sec = total % 60;
 
 		int tx = 540;
-		int ty = 300;
+		int ty = 270;
 
 		DrawNumber(min / 10, tx, ty);
 		DrawNumber(min % 10, tx + 110, ty);
@@ -136,6 +136,23 @@ void ClearScene::Draw()
 
 		DrawNumber(sec / 10, tx + 330, ty);
 		DrawNumber(sec % 10, tx + 440, ty);
+
+		//ベストタイム
+		int best = SceneManager::Instance()->bestTime;
+
+		int bmin = best / 60;
+		int bsec = best % 60;
+
+		int bx = 560;
+		int by = 430;
+
+		DrawNumber(bmin / 10, bx, by);
+		DrawNumber(bmin % 10, bx + 80, by);
+
+		DrawNumber(10, bx + 140, by);
+
+		DrawNumber(bsec / 10, bx + 190, by);
+		DrawNumber(bsec % 10, bx + 270, by);
 	}
 	else
 	{
@@ -145,6 +162,7 @@ void ClearScene::Draw()
 		}
 	}
 
+	
 }
 
 void ClearScene::Init()
@@ -154,5 +172,8 @@ void ClearScene::Init()
 	SceneManager::Instance()->isover = false;
 	SceneManager::Instance()->requestChange = false;
 	mClearTime = SceneManager::Instance()->clearTime;
-
+	if (mClearTime < SceneManager::Instance()->bestTime)
+	{
+		SceneManager::Instance()->bestTime = mClearTime;
+	}
 }
