@@ -3,9 +3,11 @@
 #include "EnemyBase.h"
 #include "DropObstacle.h"
 #include "SceneManager.h"
-#include"Camera.h"
-#include"Hubby.h"
-#include"HealItem.h"
+#include "Camera.h"
+#include "Hubby.h"
+#include "HealItem.h"
+#include "Shutome.h"
+#include "TextUi.h"
 
 
 #define CHIP_SIZE 700.0f		// 1コマのサイズ
@@ -19,7 +21,13 @@
 #define KNOCKBACK_RAITO 1.2f  //ノックバック距離、ノックバックの距離を決める
 #define INVINCIBILITY_TIME 10 //無敵時間
 
+<<<<<<< Updated upstream
 #define TEX_PLAYER "嫁絵.png"
+=======
+#define GAMEOVER_RANGE 50.0f
+
+#define TEX_PLAYER "嫁 .png"
+>>>>>>> Stashed changes
 
 Player* Player::mspInstance = nullptr;
 // プレイヤーのアニメーションデータの前宣言
@@ -416,7 +424,69 @@ Player* Player::GetInstance()
 // 当たり判定
 bool Player::Collision(ObjectBase* s_other)
 {
+
+	Shutome* shutome;
+
+
+	//衝突先のタグ
+	switch (s_other->GetTag())
+	{
+	case ETag::ENONE:
+		break;
+	case ETag::ESHUTOME:
+		// 姑に使づいたときの処理
+		shutome = (Shutome*)s_other;
+		float minDist = this->mCollisionRange + shutome->GetCollisionRange();
+
+		// 各軸の距離を求めて、範囲外であればスルー
+		if (abs(mPos.x - shutome->GetPos().x) < minDist + GAMEOVER_RANGE)
+		{
+			if (abs(mPos.y - shutome->GetPos().y) < minDist + GAMEOVER_RANGE)
+			{
+				if (abs(mPos.z - shutome->GetPos().z) < (minDist + GAMEOVER_RANGE) * 0.4f) //z軸は判定小さく
+				{
+					// "Eキーを押す"という文字を描画する
+					shutome->SetIsDrawEkey(true);
+
+					// Eキーでゲーム終了
+					if (HOLD(CInput::eButton11))
+					{
+						if (!isClear)
+						{
+							isClear = true;//一度だけtrueにする
+							//SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
+
+							SceneManager::Instance()->isclear = true;
+
+						}
+					}
+					break;
+				}
+				else
+				{
+					// "Eキーを押す"という文字を描画しない
+					shutome->SetIsDrawEkey(false);
+
+				}
+
+			}
+			else
+			{
+				// "Eキーを押す"という文字を描画しない
+				shutome->SetIsDrawEkey(false);
+
+			}
+		}
+		else
+		{
+			// "Eキーを押す"という文字を描画しない
+			shutome->SetIsDrawEkey(false);
+		}
+		
+	}
 	
+	
+	// スタン状態ならスルー
 	if (mIsStun == false) 
 	{
 
@@ -475,14 +545,19 @@ bool Player::Collision(ObjectBase* s_other)
 		case ETag::ENONE:
 			break;
 		case ETag::ESHUTOME:
-			if (!isClear)
+
+			if (HOLD(CInput::eButton11))
 			{
-				isClear = true;//一度だけtrueにする
-				//SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
+				if (!isClear)
+				{
+					isClear = true;//一度だけtrueにする
+					//SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
 
-				SceneManager::Instance()->isclear = true;
+					SceneManager::Instance()->isclear = true;
 
+				}
 			}
+			
 			break;
 		case ETag::ETHROW:
 			ChangeState(EState::ESTUN);

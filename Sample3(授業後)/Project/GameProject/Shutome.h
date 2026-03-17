@@ -1,5 +1,6 @@
 #pragma once
 #include "EnemyBase.h"
+#include "TextUi.h"
 // ŒÆ‚ÌƒNƒ‰ƒX
 
 class Shutome : public EnemyBase
@@ -18,7 +19,7 @@ public:
 	void StateIdle();
 
 	bool Collision(ObjectBase* s_other) override;
-	
+	void SetIsDrawEkey(bool s_isdraw);
 
 private:
 
@@ -34,4 +35,5 @@ private:
 
 	static TexAnimData ANIM_DATA[];
 	CImage* mpImage;    //‰æ‘œ
+	TextUi* mpEkey;
 };
