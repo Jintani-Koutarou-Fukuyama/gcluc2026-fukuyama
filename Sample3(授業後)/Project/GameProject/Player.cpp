@@ -21,13 +21,11 @@
 #define KNOCKBACK_RAITO 1.2f  //ノックバック距離、ノックバックの距離を決める
 #define INVINCIBILITY_TIME 10 //無敵時間
 
-<<<<<<< Updated upstream
+
 #define TEX_PLAYER "嫁絵.png"
-=======
+
 #define GAMEOVER_RANGE 50.0f
 
-#define TEX_PLAYER "嫁 .png"
->>>>>>> Stashed changes
 
 Player* Player::mspInstance = nullptr;
 // プレイヤーのアニメーションデータの前宣言
