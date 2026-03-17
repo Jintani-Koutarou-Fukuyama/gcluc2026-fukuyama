@@ -50,7 +50,7 @@ void TitleScene::Update()
 	if (PUSH(CInput::eButton10))
 	{
 		//シーンをゲームに変更
-		SceneManager::ChangeScene(SceneManager::GAME);
+		SceneManager::ChangeScene(SceneManager::STORY);
 		
 	}
 }
