@@ -161,8 +161,9 @@ void StoryScene::Update()
 		}
 		else
 		{
-			// 4コマが全部出たらゲームへ
-			SceneManager::ChangeScene(SceneManager::GAME);
+			//4コマ全部出た後にエンターを押すと
+			//シーンをチュートリアルに変更
+			SceneManager::ChangeScene(SceneManager::TUTORIAL);
 			return;
 		}
 	}

@@ -15,8 +15,14 @@ public:
 	void Init();//タスクマネージャーに登場された後に呼ぶもの
 private:
 	//ここにチュートリアルシーンでいるものを書く(画像とか)
+	CImage* mpTutorialImg[5]; //チュートリアル画像5枚
+	int mPage;                //現在のページ
 
-protected:
-	CImage* mpTutorialImg;	// チュートリアルの画像
+	CImage* mpNextIcon;   // 矢印アイコン
+	float mBlinkAlpha;    // 透明度
+	float mBlinkSpeed;    // 点滅速度
+	bool mBlinkUp;        // 点滅方向
+//protected:
+//	CImage* mpTutorialImg;	// チュートリアルの画像
 
 };

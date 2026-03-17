@@ -219,7 +219,7 @@ void Hubby::Update()
 	{
 		float dist = (player->GetPos() - mPos).Length();
 
-		if (dist < 120.0f)
+		if (dist < 110.0f)
 		{
 			new HealItem(CVector3D(mPos.x, 0, mPos.z));
 			Kill();
