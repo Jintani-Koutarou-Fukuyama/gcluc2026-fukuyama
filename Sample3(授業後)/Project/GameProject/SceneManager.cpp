@@ -6,6 +6,7 @@
 #include"StoryScene.h"
 #include"TaskManager.h"
 #include"Camera.h"
+#include "TutorialScene.h"
 BaseScene* SceneManager::mpScene = nullptr;
 SceneManager* SceneManager::msInstance = nullptr;
 
@@ -52,7 +53,7 @@ void SceneManager::ChangeScene(ESCENE s_scene)//シーンが変わるときに呼び出す
         mpScene = new StoryScene(); //ストーリーシーンを現在のシーンにする
         break;
     case ESCENE::TUTORIAL:
-        mpScene = new StoryScene(); //ストーリーシーンを現在のシーンにする
+        mpScene = new TutorialScene(); //ストーリーシーンを現在のシーンにする
         break;
     default:
         break;

@@ -93,8 +93,8 @@ void StoryScene::Update()
 		else
 		{
 			//4コマ全部出た後にエンターを押すと
-			//シーンをゲームに変更
-			SceneManager::ChangeScene(SceneManager::GAME);
+			//シーンをチュートリアルに変更
+			SceneManager::ChangeScene(SceneManager::TUTORIAL);
 			return;
 		}
 
