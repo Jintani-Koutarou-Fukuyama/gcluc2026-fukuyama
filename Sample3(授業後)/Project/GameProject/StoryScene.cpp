@@ -17,24 +17,24 @@ StoryScene::StoryScene()
 	for (int i = 0; i < 4; i++)
 	{
 		mpStoryImg[i]->SetSize(640, 360);
-		m_scale[i] = 1.0f;   // 最初は等倍
+		mScale[i] = 1.0f;   // 最初は等倍
 	}
 
 
 
-	m_posIndex = 0;
+	mPosIndex = 0;
 
 	// 最初の位置
 	mpStoryImg[0]->SetPos(0, 0);
 
 	//矢印アイコン読み込み
-	m_nextIcon = CImage::CreateImage("Enter矢印.png");
-	m_nextIcon->SetSize(128, 64); // サイズ調整
-	m_nextIcon->SetPos(1100, 650); // 右下
+	mpNextIcon = CImage::CreateImage("Enter矢印.png");
+	mpNextIcon->SetSize(128, 64); // サイズ調整
+	mpNextIcon->SetPos(1100, 650); // 右下
 
-	m_blinkAlpha = 1.0f;   // 最初は不透明
-	m_blinkSpeed = 0.02f;  // 点滅速度
-	m_blinkUp = false;     // 最初は暗くなる方向
+	mBlinkAlpha = 1.0f;   // 最初は不透明
+	mBlinkSpeed = 0.02f;  // 点滅速度
+	mBlinkUp = false;     // 最初は暗くなる方向
 
 }
 
@@ -52,10 +52,10 @@ StoryScene::~StoryScene()
 		}
 		
 	}
-	if (m_nextIcon)
+	if (mpNextIcon)
 	{
-		m_nextIcon->Release();
-		delete m_nextIcon;
+		mpNextIcon->Release();
+		delete mpNextIcon;
 	}
 
 	printf("シーンが変わりました\n");
@@ -69,15 +69,15 @@ void StoryScene::Update()
 	if (PUSH(CInput::eButton10))
 	{
 		// まだ4コマ出ていないなら次のコマへ
-		if (m_posIndex < 3)
+		if (mPosIndex < 3)
 		{
-			m_posIndex++;
+			mPosIndex++;
 
 			// 新しいコマのポップアップ開始
-			m_scale[m_posIndex] = 0.8f;
+			mScale[mPosIndex] = 0.8f;
 
 			// 4つの位置
-			switch (m_posIndex)
+			switch (mPosIndex)
 			{
 			case 0: mpStoryImg[0]->SetPos(0, 0); break;
 			case 1: mpStoryImg[1]->SetPos(0, 360); break;
@@ -96,34 +96,34 @@ void StoryScene::Update()
 	}
 
 	// 点滅処理
-	if (m_blinkUp)
+	if (mBlinkUp)
 	{
-		m_blinkAlpha += m_blinkSpeed;
-		if (m_blinkAlpha >= 1.0f)
+		mBlinkAlpha += mBlinkSpeed;
+		if (mBlinkAlpha >= 1.0f)
 		{
-			m_blinkAlpha = 1.0f;
-			m_blinkUp = false;
+			mBlinkAlpha = 1.0f;
+			mBlinkUp = false;
 		}
 	}
 	else
 	{
-		m_blinkAlpha -= m_blinkSpeed;
-		if (m_blinkAlpha <= 0.0f)
+		mBlinkAlpha -= mBlinkSpeed;
+		if (mBlinkAlpha <= 0.0f)
 		{
-			m_blinkAlpha = 0.0f;
-			m_blinkUp = true;
+			mBlinkAlpha = 0.0f;
+			mBlinkUp = true;
 		}
 	}
 
 	// α値をセット（r,g,b,a）
-	m_nextIcon->SetColor(1.0f, 1.0f, 1.0f, m_blinkAlpha);
+	mpNextIcon->SetColor(1.0f, 1.0f, 1.0f, mBlinkAlpha);
 
 	// 新しいコマをポップアップさせる
-		if (m_scale[m_posIndex] < 1.0f)
+		if (mScale[mPosIndex] < 1.0f)
 		{
-			m_scale[m_posIndex] += 0.04f;   // 速度調整
-			if (m_scale[m_posIndex] > 1.0f)
-				m_scale[m_posIndex] = 1.0f;
+			mScale[mPosIndex] += 0.04f;   // 速度調整
+			if (mScale[mPosIndex] > 1.0f)
+				mScale[mPosIndex] = 1.0f;
 		}
 
 }
@@ -133,15 +133,15 @@ void StoryScene::Update()
 void StoryScene::Draw()
 {
 	//ここにStoryScene()があるときにずっと描画したいしたい処理を入れる
-	for (int i = 0; i <= m_posIndex; i++)
+	for (int i = 0; i <= mPosIndex; i++)
 	{
 		// 拡大率を反映
-		mpStoryImg[i]->SetSize(640 * m_scale[i], 360 * m_scale[i]);
+		mpStoryImg[i]->SetSize(640 * mScale[i], 360 * mScale[i]);
 		mpStoryImg[i]->Draw();
 	}
 
 	// 点滅アイコンを描画
-	m_nextIcon->Draw();
+	mpNextIcon->Draw();
 
 }
 void StoryScene::Init()

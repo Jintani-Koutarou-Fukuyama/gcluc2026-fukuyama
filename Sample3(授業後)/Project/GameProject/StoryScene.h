@@ -15,10 +15,10 @@ public:
 private:
 	//ここにストーリーシーンでいるものを書く(画像とか)
 	CImage* mpStoryImg[4]; // 表示する画像  
-	int m_posIndex;  // 現在の位置インデックス（0〜3）
-	CImage* m_nextIcon;   // 右下の点滅アイコン
-	float m_blinkAlpha;   // 透明度
-	float m_blinkSpeed;   // 点滅速度
-	bool m_blinkUp;       // α値が上昇中か下降中か
-	float m_scale[4];
+	int mPosIndex;  // 現在の位置インデックス（0〜3）
+	CImage* mpNextIcon;   // 右下の点滅アイコン
+	float mBlinkAlpha;   // 透明度
+	float mBlinkSpeed;   // 点滅速度
+	bool mBlinkUp;       // α値が上昇中か下降中か
+	float mScale[4];
 };
