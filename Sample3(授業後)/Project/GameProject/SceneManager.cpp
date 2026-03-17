@@ -28,13 +28,14 @@ SceneManager* SceneManager::Instance()
 void SceneManager::ChangeScene(ESCENE s_scene)//シーンが変わるときに呼び出す
 
 {
-    TaskManager::Instance()->DeleteAll();
+   
    
     //mpSceneにシーンが入っていたら破棄する
     if (mpScene != NULL)
     {
         delete mpScene;
     }
+    TaskManager::Instance()->DeleteAll();
 
     switch (s_scene) {          //引数のシーン
     case ESCENE::TITLE:

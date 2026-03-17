@@ -22,21 +22,9 @@
 #define SPAWN_COUNT 50
 #define STAGE_WIDTH 3060 * 3
 
-#define STAGE_BGM1 "STAGEBGM1.wav"//ステージ道中のBGM１～２好きなの選んでください
-#define STAGE_BGM2 "STAGEBGM2.wav"//MP3からwavに変換しないといけない
-
-#define LAST_STAGE_BGM1 "LASTSTAGEBGM1.wav"//ラストステージのBGM１～５好きなの選んでください
-#define LAST_STAGE_BGM2 "LASTSTAGEBGM2.wav"
-#define LAST_STAGE_BGM3 "LASTSTAGEBGM3.wav"
-#define LAST_STAGE_BGM4 "LASTSTAGEBGM4.wav"
-#define LAST_STAGE_BGM5 "LASTSTAGEBGM5.wav"
+//BGMはタイトルシーンに読み込ませてある
 
 
-struct ObstacleData
-{
-	float x;
-	float z;
-};
 
 ObstacleData stage2Obstacle[] =
 {
@@ -76,6 +64,7 @@ GameScene::GameScene()
 {
 	//ここにGameScene()が生成されたときに呼び出したい処理を入れる
 	
+
     // 皿の設定難易度1
 	SetPlateGimmick(2.0f);
 	
@@ -100,6 +89,7 @@ GameScene::~GameScene()
 
 void GameScene::Init()//TaskManagerに追加された後に行う
 {
+
 	//カメラリセット
 	Camera::Instance()->Reset();
 	// フィールドを生成
@@ -127,30 +117,27 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	//カメラを生成
 	Camera::Instance();
 
-	// BGM読み込み
-	SOUND("stage_bgm")->Load(STAGE_BGM1, 1, false);
+	
 	// 再生（trueはループ）
 	SOUND("stage_bgm")->Play(true);
-	// BGM読み込み
-	SOUND("last_stage_bgm")->Load(LAST_STAGE_BGM2, 1, false);
 	
 
 	printf("ゲームになりました\n");
 
-	// 地面障害物を生成ステージ2
+	// ステージ2の障害物をキューに追加
 	int count2 = sizeof(stage2Obstacle) / sizeof(stage2Obstacle[0]);
-
 	for (int i = 0; i < count2; i++)
 	{
-		new Obstacle(CVector3D(stage2Obstacle[i].x, 0, stage2Obstacle[i].z));
+		mObstacleQueue.push_back(stage2Obstacle[i]);
 	}
-	// 地面障害物を生成ステージ3
-	int count3 = sizeof(stage3Obstacle) / sizeof(stage3Obstacle[0]);
 
+	// ステージ3の障害物をキューに追加
+	int count3 = sizeof(stage3Obstacle) / sizeof(stage3Obstacle[0]);
 	for (int i = 0; i < count3; i++)
 	{
-		new Obstacle(CVector3D(stage3Obstacle[i].x, 0, stage3Obstacle[i].z));
+		mObstacleQueue.push_back(stage3Obstacle[i]);
 	}
+
 	
 	// 落下障害物をランダム生成（ステージ３用）
 	for (int i = 0; i < 20; i++)
@@ -220,7 +207,17 @@ void GameScene::PopPlate()
 //更新処理
 void GameScene::Update()
 {
-	//ここにGameScene()があるときにずっと更新したい処理を入れる
+	    // 1フレームに5個ずつ生成
+		for (int i = 0; i < mObstacleCreatePerFrame; i++)
+		{
+			if (mObstacleQueue.empty()) break;
+
+			ObstacleData data = mObstacleQueue.back();
+			mObstacleQueue.pop_back();
+
+			new Obstacle(CVector3D(data.x, 0, data.z));
+		}
+
 
 
 	//難易度調整処理
