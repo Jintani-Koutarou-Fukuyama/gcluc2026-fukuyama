@@ -6,6 +6,9 @@ StoryScene::StoryScene()
 {
 	//ここにStoryScene()が生成されたときに呼び出したい処理を入れる
 
+	//読み込みはタイトルでやっている
+	// 再生（trueはループ）
+	SOUND("story_bgm")->Play(true);
 	printf("ストーリー中・・・\n");
 	//画像読み込み
 	mpStoryImg[0] = CImage::CreateImage("4KOMA_1.png");
@@ -57,7 +60,9 @@ StoryScene::~StoryScene()
 		mpNextIcon->Release();
 		delete mpNextIcon;
 	}
-
+	
+	// BGM停止
+	SOUND("story_bgm")->Stop();
 	printf("シーンが変わりました\n");
 }
 

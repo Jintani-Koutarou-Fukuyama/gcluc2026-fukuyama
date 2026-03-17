@@ -18,6 +18,8 @@ TitleScene::TitleScene()
 	mpTitleImg = CImage::CreateImage(TITLEIMG);
 	// BGM読み込み
 	SOUND("title_bgm")->Load(TITLE_BGM3, 1, false);
+	//ストーリー用
+	SOUND("story_bgm")->Load(TITLE_BGM2, 1, false);
 	// 再生（trueはループ）
 	SOUND("title_bgm")->Play(true);
 
