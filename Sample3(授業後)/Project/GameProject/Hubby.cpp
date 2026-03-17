@@ -1,7 +1,6 @@
 #include "Hubby.h"
 #include "Player.h"
 
-
 #define CHIP_SIZE_WIDTH 700.0f		// 1コマのサイズ 幅
 #define CHIP_SIZE_HEIGHT 800.0f		// 1コマのサイズ 高さ
 #define CENTER_POS CVector2D(170.0f, 352.0f)	// 中心座標
@@ -266,7 +265,7 @@ void Hubby::Update()
 	mpImage->SetPos(CalcScreenPos());
 	mpImage->UpdateAnimation();
 
-
+	
 }
 
 void Hubby::Render()

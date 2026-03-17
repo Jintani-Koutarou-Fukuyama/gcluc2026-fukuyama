@@ -4,6 +4,8 @@
 #include "DropObstacle.h"
 #include "SceneManager.h"
 #include"Camera.h"
+#include"Hubby.h"
+#include"HealItem.h"
 
 
 #define CHIP_SIZE 700.0f		// 1コマのサイズ
@@ -491,7 +493,7 @@ bool Player::Collision(ObjectBase* s_other)
 			
 			break;
 		case ETag::EDROPOBSTACLE:
-
+		{
 			ChangeState(EState::ESTUN);
 
 
@@ -501,8 +503,17 @@ bool Player::Collision(ObjectBase* s_other)
 			// 落ちてくる障害物をDeath状態にする
 			DropObstacle* obj = (DropObstacle*)s_other;
 			obj->ChangeState(DropObstacle::EState::EDEATH);
-
 			break;
+		}
+		case ETag::EHUBBY:
+
+			CVector3D pos = s_other->GetPos();
+			new HealItem(CVector3D(pos.x+100.0f, 0, pos.z));
+			printf("回復生成");
+			s_other->Kill();  // Hubby を Kill
+			break;
+			
+
 		}
 
 
