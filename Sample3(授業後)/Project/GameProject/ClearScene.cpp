@@ -18,7 +18,9 @@ ClearScene::ClearScene()
 
 	//å¯â âπÇÃì«Ç›çûÇ›
 	SOUND("clear_se")->Load("clear.wav", 1, false);
-	SOUND("rank_se")->Load("hyouka.wav", 1, false);
+	SOUND("rank_s")->Load("hyoukaS.wav", 1, false);
+	SOUND("rank_a")->Load("hyoukaAB.wav", 1, false);
+	SOUND("rank_b")->Load("hyoukaAB.wav", 1, false);
 
 	// ÉNÉäÉAâÊñ ï\é¶âπ
 	SOUND("clear_se")->Play(false);
@@ -65,20 +67,22 @@ void ClearScene::Update()
 			if (mClearTime <= 30)
 			{
 				mpRankImg = CImage::CreateImage("ï]âøS.png");
+				SOUND("rank_s")->Play(false);   // Å© SÇÃâπ
 				printf("Sï]âø\n");
 			}
 			else if (mClearTime <= 40)
 			{
 				mpRankImg = CImage::CreateImage("ï]âøA.png");
+				SOUND("rank_a")->Play(false);   // Å© AÇÃâπ
 				printf("Aï]âø\n");
 			}
 			else
 			{
 				mpRankImg = CImage::CreateImage("ï]âøB.png");
+				SOUND("rank_b")->Play(false);   // Å© BÇÃâπ
 				printf("Bï]âø\n");
 			}
-			// ï]âøï\é¶âπ
-			SOUND("rank_se")->Play(false);
+			
 
 			RankTime = true;
 		}
