@@ -505,16 +505,6 @@ bool Player::Collision(ObjectBase* s_other)
 			obj->ChangeState(DropObstacle::EState::EDEATH);
 			break;
 		}
-		case ETag::EHUBBY:
-
-			CVector3D pos = s_other->GetPos();
-			new HealItem(CVector3D(pos.x+100.0f, 0, pos.z));
-			printf("‰ñ•œ¶¬");
-			s_other->Kill();  // Hubby ‚ğ Kill
-			break;
-			
-
-		}
 
 
 		return true;
