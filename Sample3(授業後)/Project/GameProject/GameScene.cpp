@@ -116,8 +116,8 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	new Shutome
 	(CVector3D(9080.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);
 	//回復アイテムを生成
-	new HealItem(CVector3D(5600, 0, -120));
-	new HealItem(CVector3D(7500, 0, 180));
+	//new HealItem(CVector3D(5600, 0, -120));
+	//new HealItem(CVector3D(7500, 0, 180));
 
 	new Hubby(CVector3D(2600.0f, 0.0f, -50.0f), SHUTOME_COLLISION_RANGE);
 
@@ -237,6 +237,8 @@ void GameScene::Update()
 
 		//// 皿の設定難易度2
 		SetPlateGimmick(1.5f);
+		//旦那生成
+		new Hubby(CVector3D(5200.0f, 0.0f, -120.0f), SHUTOME_COLLISION_RANGE);
 		
 	}
 
@@ -252,6 +254,9 @@ void GameScene::Update()
 		
 		// 皿の設定難易度3
 		SetPlateGimmick(0.999999999999f);
+		//旦那生成
+		new Hubby(CVector3D(7500.0f, 0.0f, 180.0f), SHUTOME_COLLISION_RANGE);
+
 	}
 	
 	// 皿を生成する

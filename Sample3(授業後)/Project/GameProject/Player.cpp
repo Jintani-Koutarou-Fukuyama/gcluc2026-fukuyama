@@ -4,6 +4,8 @@
 #include "DropObstacle.h"
 #include "SceneManager.h"
 #include"Camera.h"
+#include"Hubby.h"
+#include"HealItem.h"
 
 
 #define CHIP_SIZE 700.0f		// 1コマのサイズ
@@ -477,9 +479,9 @@ bool Player::Collision(ObjectBase* s_other)
 			{
 				isClear = true;//一度だけtrueにする
 				//SceneManager::ChangeScene(SceneManager::ESCENE::CLEAR);
-				
+
 				SceneManager::Instance()->isclear = true;
-				
+
 			}
 			break;
 		case ETag::ETHROW:
@@ -488,10 +490,10 @@ bool Player::Collision(ObjectBase* s_other)
 			// hpを減らす処理
 			TakeDamage(1);
 
-			
+
 			break;
 		case ETag::EDROPOBSTACLE:
-
+		{
 			ChangeState(EState::ESTUN);
 
 
@@ -501,10 +503,10 @@ bool Player::Collision(ObjectBase* s_other)
 			// 落ちてくる障害物をDeath状態にする
 			DropObstacle* obj = (DropObstacle*)s_other;
 			obj->ChangeState(DropObstacle::EState::EDEATH);
-
 			break;
 		}
 
+		}
 
 		return true;
 	}
