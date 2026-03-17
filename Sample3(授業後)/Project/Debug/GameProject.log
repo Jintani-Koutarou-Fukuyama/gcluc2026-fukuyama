@@ -1,4 +1,17 @@
-﻿  OverScene.cpp
+﻿  Player.cpp
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(102,14): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(102,3): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(462,26): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(463,32): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(464,30): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(465,36): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+  TitleScene.cpp
+  TutorialScene.cpp
+  main.cpp
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\main.cpp(139,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\main.cpp(139,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  コードを生成中...
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp(515,1): warning C4715: 'Player::Collision': 値を返さないコントロール パスがあります。
 GLFW.lib(init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB '' が 'GLFW.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
