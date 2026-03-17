@@ -52,7 +52,8 @@ TutorialScene::~TutorialScene()
 	{
 		if (mpTutorialImg[i] != nullptr)
 		{
-			delete mpTutorialImg[i];
+			mpTutorialImg[i]->Release();
+			//delete mpTutorialImg[i];
 			mpTutorialImg[i] = nullptr;
 		}
 	}
@@ -69,7 +70,7 @@ TutorialScene::~TutorialScene()
 	if (mpNextIcon)
 	{
 		mpNextIcon->Release();
-		delete mpNextIcon;
+		//delete mpNextIcon;
 		mpNextIcon = nullptr;
 	}
 }
@@ -92,6 +93,7 @@ void TutorialScene::Update()
 		if (mPage >= 5)
 		{
 			SceneManager::ChangeScene(SceneManager::GAME);
+			return;
 		}
 	}
 

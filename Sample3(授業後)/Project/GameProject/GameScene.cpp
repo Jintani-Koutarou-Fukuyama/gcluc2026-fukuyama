@@ -76,6 +76,7 @@ GameScene::GameScene()
 {
 	//ここにGameScene()が生成されたときに呼び出したい処理を入れる
 	
+
     // 皿の設定難易度1
 	SetPlateGimmick(2.0f);
 	
@@ -100,6 +101,7 @@ GameScene::~GameScene()
 
 void GameScene::Init()//TaskManagerに追加された後に行う
 {
+
 	//カメラリセット
 	Camera::Instance()->Reset();
 	// フィールドを生成
@@ -220,8 +222,6 @@ void GameScene::PopPlate()
 //更新処理
 void GameScene::Update()
 {
-	//ここにGameScene()があるときにずっと更新したい処理を入れる
-
 
 	//難易度調整処理
 	Player* p = Player::GetInstance();

@@ -27,4 +27,5 @@ private:
 	float mElapsedTime;	// 経過時間計測用
 	int mSpawnCnt;    // スポーンカウント
 	int mInterval;    //生成時間
+
 };

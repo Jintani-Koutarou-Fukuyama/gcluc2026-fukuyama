@@ -66,7 +66,7 @@ StoryScene::~StoryScene()
 		if (mpStoryImg[i])
 		{
 			mpStoryImg[i]->Release();
-			delete mpStoryImg[i];
+			//delete mpStoryImg[i];
 			mpStoryImg[i] = nullptr;
 		}
 		
@@ -74,12 +74,12 @@ StoryScene::~StoryScene()
 	if (mpNextIcon)
 	{
 		mpNextIcon->Release();
-		delete mpNextIcon;
+		//delete mpNextIcon;
 	}
 	if (mpMaeokiImg)
 	{
 		mpMaeokiImg->Release();
-		delete mpMaeokiImg;
+		//delete mpMaeokiImg;
 		mpMaeokiImg = nullptr;
 	}
 
