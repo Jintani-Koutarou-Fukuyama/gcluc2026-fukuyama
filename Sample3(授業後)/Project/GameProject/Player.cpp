@@ -392,7 +392,7 @@ void Player::Update()
 	mpImage->SetPos(CalcScreenPos());
 	mpImage->UpdateAnimation();
 
-	DebugPrint::Print("プレイヤー位置：%.2f, %.2f, %.2f", mPos.x, mPos.y, mPos.z);
+	//DebugPrint::Print("プレイヤー位置：%.2f, %.2f, %.2f", mPos.x, mPos.y, mPos.z);
 
 	Camera::Instance()->SetTargetPos(mPos);
 
