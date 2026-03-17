@@ -1,6 +1,11 @@
 #pragma once
 #include"BaseScene.h"
 
+struct ObstacleData
+{
+	float x;
+	float z;
+};
 
 class GameScene :public BaseScene
 {
@@ -22,6 +27,8 @@ public:
 private:
 	//ここにゲームシーンでいるものを書く(画像とかスコアとか)
 	int mDifficultyLevel = 0;  //難易度フラグ 0=LEVEL1, 1=LEVEL2, 2=LEVEL3
+	std::vector<ObstacleData> mObstacleQueue;
+	int mObstacleCreatePerFrame = 5; // 1フレームに5個ずつ生成
 
 
 	float mElapsedTime;	// 経過時間計測用
