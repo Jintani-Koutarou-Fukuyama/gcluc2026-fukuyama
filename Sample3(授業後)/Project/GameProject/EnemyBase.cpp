@@ -24,7 +24,7 @@ EnemyBase::~EnemyBase()
 
 bool EnemyBase::Collision(ObjectBase* s_other)
 {
-	return false;
+	return ObjectBase::Collision(s_other);
 }
 
 const bool& EnemyBase::GetIsCollision() const

@@ -1,5 +1,6 @@
 #include "Hubby.h"
 #include "Player.h"
+#include "HealItem.h"
 
 
 #define CHIP_SIZE_WIDTH 700.0f		// 1コマのサイズ 幅
@@ -213,6 +214,18 @@ void Hubby::SearchDestination()
 
 void Hubby::Update()
 {
+	Player* player = Player::GetInstance();
+
+	if (player)
+	{
+		float dist = (player->GetPos() - mPos).Length();
+
+		if (dist < 120.0f)
+		{
+			new HealItem(CVector3D(mPos.x, 0, mPos.z));
+			Kill();
+		}
+	}
 	// 現在の状態に合わせて、処理を切り替える
 	switch (mState)
 	{
@@ -276,6 +289,20 @@ void Hubby::Render()
 
 bool Hubby::Collision(ObjectBase* s_other)
 {
+	printf("Hubby collision called\n");
+	// プレイヤーと当たったら
+	if (s_other->GetTag() == ETag::PLAYER)
+	{
+		printf("夫に当たりました\n");
+		// 回復薬を落とす
+		new HealItem(CVector3D(mPos.x, 0, mPos.z));
+
+		// 夫を消す
+		Kill();
+
+		return true;
+	}
+
 	return false;
 }
 
