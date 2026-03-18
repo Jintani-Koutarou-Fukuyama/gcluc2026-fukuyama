@@ -7,6 +7,7 @@
 //コンストラクタ
 ClearScene::ClearScene()
 	:mpTitleImg(nullptr)
+	,mClearTime(0)
 {
 	//ここに:ClearScene()が生成されたときに呼び出したい処理を入れる
 	RankTime = false;//フラグをオフにする

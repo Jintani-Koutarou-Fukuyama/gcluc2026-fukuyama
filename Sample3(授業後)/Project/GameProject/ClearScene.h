@@ -12,10 +12,7 @@ public:
 	void Update();//クリアシーン（でクリア画面のアニメーションとか）の更新関数
 	void Draw();//クリアシーン（でクリア画面を描画したりとか）の描画関数
 	void Init();
-	void ArankScene();//クリアタイムが速かったら
-	void BrankScene();//クリアタイムが普通だったら
-	void CrankScene();//クリアタイムが遅かったら
-
+	
 private:
 	//ここにクリアシーンでいるものを書く(画像とかスコアとか)
 	bool RankTime= false;

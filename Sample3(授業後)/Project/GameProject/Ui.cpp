@@ -10,6 +10,7 @@ const int mMmaxHp = 5;
 Ui::Ui()
 	: Task((int)ETaskPrio::EUI)
 	, mpHpImg(nullptr)
+	, mpHp(0)
 {
 	// HP‰æ‘œ‚ğ“Ç‚İ‚İ
 	mpHpImg = CImage::CreateImage(TEX_SHADOW);
