@@ -1,70 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Slime.cpp" />
-    <ClCompile Include="DebugPrint.cpp" />
-    <ClCompile Include="ObjectBase.cpp" />
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CharaBase.cpp" />
+    <ClCompile Include="ClearScene.cpp" />
+    <ClCompile Include="DebugPrint.cpp" />
+    <ClCompile Include="DropObstacle.cpp" />
     <ClCompile Include="EnemyBase.cpp" />
     <ClCompile Include="EnemyManager.cpp" />
     <ClCompile Include="Field.cpp" />
+    <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="HealItem.cpp" />
+    <ClCompile Include="Hubby.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ObjectBase.cpp" />
+    <ClCompile Include="Obstacle.cpp" />
+    <ClCompile Include="OverScene.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Random.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Shutome.cpp" />
+    <ClCompile Include="ShutomeCutIn.cpp" />
+    <ClCompile Include="Slime.cpp" />
+    <ClCompile Include="StoryScene.cpp" />
     <ClCompile Include="Task.cpp" />
     <ClCompile Include="TaskManager.cpp" />
-    <ClCompile Include="Shutome.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="Ui.cpp" />
-    <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="OverScene.cpp" />
-    <ClCompile Include="GameScene.cpp" />
-    <ClCompile Include="ClearScene.cpp" />
-    <ClCompile Include="TitleScene.cpp" />
-    <ClCompile Include="StoryScene.cpp" />
     <ClCompile Include="ThrowObject.cpp" />
-    <ClCompile Include="HealItem.cpp" />
-    <ClCompile Include="Obstacle.cpp" />
-    <ClCompile Include="DropObstacle.cpp" />
-    <ClCompile Include="ShutomeCutIn.cpp" />
-    <ClCompile Include="Random.cpp" />
-<<<<<<< Updated upstream
+    <ClCompile Include="TitleScene.cpp" />
     <ClCompile Include="TutorialScene.cpp" />
-=======
-    <ClCompile Include="Hubby.cpp" />
->>>>>>> Stashed changes
+    <ClCompile Include="Ui.cpp" />
+    <ClCompile Include="TextUi.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Global.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="Slime.h" />
-    <ClInclude Include="DebugPrint.h" />
-    <ClInclude Include="ObjectBase.h" />
+    <ClInclude Include="BaseScene.h" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="CharaBase.h" />
+    <ClInclude Include="ClearScene.h" />
+    <ClInclude Include="DebugPrint.h" />
+    <ClInclude Include="DropObstacle.h" />
     <ClInclude Include="EnemyBase.h" />
     <ClInclude Include="EnemyManager.h" />
     <ClInclude Include="Field.h" />
+    <ClInclude Include="GameScene.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="HealItem.h" />
+    <ClInclude Include="Hubby.h" />
+    <ClInclude Include="ObjectBase.h" />
+    <ClInclude Include="Obstacle.h" />
+    <ClInclude Include="OverScene.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Random.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Shutome.h" />
+    <ClInclude Include="ShutomeCutIn.h" />
+    <ClInclude Include="Slime.h" />
+    <ClInclude Include="StoryScene.h" />
     <ClInclude Include="Task.h" />
     <ClInclude Include="TaskManager.h" />
-    <ClInclude Include="Shutome.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="Ui.h" />
-    <ClInclude Include="SceneManager.h" />
-    <ClInclude Include="OverScene.h" />
-    <ClInclude Include="GameScene.h" />
-    <ClInclude Include="ClearScene.h" />
-    <ClInclude Include="BaseScene.h" />
-    <ClInclude Include="TitleScene.h" />
-    <ClInclude Include="StoryScene.h" />
     <ClInclude Include="ThrowObject.h" />
-    <ClInclude Include="HealItem.h" />
-    <ClInclude Include="Obstacle.h" />
-    <ClInclude Include="DropObstacle.h" />
-    <ClInclude Include="ShutomeCutIn.h" />
-    <ClInclude Include="Random.h" />
-<<<<<<< Updated upstream
+    <ClInclude Include="TitleScene.h" />
     <ClInclude Include="TutorialScene.h" />
-=======
-    <ClInclude Include="Hubby.h" />
->>>>>>> Stashed changes
+    <ClInclude Include="Ui.h" />
+    <ClInclude Include="TextUi.h" />
   </ItemGroup>
 </Project>

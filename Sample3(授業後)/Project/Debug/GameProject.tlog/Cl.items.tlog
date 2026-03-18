@@ -1,28 +1,60 @@
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Camera.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Camera.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\CharaBase.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\CharaBase.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ClearScene.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\ClearScene.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\DebugPrint.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\DebugPrint.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\DropObstacle.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\DropObstacle.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\EnemyBase.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\EnemyBase.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\EnemyManager.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\EnemyManager.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Field.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Field.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\GameScene.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\HealItem.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\HealItem.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Hubby.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Hubby.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\main.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\main.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ObjectBase.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\ObjectBase.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Obstacle.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Obstacle.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\OverScene.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\OverScene.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Player.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Random.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Random.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\SceneManager.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\SceneManager.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Shutome.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Shutome.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ShutomeCutIn.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\ShutomeCutIn.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Slime.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Slime.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\StoryScene.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\StoryScene.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Task.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Task.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\TaskManager.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\TaskManager.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ThrowObject.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\ThrowObject.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\TitleScene.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\TitleScene.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\TutorialScene.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\TutorialScene.obj
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp;C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Ui.obj
+<<<<<<< Updated upstream
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Camera.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Camera.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\CharaBase.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\CharaBase.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ClearScene.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\ClearScene.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\DebugPrint.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\DebugPrint.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\DropObstacle.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\DropObstacle.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\EnemyBase.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\EnemyBase.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\EnemyManager.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\EnemyManager.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Field.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Field.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\GameScene.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\HealItem.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\HealItem.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Hubby.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Hubby.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\main.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\main.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ObjectBase.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\ObjectBase.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Obstacle.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Obstacle.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\OverScene.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\OverScene.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Player.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Random.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Random.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\SceneManager.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\SceneManager.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Shutome.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Shutome.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ShutomeCutIn.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\ShutomeCutIn.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Slime.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Slime.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\StoryScene.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\StoryScene.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Task.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Task.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\TaskManager.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\TaskManager.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ThrowObject.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\ThrowObject.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\TitleScene.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\TitleScene.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\TutorialScene.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\TutorialScene.obj
+C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp;C:\Users\JINTANI KOUTAROU\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Ui.obj
+=======
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Camera.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Camera.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\CharaBase.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\CharaBase.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ClearScene.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\ClearScene.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\DebugPrint.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\DebugPrint.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\DropObstacle.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\DropObstacle.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\EnemyBase.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\EnemyBase.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\EnemyManager.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\EnemyManager.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Field.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Field.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\GameScene.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\HealItem.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\HealItem.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Hubby.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Hubby.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\main.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\main.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ObjectBase.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\ObjectBase.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Obstacle.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Obstacle.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\OverScene.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\OverScene.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Player.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Player.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Random.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Random.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\SceneManager.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\SceneManager.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Shutome.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Shutome.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ShutomeCutIn.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\ShutomeCutIn.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Slime.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Slime.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\StoryScene.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\StoryScene.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Task.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Task.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\TaskManager.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\TaskManager.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\TextUi.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\TextUi.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\ThrowObject.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\ThrowObject.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\TitleScene.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\TitleScene.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\TutorialScene.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\TutorialScene.obj
+C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp;C:\Users\gc250\Documents\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\Debug\Ui.obj
+>>>>>>> Stashed changes

@@ -2,10 +2,7 @@
 #include"SceneManager.h"
 
 #define TITLEIMG "仮タイトル.png"//←ここにタイトル画像をのせる
-#define TITLE_BGM1 "TITLEBGM1.wav"//タイトル画面のBGM１～４好きなの選んでください
-#define TITLE_BGM2 "TITLEBGM2.wav"//MP3からwavに変換しないといけない
-#define TITLE_BGM3 "TITLEBGM3.wav"
-#define TITLE_BGM4 "TITLEBGM4.wav"
+
 
 
 // コンストラクタ
@@ -16,11 +13,10 @@ TitleScene::TitleScene()
 
 	// タイトル画像を読み込み
 	mpTitleImg = CImage::CreateImage(TITLEIMG);
-	// BGM読み込み
-	SOUND("title_bgm")->Load(TITLE_BGM3, 1, false);
+	
 	// 再生（trueはループ）
 	SOUND("title_bgm")->Play(true);
-
+	
 	printf("タイトルになりました\n");
 	
 }
@@ -50,7 +46,7 @@ void TitleScene::Update()
 	if (PUSH(CInput::eButton10))
 	{
 		//シーンをゲームに変更
-		SceneManager::ChangeScene(SceneManager::GAME);
+		SceneManager::ChangeScene(SceneManager::STORY);
 		
 	}
 }

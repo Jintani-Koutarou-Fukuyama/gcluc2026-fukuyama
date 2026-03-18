@@ -35,6 +35,7 @@
     <ClCompile Include="StoryScene.cpp" />
     <ClCompile Include="Task.cpp" />
     <ClCompile Include="TaskManager.cpp" />
+    <ClCompile Include="TextUi.cpp" />
     <ClCompile Include="ThrowObject.cpp" />
     <ClCompile Include="TitleScene.cpp" />
     <ClCompile Include="TutorialScene.cpp" />
@@ -66,6 +67,7 @@
     <ClInclude Include="StoryScene.h" />
     <ClInclude Include="Task.h" />
     <ClInclude Include="TaskManager.h" />
+    <ClInclude Include="TextUi.h" />
     <ClInclude Include="ThrowObject.h" />
     <ClInclude Include="TitleScene.h" />
     <ClInclude Include="TutorialScene.h" />

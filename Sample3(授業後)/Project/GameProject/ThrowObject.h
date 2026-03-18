@@ -65,4 +65,8 @@ private:
 
 	float mMoveSpeedX; // ものが飛んでいく速度
 	float mRotateCnt;  // 回転する量を決める値
+
+	// 不具合(描画すると画面左上に画像がちらつく)対策用
+	bool mIsDraw; // trueになると描画できる
+	int mDrawCnt; // 描画できるようにするためのカウンタ
 };

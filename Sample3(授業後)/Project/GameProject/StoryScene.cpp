@@ -1,16 +1,90 @@
 #include "StoryScene.h"
+#include"SceneManager.h"
+
 
 StoryScene::StoryScene()
 {
 	//ここにStoryScene()が生成されたときに呼び出したい処理を入れる
 
+
+	// 導入画像
+	mpMaeokiImg = CImage::CreateImage("前置き.png");
+	mpMaeokiImg->SetSize(1280, 720);
+	mpMaeokiImg->SetPos(0, 0);
+
+	// 画面の下からスタート（720px 下）
+	mMaeokiY = 720.0f;
+	mMaeokiSpeed = 2.0f;       // スクロール速度（調整可）
+	mMaeokiScrollEnd = false;
+
+	mpMaeokiImg->SetPos(0, mMaeokiY);
+
+	mMaeokiDone = false;  // 最初は導入画像モード
+
+
+	//読み込みはタイトルでやっている
+	// 再生（trueはループ）
+	SOUND("story_bgm")->Play(true);
 	printf("ストーリー中・・・\n");
+	//画像読み込み
+	mpStoryImg[0] = CImage::CreateImage("4KOMA_1.png");
+	mpStoryImg[1] = CImage::CreateImage("4KOMA_2.png");
+	mpStoryImg[2] = CImage::CreateImage("4KOMA_3.png");
+	mpStoryImg[3] = CImage::CreateImage("4KOMA_4.png");
+
+	// 4コマのサイズ
+	for (int i = 0; i < 4; i++)
+	{
+		mpStoryImg[i]->SetSize(640, 360);
+		mScale[i] = 1.0f;   // 最初は等倍
+	}
+
+
+
+	mPosIndex = 0;
+
+	// 最初の位置
+	mpStoryImg[0]->SetPos(0, 0);
+
+	//矢印アイコン読み込み
+	mpNextIcon = CImage::CreateImage("Enter矢印.png");
+	mpNextIcon->SetSize(128, 64); // サイズ調整
+	mpNextIcon->SetPos(1100, 650); // 右下
+
+	mBlinkAlpha = 1.0f;   // 最初は不透明
+	mBlinkSpeed = 0.02f;  // 点滅速度
+	mBlinkUp = false;     // 最初は暗くなる方向
 
 }
 
 StoryScene::~StoryScene()
 {
 	//ここにStoryScene()が破棄されたときに呼び出したい処理を入れる
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (mpStoryImg[i])
+		{
+			mpStoryImg[i]->Release();
+			//delete mpStoryImg[i];
+			mpStoryImg[i] = nullptr;
+		}
+		
+	}
+	if (mpNextIcon)
+	{
+		mpNextIcon->Release();
+		//delete mpNextIcon;
+	}
+	if (mpMaeokiImg)
+	{
+		mpMaeokiImg->Release();
+		//delete mpMaeokiImg;
+		mpMaeokiImg = nullptr;
+	}
+
+	// BGM停止
+	SOUND("story_bgm")->Stop();
 	printf("シーンが変わりました\n");
 }
 
@@ -18,7 +92,112 @@ StoryScene::~StoryScene()
 void StoryScene::Update()
 {
 	//ここにStoryScene()があるときにずっと更新したい処理を入れる
-	
+	// 導入画像がまだ終わっていない場合
+	if (!mMaeokiDone)
+	{
+		// スクロール中
+		if (!mMaeokiScrollEnd)
+		{
+			mMaeokiY -= mMaeokiSpeed;
+			mpMaeokiImg->SetPos(0, mMaeokiY);
+
+			if (mMaeokiY <= -720.0f)
+			{
+				mMaeokiScrollEnd = true;
+			}
+		}
+		else
+		{
+			// スクロールが終了したらEnterで4コマへ
+			if (PUSH(CInput::eButton10))
+			{
+				mMaeokiDone = true;
+				return;
+			}
+		}
+
+		//導入中でも点滅処理は動かす
+		if (mBlinkUp)
+		{
+			mBlinkAlpha += mBlinkSpeed;
+			if (mBlinkAlpha >= 1.0f)
+			{
+				mBlinkAlpha = 1.0f;
+				mBlinkUp = false;
+			}
+		}
+		else
+		{
+			mBlinkAlpha -= mBlinkSpeed;
+			if (mBlinkAlpha <= 0.0f)
+			{
+				mBlinkAlpha = 0.0f;
+				mBlinkUp = true;
+			}
+		}
+		mpNextIcon->SetColor(1.0f, 1.0f, 1.0f, mBlinkAlpha);
+
+		return; 
+	}
+
+
+
+	//4コマ漫画の処理
+	if (PUSH(CInput::eButton10))
+	{
+		//4コマが全部出るまで
+		if (mPosIndex < 3)
+		{
+			mPosIndex++;
+			mScale[mPosIndex] = 0.8f;
+
+			switch (mPosIndex)
+			{
+			case 0: mpStoryImg[0]->SetPos(0, 0); break;
+			case 1: mpStoryImg[1]->SetPos(0, 360); break;
+			case 2: mpStoryImg[2]->SetPos(640, 0); break;
+			case 3: mpStoryImg[3]->SetPos(640, 360); break;
+			}
+		}
+		else
+		{
+			//4コマ全部出た後にエンターを押すと
+			//シーンをチュートリアルに変更
+			SceneManager::ChangeScene(SceneManager::TUTORIAL);
+			return;
+		}
+	}
+
+	//点滅処理
+	if (mBlinkUp)
+	{
+		mBlinkAlpha += mBlinkSpeed;
+		if (mBlinkAlpha >= 1.0f)
+		{
+			mBlinkAlpha = 1.0f;
+			mBlinkUp = false;
+		}
+	}
+	else
+	{
+		mBlinkAlpha -= mBlinkSpeed;
+		if (mBlinkAlpha <= 0.0f)
+		{
+			mBlinkAlpha = 0.0f;
+			mBlinkUp = true;
+		}
+	}
+	mpNextIcon->SetColor(1.0f, 1.0f, 1.0f, mBlinkAlpha);
+
+
+	// ポップアップ演出
+	if (mScale[mPosIndex] < 1.0f)
+	{
+		mScale[mPosIndex] += 0.04f;
+		if (mScale[mPosIndex] > 1.0f)
+			mScale[mPosIndex] = 1.0f;
+	}
+
 }
 
 
@@ -26,6 +205,32 @@ void StoryScene::Update()
 void StoryScene::Draw()
 {
 	//ここにStoryScene()があるときにずっと描画したいしたい処理を入れる
+	
+	//スクロール中は何もやらない
+	if (!mMaeokiDone)
+	{
+		mpMaeokiImg->Draw();
+
+		//スクロールが終わったらENTER矢印を出す
+		if (mMaeokiScrollEnd)
+		{
+			mpNextIcon->Draw();
+		}
+
+		return;
+	}
+
+
+	
+	for (int i = 0; i <= mPosIndex; i++)
+	{
+		// 拡大率を反映
+		mpStoryImg[i]->SetSize(640 * mScale[i], 360 * mScale[i]);
+		mpStoryImg[i]->Draw();
+	}
+
+	// ENTER矢印を描画
+	mpNextIcon->Draw();
 
 }
 void StoryScene::Init()

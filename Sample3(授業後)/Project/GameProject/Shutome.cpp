@@ -1,4 +1,7 @@
 #include "Shutome.h"
+#include "Player.h"
+#include "TaskManager.h"
+
 
 #define CHIP_SIZE 700		// 1コマのサイズ
 #define CENTER_POS CVector2D(173.0f, 350.0f)	// 中心座標
@@ -25,6 +28,7 @@ TexAnimData Shutome::ANIM_DATA[(int)EAnimeType::ENUM] =
 Shutome::Shutome(const CVector3D& s_pos, const float& s_collisionRange)
 	: EnemyBase(s_pos, s_collisionRange)
 	, mpImage(nullptr)
+	, mpEkey(nullptr)
 {
 	mHp = 100; 
 	mTag = ObjectBase::ETag::ESHUTOME;
@@ -42,6 +46,8 @@ Shutome::Shutome(const CVector3D& s_pos, const float& s_collisionRange)
 
 	mpImage->SetSize(CVector2D(350.0f, 390.0f));
 
+	mpEkey = new TextUi(CVector2D(SCREEN_WIDTH * 0.85f, 150.0f));
+
 }
 
 Shutome::~Shutome()
@@ -52,6 +58,8 @@ Shutome::~Shutome()
 		delete mpImage;
 		mpImage = nullptr;
 	}
+	mpEkey->Kill();
+	mpEkey = nullptr;
 }
 
 void Shutome::StateIdle()
@@ -68,7 +76,7 @@ void Shutome::Update()
 	// イメージに座標を設定して、アニメーションを更新
 	mpImage->SetPos(CalcScreenPos());
 	mpImage->UpdateAnimation();
-
+	
 }
 
 void Shutome::Render()
@@ -79,5 +87,12 @@ void Shutome::Render()
 bool Shutome::Collision(ObjectBase* s_other)
 {
 	return false;
+}
+
+
+void Shutome::SetIsDrawEkey(bool s_isdraw)
+{
+	// 画像を表示するかどうかを設定する
+	mpEkey->SetIsDraw(s_isdraw);
 }
 
