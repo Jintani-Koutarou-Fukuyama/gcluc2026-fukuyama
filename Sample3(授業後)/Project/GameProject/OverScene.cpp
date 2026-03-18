@@ -12,7 +12,7 @@ OverScene::OverScene()
 	//ここにOverScene()が生成されたときに呼び出したい処理を入れる
 	SOUND("over_se")->Load("gameover.wav", 1, false);
 	SOUND("over_se")->Play(false);
-	printf("ゲームオーバーになりました");
+	printf("ゲームオーバーになりました\n");
 }
 
 //デストラクタ

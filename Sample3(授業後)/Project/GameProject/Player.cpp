@@ -96,6 +96,8 @@ Player::Player(const CVector3D& s_pos, const float& s_collisionRange)
 	, mIsStun(false)
 	, mKnockbackdistance(CVector3D::zero)
 	, mInvincibilityCnt(0)
+	, mMoveSpeedY(0.0f)
+
 {
 	mHp = 5;
 	mTag = ETag::PLAYER;

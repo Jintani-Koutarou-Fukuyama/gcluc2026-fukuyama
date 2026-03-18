@@ -43,6 +43,8 @@ DropObstacle::DropObstacle(DropObstacleType s_type, const CVector3D& s_pos, cons
 	: EnemyBase(s_pos, s_collisionRange)
 	, mpImage(nullptr)
 	, mType(s_type)
+	, mState(EState::EHANGING) 
+	, mStateStep(0)
 {
 	mTag = ETag::EDROPOBSTACLE;
 
