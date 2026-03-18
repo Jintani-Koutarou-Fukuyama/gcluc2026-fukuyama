@@ -21,6 +21,9 @@
 #define LAST_STAGE_BGM3 "LASTSTAGEBGM3.wav"
 #define LAST_STAGE_BGM4 "LASTSTAGEBGM4.wav"
 #define LAST_STAGE_BGM5 "LASTSTAGEBGM5.wav"
+//ダメージ音
+#define DAMAGE "damage.wav"
+
 //--------------------------------------------
 //グローバル変数領域
 //--------------------------------------------
@@ -109,7 +112,8 @@ void Init()
 	SOUND("stage_bgm")->Load(STAGE_BGM1, 1, false);
 	// BGM読み込み（最終ステージ）
 	SOUND("last_stage_bgm")->Load(LAST_STAGE_BGM2, 1, false);
-
+	// ダメージ音読み込み
+	SOUND("damage")->Load(DAMAGE, 1, false);
 	//最初にタイトルを表示
 	SceneManager::ChangeScene(SceneManager::TITLE);
 	

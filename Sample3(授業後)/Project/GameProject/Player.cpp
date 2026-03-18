@@ -564,7 +564,8 @@ bool Player::Collision(ObjectBase* s_other)
 
 			// hpを減らす処理
 			TakeDamage(1);
-
+			// 再生（falseは1回）
+			SOUND("damage")->Play(false);
 
 			break;
 		case ETag::EDROPOBSTACLE:
@@ -574,6 +575,8 @@ bool Player::Collision(ObjectBase* s_other)
 
 			// hpを減らす処理
 			TakeDamage(1);
+			// 再生（falseは1回）
+			SOUND("damage")->Play(false);
 
 			// 落ちてくる障害物をDeath状態にする
 			DropObstacle* obj = (DropObstacle*)s_other;
