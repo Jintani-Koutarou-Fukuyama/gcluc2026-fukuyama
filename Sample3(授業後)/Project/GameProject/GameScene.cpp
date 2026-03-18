@@ -100,8 +100,8 @@ void GameScene::Init()//TaskManagerに追加された後に行う
 	new Player
 	(CVector3D(SCREEN_WIDTH * 0.3f, 0.0f, 0.0f), PLAYER_COLLISIONRANGE);
 	//姑を生成←前にいる方
-	new Shutome
-	(CVector3D(2600.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);
+	/*new Shutome
+	(CVector3D(2600.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);*/
 	//姑を生成←ステージの一番後ろにいる方
 	new Shutome
 	(CVector3D(9080.0f, 0.0f, 0.0f), SHUTOME_COLLISION_RANGE);
