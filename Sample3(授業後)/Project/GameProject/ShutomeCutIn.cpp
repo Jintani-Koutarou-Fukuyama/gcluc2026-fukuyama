@@ -1,6 +1,7 @@
 #include "ShutomeCutIn.h"
 
 #define TEX_SHUTOME "shutome_face.png"
+#define SE_CUTIN "cutin_se"
 
 ShutomeCutIn::ShutomeCutIn(int area)
     : Task((int)ETaskPrio::EUI)
@@ -14,6 +15,9 @@ ShutomeCutIn::ShutomeCutIn(int area)
     {
         mpSerif = CImage::CreateImage("吹き出し2.png");//セリフ入りの吹き出し画像入れる
     }
+
+    SOUND(SE_CUTIN)->Load("CutIn.wav", 1, false);
+    SOUND(SE_CUTIN)->Play();
 
     mTimer = 120;   // 2秒
     mArea = area;
