@@ -226,8 +226,8 @@ void GameScene::Update()
 
 	float x = p->GetPos().x;
 
-	//プレイヤーのX座標が3060を超えると難易度2になる
-	if (mDifficultyLevel == 0 && x > 3060.0f)
+	//プレイヤーのX座標が2360を超えると難易度2になる
+	if (mDifficultyLevel == 0 && x > 2360.0f)
 	{
 		mDifficultyLevel = 1;
 		printf("難易度アップ Lv1！\n");
@@ -240,7 +240,7 @@ void GameScene::Update()
 	}
 
 	//プレイヤーのX座標が6120を超えると難易度3になる
-	if (mDifficultyLevel == 1 && x > 6120.0f)
+	if (mDifficultyLevel == 1 && x > 5420.0f)
 	{
 		mDifficultyLevel = 2;
 		printf("難易度アップ Lv2！\n");
