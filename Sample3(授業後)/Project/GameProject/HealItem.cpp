@@ -5,6 +5,8 @@
 HealItem::HealItem(const CVector3D& pos)
 	: ObjectBase(pos, 40.0f)
 {
+    SOUND("heal_se")->Load("heal.wav", 1, false);
+
     mpImage = CImage::CreateImage("‰ñ•œ.png");
 
     mpImage->SetSize(200, 200);
@@ -35,6 +37,8 @@ void HealItem::Update()
     if (dist < 80.0f)
     {
         player->Heal(1);
+        // ‰ñ•œ‰¹
+        SOUND("heal_se")->Play(false);
         Kill();
     }
     
