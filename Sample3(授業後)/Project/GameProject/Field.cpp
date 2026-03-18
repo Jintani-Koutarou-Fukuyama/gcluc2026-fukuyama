@@ -82,7 +82,7 @@ int Field::GetArea()
 
 	int w = sFieldWidth / 3;
 
-	int area = playerX / w;
+	int area = (playerX+700) / w;
 
 	if (area < 0) area = 0;
 	if (area > 2) area = 2;

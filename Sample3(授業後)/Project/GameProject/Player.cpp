@@ -22,7 +22,7 @@
 #define INVINCIBILITY_TIME 10 //無敵時間
 
 
-#define TEX_PLAYER "嫁絵.png"
+#define TEX_PLAYER "嫁絵 アウトライン.png"
 
 #define GAMEOVER_RANGE 50.0f
 
