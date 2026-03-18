@@ -19,7 +19,7 @@ public:
 	void StateIdle();
 
 	bool Collision(ObjectBase* s_other) override;
-	void SetIsDrawEkey(bool s_isdraw);
+	void SetIsDrawEnterkey(bool s_isdraw);
 
 private:
 
@@ -35,5 +35,5 @@ private:
 
 	static TexAnimData ANIM_DATA[];
 	CImage* mpImage;    //‰æ‘œ
-	TextUi* mpEkey;
+	TextUi* mpEnterkey;
 };

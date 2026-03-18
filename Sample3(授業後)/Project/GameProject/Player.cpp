@@ -445,11 +445,11 @@ bool Player::Collision(ObjectBase* s_other)
 			{
 				if (abs(mPos.z - shutome->GetPos().z) < (minDist + GAMEOVER_RANGE) * 0.4f) //z軸は判定小さく
 				{
-					// "Eキーを押す"という文字を描画する
-					shutome->SetIsDrawEkey(true);
+					// "Enterキーを押す"という文字を描画する
+					shutome->SetIsDrawEnterkey(true);
 
-					// Eキーでゲーム終了
-					if (HOLD(CInput::eButton11))
+					// Enterキーでゲーム終了
+					if (HOLD(CInput::eButton10))
 					{
 						if (!isClear)
 						{
@@ -464,23 +464,23 @@ bool Player::Collision(ObjectBase* s_other)
 				}
 				else
 				{
-					// "Eキーを押す"という文字を描画しない
-					shutome->SetIsDrawEkey(false);
+					// "Enterキーを押す"という文字を描画しない
+					shutome->SetIsDrawEnterkey(false);
 
 				}
 
 			}
 			else
 			{
-				// "Eキーを押す"という文字を描画しない
-				shutome->SetIsDrawEkey(false);
+				// "Enterキーを押す"という文字を描画しない
+				shutome->SetIsDrawEnterkey(false);
 
 			}
 		}
 		else
 		{
-			// "Eキーを押す"という文字を描画しない
-			shutome->SetIsDrawEkey(false);
+			// "Enterキーを押す"という文字を描画しない
+			shutome->SetIsDrawEnterkey(false);
 		}
 		
 	}

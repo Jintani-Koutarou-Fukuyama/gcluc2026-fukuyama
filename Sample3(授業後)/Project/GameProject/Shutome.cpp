@@ -28,7 +28,7 @@ TexAnimData Shutome::ANIM_DATA[(int)EAnimeType::ENUM] =
 Shutome::Shutome(const CVector3D& s_pos, const float& s_collisionRange)
 	: EnemyBase(s_pos, s_collisionRange)
 	, mpImage(nullptr)
-	, mpEkey(nullptr)
+	, mpEnterkey(nullptr)
 {
 	mHp = 100; 
 	mTag = ObjectBase::ETag::ESHUTOME;
@@ -46,7 +46,7 @@ Shutome::Shutome(const CVector3D& s_pos, const float& s_collisionRange)
 
 	mpImage->SetSize(CVector2D(350.0f, 390.0f));
 
-	mpEkey = new TextUi(CVector2D(SCREEN_WIDTH * 0.85f, 150.0f));
+	mpEnterkey = new TextUi(CVector2D(SCREEN_WIDTH * 0.85f, 150.0f));
 
 }
 
@@ -58,8 +58,8 @@ Shutome::~Shutome()
 		delete mpImage;
 		mpImage = nullptr;
 	}
-	mpEkey->Kill();
-	mpEkey = nullptr;
+	mpEnterkey->Kill();
+	mpEnterkey = nullptr;
 }
 
 void Shutome::StateIdle()
@@ -90,9 +90,9 @@ bool Shutome::Collision(ObjectBase* s_other)
 }
 
 
-void Shutome::SetIsDrawEkey(bool s_isdraw)
+void Shutome::SetIsDrawEnterkey(bool s_isdraw)
 {
 	// ‰æ‘œ‚ð•\Ž¦‚·‚é‚©‚Ç‚¤‚©‚ðÝ’è‚·‚é
-	mpEkey->SetIsDraw(s_isdraw);
+	mpEnterkey->SetIsDraw(s_isdraw);
 }
 

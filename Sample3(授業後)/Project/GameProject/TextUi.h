@@ -19,7 +19,7 @@ public:
 	void SetIsDraw(bool s_isdraw);
 private:
 
-	CImage* mpEkeyImg;
+	CImage* mpEnterkeyImg;
 	bool mIsDraw; // true‚Å‚ ‚ê‚Î‰æ‘œ‚ð•`‰æ‚·‚é
 };
 
