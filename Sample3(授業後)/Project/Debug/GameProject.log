@@ -1,12 +1,8 @@
-﻿  Ui.cpp
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(91,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(91,32): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(147,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(147,34): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(147,27): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(147,23): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(149,35): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\Ui.cpp(149,32): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+﻿  GameScene.cpp
+C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(63,13): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(148,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(149,11): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Project\GameProject\GameScene.cpp(162,14): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
 GLFW.lib(init.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(init.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(window.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB 'GLFW.pdb' が 'GLFW.lib(input.obj)' で、または 'C:\Users\gc250\OneDrive\ドキュメント\GitHub\gcluc2026-fukuyama\Sample3(授業後)\Game\GLFW.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
